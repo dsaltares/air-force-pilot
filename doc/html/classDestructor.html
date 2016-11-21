@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Referencia de la Clase Destructor</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generado por Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Clases</span></a></li>
+      <li><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;clases</span></a></li>
+      <li><a href="hierarchy.html"><span>Jerarquía&nbsp;de&nbsp;la&nbsp;clase</span></a></li>
+      <li><a href="functions.html"><span>Miembros&nbsp;de&nbsp;las&nbsp;clases</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Referencia de la Clase Destructor</h1><!-- doxytag: class="Destructor" -->
+<p>Clase base del destructor genérico para destuir Singleton.  
+<a href="#_details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="destructor_8h_source.html">destructor.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de herencias de Destructor</div>
+<div class="dynsection">
+ <div class="center">
+  <img src="classDestructor.gif" usemap="#Destructor_map" alt=""/>
+  <map id="Destructor_map" name="Destructor_map">
+<area href="classTDestructor.html" alt="TDestructor&lt; T &gt;" shape="rect" coords="0,56,109,80"/>
+</map>
+ </div>
+</div>
+
+<p><a href="classDestructor-members.html">Lista de todos los miembros.</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDestructor.html#a12513e41911b86e1afbeaae0425c2abc">Destructor</a> (<a class="el" href="classDestructionPhase.html">DestructionPhase</a> dphase)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDestructor.html#a4613fe3441c2481fa806ba479a89bce2">operator&gt;</a> (const <a class="el" href="classDestructor.html">Destructor</a> &amp;destructor) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDestructor.html#afcd8007a6f925589404ded61bad96623">destroy</a> ()=0</td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descripción detallada</h2>
+<p>Clase base del destructor genérico para destuir Singleton. </p>
+<hr/><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" id="a12513e41911b86e1afbeaae0425c2abc"></a><!-- doxytag: member="Destructor::Destructor" ref="a12513e41911b86e1afbeaae0425c2abc" args="(DestructionPhase dphase)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Destructor::Destructor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classDestructionPhase.html">DestructionPhase</a>&nbsp;</td>
+          <td class="paramname"> <em>dphase</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Constructor</p>
+<p>Establece la fase de destrucción y registra el Singleton en la lista de los Singleton a destruir. </p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>dphase</em>&nbsp;</td><td>Objeto <a class="el" href="classDestructionPhase.html" title="Utilizado para asignarle un orden de destrucción a los Singleton.">DestructionPhase</a> que indica el orden. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" id="afcd8007a6f925589404ded61bad96623"></a><!-- doxytag: member="Destructor::destroy" ref="afcd8007a6f925589404ded61bad96623" args="()=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Destructor::destroy </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Función virtual pura, utilizada para elegir el destructor apropiado en tiempo de ejecución </p>
+
+<p>Implementado en <a class="el" href="classTDestructor.html#af8ddf02ab177b9c32a6b5484f049ef0a">TDestructor&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4613fe3441c2481fa806ba479a89bce2"></a><!-- doxytag: member="Destructor::operator&gt;" ref="a4613fe3441c2481fa806ba479a89bce2" args="(const Destructor &amp;destructor) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Destructor::operator&gt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classDestructor.html">Destructor</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>destructor</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Compara dos destructores en función de su fase de destrucción (<a class="el" href="classDestructionPhase.html" title="Utilizado para asignarle un orden de destrucción a los Singleton.">DestructionPhase</a>) </p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>destructor</em>&nbsp;</td><td><a class="el" href="classDestructor.html" title="Clase base del destructor genérico para destuir Singleton.">Destructor</a> con el que comparar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Verdadero si el destructor a debe eliminarse después que el destructor b </dd></dl>
+
+</div>
+</div>
+<hr/>La documentación para esta clase fue generada a partir del siguiente fichero:<ul>
+<li>/home/david/Juegos/airforcepilot/src/motor/<a class="el" href="destructor_8h_source.html">destructor.h</a></li>
+</ul>
+</div>
+<hr size="1"/><address style="text-align: right;"><small>Generado el Sun Dec 13 19:09:11 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
+</body>
+</html>

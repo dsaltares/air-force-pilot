@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Referencia de la Clase Bala</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generado por Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Clases</span></a></li>
+      <li><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;clases</span></a></li>
+      <li><a href="hierarchy.html"><span>Jerarquía&nbsp;de&nbsp;la&nbsp;clase</span></a></li>
+      <li><a href="functions.html"><span>Miembros&nbsp;de&nbsp;las&nbsp;clases</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Referencia de la Clase Bala</h1><!-- doxytag: class="Bala" --><!-- doxytag: inherits="Participante" -->
+<p>Objeto que representa los proyectiles del juego.  
+<a href="#_details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="bala_8h_source.html">bala.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de herencias de Bala</div>
+<div class="dynsection">
+ <div class="center">
+  <img src="classBala.gif" usemap="#Bala_map" alt=""/>
+  <map id="Bala_map" name="Bala_map">
+<area href="classParticipante.html" alt="Participante" shape="rect" coords="0,0,79,24"/>
+</map>
+ </div>
+</div>
+
+<p><a href="classBala-members.html">Lista de todos los miembros.</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBala.html#a63c39ba1380ef285b4b0e4efc6263a64">Bala</a> (<a class="el" href="classJuego.html">Juego</a> *<a class="el" href="classParticipante.html#adcbfadacc4d0c6132362a851cd79aec8">juego</a>, const string &amp;clave, int pos_x, int pos_y, int vel_y, int a)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBala.html#a1da8401a0ab31f2e39111df33b568aa6">~Bala</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBala.html#a76a853b2ff851adab32ca8da5d47e8f3">actualizar</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBala.html#af96ebfb4dc3af9d5ac38bae0d7b04d34">colisiona_con</a> (<a class="el" href="classParticipante.html">Participante</a> *otro)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBala.html#ac75abb2c8ae4b9b033c64916e696a11f">ataque</a> () const </td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descripción detallada</h2>
+<p>Objeto que representa los proyectiles del juego. </p>
+<p>Se utiliza para controlar los proyectiles lanzados por el protagonista y los enemigos</p>
+<p>Ejemplo de uso:</p>
+<div class="fragment"><pre class="fragment"><span class="preprocessor">                #include &quot;<a class="code" href="juego_8h.html">juego.h</a>&quot;</span>
+<span class="preprocessor">                #include &quot;<a class="code" href="bala_8h.html">bala.h</a>&quot;</span>
+                
+                <span class="comment">// Imaginamos que estamos en la función en la que un Participante dispara</span>
+                <span class="keywordtype">void</span> disparar()
+                {
+                        <a class="code" href="classBala.html" title="Objeto que representa los proyectiles del juego.">Bala</a> *bala = <span class="keyword">new</span> <a class="code" href="classBala.html#a63c39ba1380ef285b4b0e4efc6263a64">Bala</a>(<a class="code" href="classParticipante.html#adcbfadacc4d0c6132362a851cd79aec8">juego</a>, <span class="stringliteral">&quot;disp&quot;</span>, this-&gt;<a class="code" href="classParticipante.html#a31a5df093a3e8ada91a23a4a30ae64ea">x</a>+40 , this-&gt;<a class="code" href="classParticipante.html#a9ee6164f11bd09c76caec1b90cf514c6">y</a>+10, -3, this-&gt;ataque_);
+                        <a class="code" href="classParticipante.html#adcbfadacc4d0c6132362a851cd79aec8">juego</a>-&gt;<a class="code" href="classJuego.html#a1dc8db927a6f3ba920cd334a876689fe">add_bala</a>(bala);
+                }
+</pre></div> <hr/><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" id="a63c39ba1380ef285b4b0e4efc6263a64"></a><!-- doxytag: member="Bala::Bala" ref="a63c39ba1380ef285b4b0e4efc6263a64" args="(Juego *juego, const string &amp;clave, int pos_x, int pos_y, int vel_y, int a)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Bala::Bala </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classJuego.html">Juego</a> *&nbsp;</td>
+          <td class="paramname"> <em>juego</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&nbsp;</td>
+          <td class="paramname"> <em>clave</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>pos_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>pos_y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>vel_y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>a</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Constructor</p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>juego</em>&nbsp;</td><td><a class="el" href="classJuego.html" title="Clase derivada de Escena utilizada para el Juego y su lógica.">Juego</a> al que pertenece la bala </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>clave</em>&nbsp;</td><td>Cadena para asignarle una imagen de la <a class="el" href="classGaleria.html" title="Gestor de recursos multimedia, emplea el patrón Singleton.">Galeria</a> a la bala </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>pos_x</em>&nbsp;</td><td>Coordenada en x donde aparecerá la bala </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>pos_y</em>&nbsp;</td><td>Coordenada en y donde aparecerá la bala </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>vel_y</em>&nbsp;</td><td>Velocidad en y para la bala </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>a</em>&nbsp;</td><td>Daño que producirá la bala al impactar en un enemigo </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a1da8401a0ab31f2e39111df33b568aa6"></a><!-- doxytag: member="Bala::~Bala" ref="a1da8401a0ab31f2e39111df33b568aa6" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Bala::~Bala </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="classDestructor.html" title="Clase base del destructor genérico para destuir Singleton.">Destructor</a></p>
+<p>Libera la memoria ocupada por la <a class="el" href="classBala.html" title="Objeto que representa los proyectiles del juego.">Bala</a> </p>
+
+</div>
+</div>
+<hr/><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" id="a76a853b2ff851adab32ca8da5d47e8f3"></a><!-- doxytag: member="Bala::actualizar" ref="a76a853b2ff851adab32ca8da5d47e8f3" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Bala::actualizar </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Actualiza lógicamente a la bala (la desplaza según su velocidad o la marca para eliminar si se sale de la pantalla, estado ELIMINAR) </p>
+
+<p>Implementa <a class="el" href="classParticipante.html#a7a716385c57453a44e822dbe3daa4eb3">Participante</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac75abb2c8ae4b9b033c64916e696a11f"></a><!-- doxytag: member="Bala::ataque" ref="ac75abb2c8ae4b9b033c64916e696a11f" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Bala::ataque </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Consultor</p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Daño que produce la bala al impactar sobre un objetivo </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af96ebfb4dc3af9d5ac38bae0d7b04d34"></a><!-- doxytag: member="Bala::colisiona_con" ref="af96ebfb4dc3af9d5ac38bae0d7b04d34" args="(Participante *otro)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Bala::colisiona_con </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classParticipante.html">Participante</a> *&nbsp;</td>
+          <td class="paramname"> <em>otro</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Cuando la bala impacta en algún objetivo se marca para su eliminación (estado ELIMINAR) </p>
+
+</div>
+</div>
+<hr/>La documentación para esta clase fue generada a partir de los siguientes ficheros:<ul>
+<li>/home/david/Juegos/airforcepilot/src/motor/<a class="el" href="bala_8h_source.html">bala.h</a></li>
+<li>/home/david/Juegos/airforcepilot/src/motor/<a class="el" href="bala_8cpp.html">bala.cpp</a></li>
+</ul>
+</div>
+<hr size="1"/><address style="text-align: right;"><small>Generado el Sun Dec 13 19:09:11 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<protagonista vx="0" vy="2" energia="4" ataque="2" cadencia = "30" imagen="aguila">
+	<colisiones>
+		<colision x="48" y="0" w="20" h="94" />
+		<colision x="0" y="38" w="115" h="16" />
+	</colisiones>
+	<animaciones>
+		<animacion nombre="normal" anim="0" retardo="1"/>
+		<animacion nombre="acelerado" anim="0" retardo="1"/>
+		<animacion nombre="frenado" anim="0" retardo="1"/>
+		<animacion nombre="morir" anim="1,2,3,4" retardo="6"/>
+		<animacion nombre="eliminar" anim="0" retardo="1"/>
+	</animaciones>
+</protagonista>

@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Referencia de la Clase Cronometro</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generado por Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Clases</span></a></li>
+      <li><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;clases</span></a></li>
+      <li><a href="hierarchy.html"><span>Jerarquía&nbsp;de&nbsp;la&nbsp;clase</span></a></li>
+      <li><a href="functions.html"><span>Miembros&nbsp;de&nbsp;las&nbsp;clases</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Referencia de la Clase Cronometro</h1><!-- doxytag: class="Cronometro" -->
+<p>Cronómetro utilizado en el control del framerrate (utilizando funciones de SDL).  
+<a href="#_details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="cronometro_8h_source.html">cronometro.h</a>&gt;</code></p>
+
+<p><a href="classCronometro-members.html">Lista de todos los miembros.</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCronometro.html#a47cde54831744e3e0c6c7abe2bf17f0d">Cronometro</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCronometro.html#aaef9787a8deaaa6e2d57fe85bfd387c4">activar</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCronometro.html#ae358802141ac1b854f375d80e6ff3deb">parar</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCronometro.html#a9e09eb691180cdabc54ff5cdeae4a186">tiempo</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCronometro.html#ab6bf261a62886ef62b498f199c531636">esta_activo</a> () const </td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descripción detallada</h2>
+<p>Cronómetro utilizado en el control del framerrate (utilizando funciones de SDL). </p>
+<p>Es una clase sencilla que utilizamos para el control del tiempo en el juego. Como ejemplo puedo usar el del control del framerrate en Universo::sincronizar_fps();</p>
+<div class="fragment"><pre class="fragment">        ...
+        crono.activar(); <span class="comment">// Se activa en el constructor de Universo</span>
+        ...
+        <span class="keywordtype">void</span> Universo::sincronizar_fps()
+        {           
+                <span class="keywordflow">if</span>(crono.<a class="code" href="classCronometro.html#a9e09eb691180cdabc54ff5cdeae4a186">tiempo</a>() &lt; (1000/maxfps))                      <span class="comment">// Si vamos demasiaod rápido...</span>
+                        SDL_Delay((1000/maxfps) - crono.<a class="code" href="classCronometro.html#a9e09eb691180cdabc54ff5cdeae4a186">tiempo</a>());      <span class="comment">// ... Esperamos para estabilizar los fps</span>
+        
+                crono.<a class="code" href="classCronometro.html#aaef9787a8deaaa6e2d57fe85bfd387c4">activar</a>();
+        }
+</pre></div> <hr/><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" id="a47cde54831744e3e0c6c7abe2bf17f0d"></a><!-- doxytag: member="Cronometro::Cronometro" ref="a47cde54831744e3e0c6c7abe2bf17f0d" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Cronometro::Cronometro </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Constructor Pone el contador a 0 y establece como inactivo el cronómetro </p>
+
+</div>
+</div>
+<hr/><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" id="aaef9787a8deaaa6e2d57fe85bfd387c4"></a><!-- doxytag: member="Cronometro::activar" ref="aaef9787a8deaaa6e2d57fe85bfd387c4" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Cronometro::activar </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Activa el cronómetro y pone la cuenta a 0 </p>
+
+</div>
+</div>
+<a class="anchor" id="ab6bf261a62886ef62b498f199c531636"></a><!-- doxytag: member="Cronometro::esta_activo" ref="ab6bf261a62886ef62b498f199c531636" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Cronometro::esta_activo </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Método consultor</p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Verdadero si el cronómetro está activo o falso en caso contrario </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae358802141ac1b854f375d80e6ff3deb"></a><!-- doxytag: member="Cronometro::parar" ref="ae358802141ac1b854f375d80e6ff3deb" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Cronometro::parar </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Para el cronómetro </p>
+
+</div>
+</div>
+<a class="anchor" id="a9e09eb691180cdabc54ff5cdeae4a186"></a><!-- doxytag: member="Cronometro::tiempo" ref="a9e09eb691180cdabc54ff5cdeae4a186" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Cronometro::tiempo </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Método consultor</p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Tiempo en ms transcurrido desde que se activó el cronómetro por última vez. </dd></dl>
+
+</div>
+</div>
+<hr/>La documentación para esta clase fue generada a partir de los siguientes ficheros:<ul>
+<li>/home/david/Juegos/airforcepilot/src/motor/<a class="el" href="cronometro_8h_source.html">cronometro.h</a></li>
+<li>/home/david/Juegos/airforcepilot/src/motor/<a class="el" href="cronometro_8cpp.html">cronometro.cpp</a></li>
+</ul>
+</div>
+<hr size="1"/><address style="text-align: right;"><small>Generado el Sun Dec 13 19:09:11 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
+</body>
+</html>

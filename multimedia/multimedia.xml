@@ -1,0 +1,33 @@
+<!-- Rutas e identificadores de todos los contenidos multimedia del juego -->
+<galeria>
+
+	<imagenes>
+		<imagen nombre="avion" ruta="multimedia/avion.png" filas="7" columnas="1"/>
+		<imagen nombre="harrier" ruta="multimedia/harrier.png" filas="5" columnas="1"/>
+		<imagen nombre="aguila" ruta="multimedia/aguila.png" filas="5" columnas="1"/>
+		<imagen nombre="bala" ruta="multimedia/bala.png" filas="1" columnas="1" />
+		<imagen nombre="cursor" ruta="multimedia/cursor.png" filas="1" columnas="1" />
+		<imagen nombre="fondomenu" ruta="multimedia/fondomenu.png" filas="1" columnas="1" />
+		<imagen nombre="fondogameover" ruta="multimedia/fondogameover.png" filas="1" columnas="1" />
+	</imagenes>
+	
+	<fuentes>
+		<fuente nombre="stencil" ruta="multimedia/stencil.ttf" puntos="40"/>
+		<fuente nombre="stencilg" ruta="multimedia/stencil.ttf" puntos="80"/>
+		<fuente nombre="stencilp" ruta="multimedia/stencil.ttf" puntos="20"/>
+	</fuentes>
+	
+	<sonidos>
+		<sonido nombre="disp" ruta="multimedia/disparo.wav"/>
+		<sonido nombre="expl" ruta="multimedia/explosion.ogg"/>
+		<sonido nombre="click" ruta="multimedia/click.ogg" />
+		<sonido nombre="aceptar" ruta="multimedia/aceptar.ogg" />
+	</sonidos>
+	
+	<musicas>
+		<musica nombre="musica" ruta="multimedia/musica.ogg"/>
+		<musica nombre="menu" ruta="multimedia/menu.ogg" />
+	</musicas>
+	
+</galeria>
+

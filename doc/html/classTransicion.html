@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Referencia de la Clase Transicion</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generado por Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Clases</span></a></li>
+      <li><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;clases</span></a></li>
+      <li><a href="hierarchy.html"><span>Jerarquía&nbsp;de&nbsp;la&nbsp;clase</span></a></li>
+      <li><a href="functions.html"><span>Miembros&nbsp;de&nbsp;las&nbsp;clases</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Referencia de la Clase Transicion</h1><!-- doxytag: class="Transicion" --><!-- doxytag: inherits="Escena" -->
+<p>Clase hija de <a class="el" href="classEscena.html" title="Clase abstracta que representa una escena del Sistema.">Escena</a> utilizada para transiciones entre otras escenas.  
+<a href="#_details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="transicion_8h_source.html">transicion.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de herencias de Transicion</div>
+<div class="dynsection">
+ <div class="center">
+  <img src="classTransicion.gif" usemap="#Transicion_map" alt=""/>
+  <map id="Transicion_map" name="Transicion_map">
+<area href="classEscena.html" alt="Escena" shape="rect" coords="0,0,71,24"/>
+</map>
+ </div>
+</div>
+
+<p><a href="classTransicion-members.html">Lista de todos los miembros.</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTransicion.html#a9e09023cdc2430c079e90ba7fa09b00e">Transicion</a> (<a class="el" href="classUniverso.html">Universo</a> *universo)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTransicion.html#a3dc0fbbafe2cbd0a2e8e633a7634a9b8">~Transicion</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTransicion.html#ae0f323d1f133d90b17426c4abf93ec85">reiniciar</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTransicion.html#a71cd6f1e9c25674a6759e18424fd6bc6">actualizar</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTransicion.html#adb90e6d8fb364c83b88d38734ed95e4f">dibujar</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTransicion.html#aa8954305d5b3cf0997a4761e7ad79204">cargar</a> (const std::string &amp;ruta, <a class="el" href="classEscena.html">Escena</a> *p)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTransicion.html#abe3eef9ada687665f745b4865df59778">cargar_trans_nivel</a> (const std::string &amp;ruta_base, <a class="el" href="classEscena.html">Escena</a> *p, int nivel)</td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descripción detallada</h2>
+<p>Clase hija de <a class="el" href="classEscena.html" title="Clase abstracta que representa una escena del Sistema.">Escena</a> utilizada para transiciones entre otras escenas. </p>
+<p><a class="el" href="classTransicion.html" title="Clase hija de Escena utilizada para transiciones entre otras escenas.">Transicion</a> carga un fichero XML con las líneas de texto, el fondo que se mostrarán y la música que sonará. Sirve para mostrar pantallas del tipo (NIVEL 1 -START!-) Contiene información de la escena que la llamó para volver a ella cuando se pulse la tecla ESC</p>
+<p>Ejemplo de uso:</p>
+<div class="fragment"><pre class="fragment">        <span class="comment">// Estamos en la función actualizar de la clase Juego y hemos detectado que se ha completado el nivel</span>
+        universo-&gt;crear_transicion(<span class="stringliteral">&quot;nivel_completado.xml&quot;</span>, <span class="keyword">this</span>); <span class="comment">// Debemos poder volver</span>
+        <a class="code" href="classEscena.html#a36cf14782a7e41a4dfe975b0493bc3ca">universo_</a>-&gt;cambiar_escena(<a class="code" href="classEscena.html#ad0bc8b751580f7d7bf7fe3b8f205de06a3e07cb0551eca069d915763f6691ac89">Escena::TRANSICION</a>);
+        <span class="comment">// En la función actualizar de Transición se comprueba la pulsación de ESC.</span>
+        <span class="comment">// Cuando se pulse se vuelve a la escena que se pretendía</span>
+</pre></div><p>"nivel_completado.xml" podría contener: </p>
+<div class="fragment"><pre class="fragment">        &lt;transicion fondo=<span class="stringliteral">&quot;cielo&quot;</span> musica=<span class="stringliteral">&quot;victoria&quot;</span>&gt;
+                &lt;Elemento x=<span class="stringliteral">&quot;300&quot;</span> y=<span class="stringliteral">&quot;250&quot;</span> texto=<span class="stringliteral">&quot;¡HAS COMPLETADO ESTE NIVEL!&quot;</span> fuente=<span class="stringliteral">&quot;stencil&quot;</span> r=<span class="stringliteral">&quot;0&quot;</span> g=<span class="stringliteral">&quot;0&quot;</span> b=<span class="stringliteral">&quot;0&quot;</span>/&gt;
+                &lt;Elemento x=<span class="stringliteral">&quot;300&quot;</span> y=<span class="stringliteral">&quot;320&quot;</span> texto=<span class="stringliteral">&quot;Ya queda menos para el final&quot;</span> fuente=<span class="stringliteral">&quot;stencil&quot;</span> r=<span class="stringliteral">&quot;0&quot;</span> g=<span class="stringliteral">&quot;0&quot;</span> b=<span class="stringliteral">&quot;0&quot;</span>/&gt;
+                &lt;Elemento x=<span class="stringliteral">&quot;300&quot;</span> y=<span class="stringliteral">&quot;430&quot;</span> texto=<span class="stringliteral">&quot;Pulsa ESC para continuar&quot;</span> fuente=<span class="stringliteral">&quot;stencil&quot;</span> r1=<span class="stringliteral">&quot;0&quot;</span> g1=<span class="stringliteral">&quot;0&quot;</span> b1=<span class="stringliteral">&quot;0&quot;</span> r=<span class="stringliteral">&quot;0&quot;</span> g=<span class="stringliteral">&quot;0&quot;</span> b=<span class="stringliteral">&quot;0&quot;</span>/&gt;
+        &lt;/transicion&gt;
+</pre></div> <hr/><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" id="a9e09023cdc2430c079e90ba7fa09b00e"></a><!-- doxytag: member="Transicion::Transicion" ref="a9e09023cdc2430c079e90ba7fa09b00e" args="(Universo *universo)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Transicion::Transicion </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classUniverso.html">Universo</a> *&nbsp;</td>
+          <td class="paramname"> <em>universo</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Constructor</p>
+<p>Crea una escena asociada a un universo que aún no se puede utilizar, es necesario cargarle un fichero</p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>universo</em>&nbsp;</td><td><a class="el" href="classUniverso.html" title="Clase que controla el funcionamiento general del juego.">Universo</a> al que se asocia la escena de transición </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a3dc0fbbafe2cbd0a2e8e633a7634a9b8"></a><!-- doxytag: member="Transicion::~Transicion" ref="a3dc0fbbafe2cbd0a2e8e633a7634a9b8" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Transicion::~Transicion </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="classDestructor.html" title="Clase base del destructor genérico para destuir Singleton.">Destructor</a></p>
+<p>Libera la memoria ocupada por la Transición </p>
+
+</div>
+</div>
+<hr/><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" id="a71cd6f1e9c25674a6759e18424fd6bc6"></a><!-- doxytag: member="Transicion::actualizar" ref="a71cd6f1e9c25674a6759e18424fd6bc6" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Transicion::actualizar </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Actualiza lógicamente la transición (consulta si se quiere salir) </p>
+
+<p>Implementa <a class="el" href="classEscena.html#a6d984f3b66985043eb878fbd9f6d0f6a">Escena</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa8954305d5b3cf0997a4761e7ad79204"></a><!-- doxytag: member="Transicion::cargar" ref="aa8954305d5b3cf0997a4761e7ad79204" args="(const std::string &amp;ruta, Escena *p)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Transicion::cargar </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>ruta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classEscena.html">Escena</a> *&nbsp;</td>
+          <td class="paramname"> <em>p</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Carga el fichero XML indicado por ruta para posteriormente pasar a <a class="el" href="classEscena.html" title="Clase abstracta que representa una escena del Sistema.">Escena</a> <a class="el" href="classTransicion.html" title="Clase hija de Escena utilizada para transiciones entre otras escenas.">Transicion</a></p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>ruta</em>&nbsp;</td><td>Ruta del fichero XML </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>p</em>&nbsp;</td><td>Puntero a <a class="el" href="classEscena.html" title="Clase abstracta que representa una escena del Sistema.">Escena</a> para que la transición sepa a quién tiene que devolver el control </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="abe3eef9ada687665f745b4865df59778"></a><!-- doxytag: member="Transicion::cargar_trans_nivel" ref="abe3eef9ada687665f745b4865df59778" args="(const std::string &amp;ruta_base, Escena *p, int nivel)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Transicion::cargar_trans_nivel </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>ruta_base</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classEscena.html">Escena</a> *&nbsp;</td>
+          <td class="paramname"> <em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nivel</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Carga el fichero XML indicado por ruta para posteriormente pasar a <a class="el" href="classEscena.html" title="Clase abstracta que representa una escena del Sistema.">Escena</a> <a class="el" href="classTransicion.html" title="Clase hija de Escena utilizada para transiciones entre otras escenas.">Transicion</a> Sirve para poner transiciones relacionadas con un nivel en sí</p>
+<p>Las rutas estarán formadas por una base, un nivel y una extensión. Ejemplo:</p>
+<p>"trans_inicio_nivel" + "1" + ".xml"</p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>ruta_base</em>&nbsp;</td><td>Ruta base del fichero XML. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>nivel</em>&nbsp;</td><td><a class="el" href="classNivel.html" title="Utilizada para cargar, manejar y dibujar los niveles del juego.">Nivel</a> de la que se quiere cargar la transición. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>p</em>&nbsp;</td><td>Puntero a <a class="el" href="classEscena.html" title="Clase abstracta que representa una escena del Sistema.">Escena</a> para que la transición sepa a quién tiene que devolver el control </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="adb90e6d8fb364c83b88d38734ed95e4f"></a><!-- doxytag: member="Transicion::dibujar" ref="adb90e6d8fb364c83b88d38734ed95e4f" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Transicion::dibujar </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Dibuja en la pantalla la transición con todos sus elementos </p>
+
+<p>Implementa <a class="el" href="classEscena.html#ab6026872f79ddeef7adeaacd3e7737c6">Escena</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae0f323d1f133d90b17426c4abf93ec85"></a><!-- doxytag: member="Transicion::reiniciar" ref="ae0f323d1f133d90b17426c4abf93ec85" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Transicion::reiniciar </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Reinicia la transición </p>
+
+<p>Implementa <a class="el" href="classEscena.html#a19b36d483182d27e5caff09794561546">Escena</a>.</p>
+
+</div>
+</div>
+<hr/>La documentación para esta clase fue generada a partir de los siguientes ficheros:<ul>
+<li>/home/david/Juegos/airforcepilot/src/motor/<a class="el" href="transicion_8h_source.html">transicion.h</a></li>
+<li>/home/david/Juegos/airforcepilot/src/motor/<a class="el" href="transicion_8cpp.html">transicion.cpp</a></li>
+</ul>
+</div>
+<hr size="1"/><address style="text-align: right;"><small>Generado el Sun Dec 13 19:09:11 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
+</body>
+</html>

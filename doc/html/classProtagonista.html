@@ -1,0 +1,322 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Referencia de la Clase Protagonista</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generado por Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Clases</span></a></li>
+      <li><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;clases</span></a></li>
+      <li><a href="hierarchy.html"><span>Jerarquía&nbsp;de&nbsp;la&nbsp;clase</span></a></li>
+      <li><a href="functions.html"><span>Miembros&nbsp;de&nbsp;las&nbsp;clases</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Referencia de la Clase Protagonista</h1><!-- doxytag: class="Protagonista" --><!-- doxytag: inherits="Participante" -->
+<p>Clase descendiente de <a class="el" href="classParticipante.html" title="Clase virtual pura para gestionar el comportamiento común de todos los participantes...">Participante</a> que controla la lógica y la gestión del protagonista.  
+<a href="#_details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="protagonista_8h_source.html">protagonista.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de herencias de Protagonista</div>
+<div class="dynsection">
+ <div class="center">
+  <img src="classProtagonista.gif" usemap="#Protagonista_map" alt=""/>
+  <map id="Protagonista_map" name="Protagonista_map">
+<area href="classParticipante.html" alt="Participante" shape="rect" coords="0,0,82,24"/>
+</map>
+ </div>
+</div>
+
+<p><a href="classProtagonista-members.html">Lista de todos los miembros.</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProtagonista.html#af1263b44a4e4fc55ae2b97f5431a508a">Protagonista</a> (<a class="el" href="classJuego.html">Juego</a> *j, const std::string &amp;ruta, int <a class="el" href="classParticipante.html#a31a5df093a3e8ada91a23a4a30ae64ea">x</a>=0, int <a class="el" href="classParticipante.html#a9ee6164f11bd09c76caec1b90cf514c6">y</a>=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProtagonista.html#a076643e0eaf740826a646245e7c98fa6">~Protagonista</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProtagonista.html#a5afb8594fe95f048b65f13361606092c">actualizar</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProtagonista.html#a39c22009c703c0255d2f433fb089cf0c">colisiona_con</a> (<a class="el" href="classParticipante.html">Participante</a> *otro)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProtagonista.html#a4bd02fb3da7ce4f464c5aced5ca3f38a">energia</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProtagonista.html#a406fbf642074d841ceab56734978fc45">energia</a> (int diferencia)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProtagonista.html#acab2da75b4e60a3a9ef722a4962953d5">ataque</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProtagonista.html#ae831f8f3404e8454f17a2ad135ffbf48">vidas</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProtagonista.html#a25dcda8583da86b524b3261242a208aa">vidas</a> (int diferencia)</td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descripción detallada</h2>
+<p>Clase descendiente de <a class="el" href="classParticipante.html" title="Clase virtual pura para gestionar el comportamiento común de todos los participantes...">Participante</a> que controla la lógica y la gestión del protagonista. </p>
+<p>Sirve para cargar las características de un fichero xml del <a class="el" href="classProtagonista.html" title="Clase descendiente de Participante que controla la lógica y la gestión del protagonista...">Protagonista</a> del juego así como para actualizarlo y gestionar las colisiones.</p>
+<p>Veamos un ejemplo de su uso:</p>
+<div class="fragment"><pre class="fragment"><span class="preprocessor">                #include &quot;<a class="code" href="protagonista_8h.html">protagonista.h</a>&quot;</span>
+                
+                <a class="code" href="classProtagonista.html" title="Clase descendiente de Participante que controla la lógica y la gestión del protagonista...">Protagonista</a> avion(<span class="stringliteral">&quot;protagonista.xml&quot;</span>);
+                
+                <span class="comment">// Bucle de juego</span>
+                <span class="keywordflow">while</span>(<a class="code" href="classParticipante.html#adcbfadacc4d0c6132362a851cd79aec8">juego</a>){
+                        avion.actualizar();
+                        comprobar_colisiones() <span class="comment">// Función inventada para calcular las colisiones</span>
+                        avion.<a class="code" href="classParticipante.html#a00ab2fdf42f991de179a656ca0c74cc6">dibujar</a>(pantalla);
+                }       
+</pre></div><div class="fragment"><pre class="fragment">                <span class="comment">// Función imaginaria, de esto se encarga la clase Control</span>
+                <span class="keywordtype">void</span> comprobar_colisiones(){
+                        <span class="keywordflow">if</span>(colisionan(protagonista, otro))
+                                protagonista.colisiona_con(otro); <span class="comment">// Para restarle vida por ejemplo</span>
+                }
+</pre></div> <hr/><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" id="af1263b44a4e4fc55ae2b97f5431a508a"></a><!-- doxytag: member="Protagonista::Protagonista" ref="af1263b44a4e4fc55ae2b97f5431a508a" args="(Juego *j, const std::string &amp;ruta, int x=0, int y=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Protagonista::Protagonista </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classJuego.html">Juego</a> *&nbsp;</td>
+          <td class="paramname"> <em>j</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>ruta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>x</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>y</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Constructor</p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>j</em>&nbsp;</td><td><a class="el" href="classEscena.html" title="Clase abstracta que representa una escena del Sistema.">Escena</a> de <a class="el" href="classJuego.html" title="Clase derivada de Escena utilizada para el Juego y su lógica.">Juego</a> con el que se asocia el <a class="el" href="classProtagonista.html" title="Clase descendiente de Participante que controla la lógica y la gestión del protagonista...">Protagonista</a> </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>ruta</em>&nbsp;</td><td>Ruta del fichero de las características del <a class="el" href="classProtagonista.html" title="Clase descendiente de Participante que controla la lógica y la gestión del protagonista...">Protagonista</a> </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Coordenada x del <a class="el" href="classProtagonista.html" title="Clase descendiente de Participante que controla la lógica y la gestión del protagonista...">Protagonista</a> </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>Coordenada y del <a class="el" href="classProtagonista.html" title="Clase descendiente de Participante que controla la lógica y la gestión del protagonista...">Protagonista</a></td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Abre el fichero indicado del que se extraen los datos y las características del protagonista. Ejemplo:</p>
+<div class="fragment"><pre class="fragment">                                &lt;protagonista <a class="code" href="classParticipante.html#af9fb5b4a3bade376308fcfe63acd0a47">vx</a>=<span class="stringliteral">&quot;5&quot;</span> <a class="code" href="classParticipante.html#af6f63950121f600d07b906b5094b94b6">vy</a>=<span class="stringliteral">&quot;3&quot;</span> <a class="code" href="classProtagonista.html#a4bd02fb3da7ce4f464c5aced5ca3f38a">energia</a>=<span class="stringliteral">&quot;4&quot;</span> <a class="code" href="classProtagonista.html#acab2da75b4e60a3a9ef722a4962953d5">ataque</a>=<span class="stringliteral">&quot;2&quot;</span> <a class="code" href="classProtagonista.html#ae831f8f3404e8454f17a2ad135ffbf48">vidas</a>=<span class="stringliteral">&quot;3&quot;</span>&gt;
+                                        &lt;colisiones&gt;
+                                                &lt;colision <a class="code" href="classParticipante.html#a31a5df093a3e8ada91a23a4a30ae64ea">x</a>=<span class="stringliteral">&quot;51&quot;</span> <a class="code" href="classParticipante.html#a9ee6164f11bd09c76caec1b90cf514c6">y</a>=<span class="stringliteral">&quot;0&quot;</span> w=<span class="stringliteral">&quot;14&quot;</span> h=<span class="stringliteral">&quot;129&quot;</span> /&gt;
+                                                &lt;colision x=<span class="stringliteral">&quot;27&quot;</span> <a class="code" href="classParticipante.html#a9ee6164f11bd09c76caec1b90cf514c6">y</a>=<span class="stringliteral">&quot;40&quot;</span> w=<span class="stringliteral">&quot;63&quot;</span> h=<span class="stringliteral">&quot;18&quot;</span> /&gt;
+                                                &lt;colision x=<span class="stringliteral">&quot;2&quot;</span> <a class="code" href="classParticipante.html#a9ee6164f11bd09c76caec1b90cf514c6">y</a>=<span class="stringliteral">&quot;57&quot;</span> w=<span class="stringliteral">&quot;112&quot;</span> h=<span class="stringliteral">&quot;45&quot;</span> /&gt;
+                                        &lt;/colisiones&gt;
+                                        &lt;<a class="code" href="classParticipante.html#a3f5bf43f15f5313f132611e5eca70530">animaciones</a>&gt;
+                                                &lt;animacion nombre=<span class="stringliteral">&quot;normal&quot;</span> anim=<span class="stringliteral">&quot;1&quot;</span>/&gt;
+                                                &lt;animacion nombre=<span class="stringliteral">&quot;acelerado&quot;</span> anim=<span class="stringliteral">&quot;0&quot;</span>/&gt;
+                                                &lt;animacion nombre=<span class="stringliteral">&quot;frenado&quot;</span> anim=<span class="stringliteral">&quot;2&quot;</span>/&gt;
+                                        &lt;/<a class="code" href="classParticipante.html#a3f5bf43f15f5313f132611e5eca70530">animaciones</a>&gt;
+                                &lt;/protagonista&gt;
+</pre></div><p>A medida que aumentan los cuadros de colisión disminuye el rendimiento </p>
+
+</div>
+</div>
+<a class="anchor" id="a076643e0eaf740826a646245e7c98fa6"></a><!-- doxytag: member="Protagonista::~Protagonista" ref="a076643e0eaf740826a646245e7c98fa6" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Protagonista::~Protagonista </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="classDestructor.html" title="Clase base del destructor genérico para destuir Singleton.">Destructor</a></p>
+<p>Destruye la memoria ocupada por el protagonista </p>
+
+</div>
+</div>
+<hr/><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" id="a5afb8594fe95f048b65f13361606092c"></a><!-- doxytag: member="Protagonista::actualizar" ref="a5afb8594fe95f048b65f13361606092c" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Protagonista::actualizar </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Actualiza el protagonista según su lógica. Debe llamarse a esta función en cada iteración del bucle del juego </p>
+
+<p>Implementa <a class="el" href="classParticipante.html#a7a716385c57453a44e822dbe3daa4eb3">Participante</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acab2da75b4e60a3a9ef722a4962953d5"></a><!-- doxytag: member="Protagonista::ataque" ref="acab2da75b4e60a3a9ef722a4962953d5" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Protagonista::ataque </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Método consultor</p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Daño que hace el protagonista cuando impactan sus balas sobre un enemigo </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a39c22009c703c0255d2f433fb089cf0c"></a><!-- doxytag: member="Protagonista::colisiona_con" ref="a39c22009c703c0255d2f433fb089cf0c" args="(Participante *otro)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Protagonista::colisiona_con </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classParticipante.html">Participante</a> *&nbsp;</td>
+          <td class="paramname"> <em>otro</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Función a llamar cuando un enemigo colisiona con el <a class="el" href="classProtagonista.html" title="Clase descendiente de Participante que controla la lógica y la gestión del protagonista...">Protagonista</a>. Recalcula los atributos del protagonista en función de los del enemigo.</p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>otro</em>&nbsp;</td><td>Puntero al <a class="el" href="classParticipante.html" title="Clase virtual pura para gestionar el comportamiento común de todos los participantes...">Participante</a> con el que colisiona </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a406fbf642074d841ceab56734978fc45"></a><!-- doxytag: member="Protagonista::energia" ref="a406fbf642074d841ceab56734978fc45" args="(int diferencia)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Protagonista::energia </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>diferencia</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Modificador</p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>diferencia</em>&nbsp;</td><td>Cantidad a sumársele a la energía del protagonista. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a4bd02fb3da7ce4f464c5aced5ca3f38a"></a><!-- doxytag: member="Protagonista::energia" ref="a4bd02fb3da7ce4f464c5aced5ca3f38a" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Protagonista::energia </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Método consultor</p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Energía del protagonista, su vida. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a25dcda8583da86b524b3261242a208aa"></a><!-- doxytag: member="Protagonista::vidas" ref="a25dcda8583da86b524b3261242a208aa" args="(int diferencia)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Protagonista::vidas </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>diferencia</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Modificador</p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>diferencia</em>&nbsp;</td><td>Cantidad a sumársele al número de vidas del protagonista. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ae831f8f3404e8454f17a2ad135ffbf48"></a><!-- doxytag: member="Protagonista::vidas" ref="ae831f8f3404e8454f17a2ad135ffbf48" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Protagonista::vidas </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Metodo consultor</p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Número de vidas del protagonista </dd></dl>
+
+</div>
+</div>
+<hr/>La documentación para esta clase fue generada a partir de los siguientes ficheros:<ul>
+<li>/home/david/Juegos/airforcepilot/src/motor/<a class="el" href="protagonista_8h_source.html">protagonista.h</a></li>
+<li>/home/david/Juegos/airforcepilot/src/motor/<a class="el" href="protagonista_8cpp.html">protagonista.cpp</a></li>
+</ul>
+</div>
+<hr size="1"/><address style="text-align: right;"><small>Generado el Sun Dec 13 19:09:11 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Fichero Fuente /home/david/Juegos/airforcepilot/src/motor/universo.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css">
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.8 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&nbsp;de&nbsp;los&nbsp;ficheros</span></a></li>
+    </ul>
+  </div>
+<h1>/home/david/Juegos/airforcepilot/src/motor/universo.h</h1><a href="universo_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef _UNIVERSO_</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define _UNIVERSO_</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00005"></a>00005 
+<a name="l00006"></a>00006 <span class="preprocessor">#include "<a class="code" href="Teclado_8h.html">Teclado.h</a>"</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include "<a class="code" href="escena_8h.html">escena.h</a>"</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include "<a class="code" href="menu_8h.html">menu.h</a>"</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include "<a class="code" href="juego_8h.html">juego.h</a>"</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include "<a class="code" href="cronometro_8h.html">cronometro.h</a>"</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include "<a class="code" href="transicion_8h.html">transicion.h</a>"</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &lt;SDL/SDL.h&gt;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &lt;SDL/SDL_image.h&gt;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &lt;SDL/SDL_mixer.h&gt;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &lt;SDL/SDL_ttf.h&gt;</span>
+<a name="l00016"></a>00016 
+<a name="l00017"></a>00017 <span class="keyword">class </span><a class="code" href="classJuego.html" title="Clase derivada de Escena utilizada para el Juego y su lógica.">Juego</a>;
+<a name="l00018"></a>00018 
+<a name="l00020"></a>00020 
+<a name="l00040"></a><a class="code" href="classUniverso.html">00040</a> <span class="keyword">class </span><a class="code" href="classUniverso.html" title="Clase que controla el funcionamiento general del juego.">Universo</a>{
+<a name="l00041"></a>00041         <span class="keyword">public</span>:
+<a name="l00047"></a>00047                 <a class="code" href="classUniverso.html#0ea5e5996a19e7c34480a77265ebc4a2">Universo</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *ruta);
+<a name="l00048"></a>00048                 
+<a name="l00052"></a>00052                 <span class="keywordtype">void</span> <a class="code" href="classUniverso.html#0633602885c021eb512eba506f25b580">bucle_principal</a>(<span class="keywordtype">void</span>);
+<a name="l00053"></a>00053                 
+<a name="l00057"></a>00057                 SDL_Surface*    <a class="code" href="classUniverso.html#83c31f284af7b00dcd71449efeb04ea5">superficie</a>();
+<a name="l00058"></a>00058                 
+<a name="l00062"></a>00062                 <a class="code" href="classTeclado.html">Teclado</a>* <a class="code" href="classUniverso.html#00b01867aa8925ca958a0e444773d9f2">tecla</a>();
+<a name="l00063"></a>00063                 
+<a name="l00067"></a>00067                 <a class="code" href="classTransicion.html" title="Clase hija de Escena utilizada para transiciones entre otras escenas.">Transicion</a>* <a class="code" href="classUniverso.html#862850893aaed58e8c674c571bb42180">transicion</a>();
+<a name="l00068"></a>00068                 
+<a name="l00072"></a>00072                 <span class="keywordtype">void</span> <a class="code" href="classUniverso.html#412f27711556f861b2b1690f18187ce4">terminar</a>();
+<a name="l00073"></a>00073                 
+<a name="l00079"></a>00079                 <span class="keywordtype">int</span> <a class="code" href="classUniverso.html#eafc62d6533f88fbd190ad6137925e95">pantalla_ancho</a>() <span class="keyword">const</span>;
+<a name="l00080"></a>00080                 
+<a name="l00086"></a>00086                 <span class="keywordtype">int</span> <a class="code" href="classUniverso.html#67a0450843cabbfb1a98fd5e1d0a761f">pantalla_alto</a>() <span class="keyword">const</span>;
+<a name="l00087"></a>00087                 
+<a name="l00093"></a>00093                 <span class="keywordtype">int</span> <a class="code" href="classUniverso.html#455834b48e1b83506500b7302883fcde">pantalla_bpp</a>() <span class="keyword">const</span>;
+<a name="l00094"></a>00094                 
+<a name="l00100"></a>00100                 <span class="keywordtype">int</span> <a class="code" href="classUniverso.html#102d40d4f8a21133961fdd90fe0db077">framespersecond</a>() <span class="keyword">const</span>;
+<a name="l00101"></a>00101                 
+<a name="l00107"></a>00107                 <a class="code" href="classUniverso.html#35d9955d8d2b457736886b0318881451">~Universo</a>();
+<a name="l00108"></a>00108         <span class="keyword">private</span>:
+<a name="l00109"></a>00109                 
+<a name="l00110"></a>00110                 <span class="keywordtype">bool</span> salir;
+<a name="l00111"></a>00111                 <a class="code" href="classEscena.html" title="Clase abstracta que representa una escena del Sistema.">Escena</a> *actual;
+<a name="l00112"></a>00112                 <a class="code" href="classJuego.html" title="Clase derivada de Escena utilizada para el Juego y su lógica.">Juego</a> *juego;
+<a name="l00113"></a>00113                 <a class="code" href="classMenu.html">Menu</a> *menu;
+<a name="l00114"></a>00114                 <a class="code" href="classTransicion.html" title="Clase hija de Escena utilizada para transiciones entre otras escenas.">Transicion</a> *transicion_;
+<a name="l00115"></a>00115                 <a class="code" href="classTeclado.html">Teclado</a> teclado;
+<a name="l00116"></a>00116                 SDL_Surface *pantalla;
+<a name="l00117"></a>00117                 
+<a name="l00118"></a>00118                 <span class="keywordtype">int</span> ancho, alto, bpp, maxfps;
+<a name="l00119"></a>00119                 
+<a name="l00120"></a>00120                 <a class="code" href="classCronometro.html" title="Cronómetro utilizado en el control del framerrate (utilizando funciones de SDL)...">Cronometro</a> crono;
+<a name="l00121"></a>00121                 
+<a name="l00122"></a>00122                 <span class="keywordtype">void</span> iniciar_ventana(<span class="keywordtype">bool</span> completa);
+<a name="l00123"></a>00123                 <span class="keywordtype">void</span> pantalla_completa();
+<a name="l00124"></a>00124                 <span class="keywordtype">void</span> procesar_eventos(<span class="keywordtype">void</span>);
+<a name="l00125"></a>00125                 <span class="keywordtype">void</span> sincronizar_fps();
+<a name="l00126"></a>00126                 <span class="keywordtype">void</span> cambiar_escena(<a class="code" href="classEscena.html#d0bc8b751580f7d7bf7fe3b8f205de06">Escena::escenas</a> nueva);
+<a name="l00127"></a>00127                 <span class="comment">//void escena_intermedia(const std::string&amp; ruta);</span>
+<a name="l00128"></a>00128                 <span class="keyword">friend</span> <span class="keywordtype">void</span> <a class="code" href="classMenu.html#3b3b2e1306ad0b57fa47a6859edf05ad">Menu::seleccionar_opcion</a>();
+<a name="l00129"></a>00129                 <span class="keyword">friend</span> <span class="keywordtype">void</span> <a class="code" href="classJuego.html#b669ac4f512edebabb50292a440a86bd">Juego::actualizar</a>();
+<a name="l00130"></a>00130                 <span class="keyword">friend</span> <span class="keywordtype">void</span> <a class="code" href="classTransicion.html#71cd6f1e9c25674a6759e18424fd6bc6">Transicion::actualizar</a>();
+<a name="l00131"></a>00131 };
+<a name="l00132"></a>00132 
+<a name="l00133"></a><a class="code" href="classUniverso.html#412f27711556f861b2b1690f18187ce4">00133</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classUniverso.html#412f27711556f861b2b1690f18187ce4">Universo::terminar</a>() {salir = <span class="keyword">true</span>;}
+<a name="l00134"></a>00134 
+<a name="l00135"></a><a class="code" href="classUniverso.html#83c31f284af7b00dcd71449efeb04ea5">00135</a> <span class="keyword">inline</span> SDL_Surface* <a class="code" href="classUniverso.html#83c31f284af7b00dcd71449efeb04ea5">Universo::superficie</a>(){<span class="keywordflow">return</span> pantalla;}
+<a name="l00136"></a><a class="code" href="classUniverso.html#00b01867aa8925ca958a0e444773d9f2">00136</a> <span class="keyword">inline</span> <a class="code" href="classTeclado.html">Teclado</a>* <a class="code" href="classUniverso.html#00b01867aa8925ca958a0e444773d9f2">Universo::tecla</a>(){<span class="keywordflow">return</span> &amp;teclado;}
+<a name="l00137"></a><a class="code" href="classUniverso.html#eafc62d6533f88fbd190ad6137925e95">00137</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classUniverso.html#eafc62d6533f88fbd190ad6137925e95">Universo::pantalla_ancho</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> ancho;}
+<a name="l00138"></a><a class="code" href="classUniverso.html#67a0450843cabbfb1a98fd5e1d0a761f">00138</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classUniverso.html#67a0450843cabbfb1a98fd5e1d0a761f">Universo::pantalla_alto</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> alto;}
+<a name="l00139"></a><a class="code" href="classUniverso.html#455834b48e1b83506500b7302883fcde">00139</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classUniverso.html#455834b48e1b83506500b7302883fcde">Universo::pantalla_bpp</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> bpp;}
+<a name="l00140"></a><a class="code" href="classUniverso.html#102d40d4f8a21133961fdd90fe0db077">00140</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classUniverso.html#102d40d4f8a21133961fdd90fe0db077">Universo::framespersecond</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> maxfps;}
+<a name="l00141"></a><a class="code" href="classUniverso.html#862850893aaed58e8c674c571bb42180">00141</a> <span class="keyword">inline</span> <a class="code" href="classTransicion.html" title="Clase hija de Escena utilizada para transiciones entre otras escenas.">Transicion</a>* <a class="code" href="classUniverso.html#862850893aaed58e8c674c571bb42180">Universo::transicion</a>() {<span class="keywordflow">return</span> transicion_;}
+<a name="l00142"></a>00142 
+<a name="l00143"></a>00143 <span class="preprocessor">#endif</span>
+</pre></div></div>
+<hr size="1"><address style="text-align: right;"><small>Generado el Sun Nov 22 12:29:30 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
+</body>
+</html>

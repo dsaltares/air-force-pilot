@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Referencia del Archivo /home/david/Juegos/airforcepilot/src/motor/participante.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generado por Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&nbsp;de&nbsp;los&nbsp;ficheros</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Referencia del Archivo /home/david/Juegos/airforcepilot/src/motor/participante.h</h1><code>#include &lt;map&gt;</code><br/>
+<code>#include &lt;vector&gt;</code><br/>
+<code>#include &lt;SDL/SDL.h&gt;</code><br/>
+<code>#include &quot;<a class="el" href="galeria_8h_source.html">galeria.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="control__animacion_8h_source.html">control_animacion.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="juego_8h_source.html">juego.h</a>&quot;</code><br/>
+
+<p><a href="participante_8h_source.html">Ir al código fuente de este archivo.</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Clases</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParticipante.html">Participante</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clase virtual pura para gestionar el comportamiento común de todos los participantes.  <a href="classParticipante.html#_details">Más...</a><br/></td></tr>
+<tr><td colspan="2"><h2>Enumeraciones</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="participante_8h.html#a16933f9df95c0418037c4d7184797631">estados</a> { <br/>
+&nbsp;&nbsp;<a class="el" href="participante_8h.html#a16933f9df95c0418037c4d7184797631a50d1448013c6f17125caee18aa418af7">NORMAL</a>, 
+<a class="el" href="participante_8h.html#a16933f9df95c0418037c4d7184797631ad5515ce4b23c20f4ed05005cee75f580">ACELERADO</a>, 
+<a class="el" href="participante_8h.html#a16933f9df95c0418037c4d7184797631a5d29db413fc94545ed809063ac32dd9a">FRENADO</a>, 
+<a class="el" href="participante_8h.html#a16933f9df95c0418037c4d7184797631af746fe29f6075c2ab50eecb34aa2868d">MORIR</a>, 
+<br/>
+&nbsp;&nbsp;<a class="el" href="participante_8h.html#a16933f9df95c0418037c4d7184797631a68e88765aeb34e62ff79d7da43cd19e5">ELIMINAR</a>
+<br/>
+ }</td></tr>
+</table>
+<hr/><h2>Documentación de las enumeraciones</h2>
+<a class="anchor" id="a16933f9df95c0418037c4d7184797631"></a><!-- doxytag: member="participante.h::estados" ref="a16933f9df95c0418037c4d7184797631" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="participante_8h.html#a16933f9df95c0418037c4d7184797631">estados</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Diferentes estados en los que puede encontrarse un <a class="el" href="classParticipante.html" title="Clase virtual pura para gestionar el comportamiento común de todos los participantes...">Participante</a> </p>
+<dl><dt><b>Valores de la enumeración: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="a16933f9df95c0418037c4d7184797631a50d1448013c6f17125caee18aa418af7"></a><!-- doxytag: member="NORMAL" ref="a16933f9df95c0418037c4d7184797631a50d1448013c6f17125caee18aa418af7" args="" -->NORMAL</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a16933f9df95c0418037c4d7184797631ad5515ce4b23c20f4ed05005cee75f580"></a><!-- doxytag: member="ACELERADO" ref="a16933f9df95c0418037c4d7184797631ad5515ce4b23c20f4ed05005cee75f580" args="" -->ACELERADO</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a16933f9df95c0418037c4d7184797631a5d29db413fc94545ed809063ac32dd9a"></a><!-- doxytag: member="FRENADO" ref="a16933f9df95c0418037c4d7184797631a5d29db413fc94545ed809063ac32dd9a" args="" -->FRENADO</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a16933f9df95c0418037c4d7184797631af746fe29f6075c2ab50eecb34aa2868d"></a><!-- doxytag: member="MORIR" ref="a16933f9df95c0418037c4d7184797631af746fe29f6075c2ab50eecb34aa2868d" args="" -->MORIR</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a16933f9df95c0418037c4d7184797631a68e88765aeb34e62ff79d7da43cd19e5"></a><!-- doxytag: member="ELIMINAR" ref="a16933f9df95c0418037c4d7184797631a68e88765aeb34e62ff79d7da43cd19e5" args="" -->ELIMINAR</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+</div>
+</div>
+</div>
+<hr size="1"/><address style="text-align: right;"><small>Generado el Sun Dec 13 19:09:11 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Referencia de la Clase Fuente</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generado por Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Clases</span></a></li>
+      <li><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;clases</span></a></li>
+      <li><a href="hierarchy.html"><span>Jerarquía&nbsp;de&nbsp;la&nbsp;clase</span></a></li>
+      <li><a href="functions.html"><span>Miembros&nbsp;de&nbsp;las&nbsp;clases</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Referencia de la Clase Fuente</h1><!-- doxytag: class="Fuente" -->
+<p>Utilizada para gestionar fuentes ttf.  
+<a href="#_details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="fuente_8h_source.html">fuente.h</a>&gt;</code></p>
+
+<p><a href="classFuente-members.html">Lista de todos los miembros.</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFuente.html#a74028847653c8f26fc7b59ecc846af61">Fuente</a> (const char *ruta, int puntos=20)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFuente.html#ab4fc84de0db1fc7de6ef81d98df24325">dibujar</a> (SDL_Surface *superficie, const char *cadena, int x, int y, SDL_Color color)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">TTF_Font *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFuente.html#a50001fc87d28ca24cfb3c62f0cad53db">tipo_fuente</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFuente.html#a7a2044e65775def6d3f7fb80095cfa69">puntos</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFuente.html#a01184689694f659594bbadf1cad63e87">~Fuente</a> ()</td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descripción detallada</h2>
+<p>Utilizada para gestionar fuentes ttf. </p>
+<p>Permite cargar desde memoria secundaria fuentes en formato ttf y posteriormente dibujarlas en pantalla</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Tareas Pendientes:</a></b></dt><dd>Abstraer el tema del color, incluir un atributo color para hacer más sencillo su uso.</dd></dl>
+<p>Ejemplo de uso : </p>
+<div class="fragment"><pre class="fragment"><span class="preprocessor">        #include &quot;<a class="code" href="fuente_8h.html">fuente.h</a>&quot;</span>
+        
+        <span class="comment">// Se supone pantalla debidamente inicializada y el subsistema de vídeo inicializado</span>
+        SDL_Surface* pantalla;
+        
+        <span class="comment">// Creamos un objeto Fuente: ruta, tamaño (supones SDL_TTF inicializada)</span>
+        <a class="code" href="classFuente.html" title="Utilizada para gestionar fuentes ttf.">Fuente</a> sans(<span class="stringliteral">&quot;free-sans.ttf&quot;</span>, 12);
+        
+        SDL_Color color = SDL_MapRGB(pantalla-&gt;format, 255, 0, 0);
+        
+        <span class="comment">// Lo dibujamos: superficie, cadena, x, y, color</span>
+        sans.dibujar(pantalla, <span class="stringliteral">&quot;Hola a todos&quot;</span>, 100, 100, color);
+        
+        <span class="comment">// Hacemos flip</span>
+        SDL_Flip(pantalla);
+</pre></div> <hr/><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" id="a74028847653c8f26fc7b59ecc846af61"></a><!-- doxytag: member="Fuente::Fuente" ref="a74028847653c8f26fc7b59ecc846af61" args="(const char *ruta, int puntos=20)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Fuente::Fuente </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>ruta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>puntos</em> = <code>20</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Constructor Carga un fichero .ttf en memoria con un tamaño determinado. </p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>ruta</em>&nbsp;</td><td>Ruta del fichero ttf con la fuente </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>puntos</em>&nbsp;</td><td>Tamaño de la fuente, por defecto 20 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a01184689694f659594bbadf1cad63e87"></a><!-- doxytag: member="Fuente::~Fuente" ref="a01184689694f659594bbadf1cad63e87" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Fuente::~Fuente </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="classDestructor.html" title="Clase base del destructor genérico para destuir Singleton.">Destructor</a>. Libera la memoria ocupada por la fuente </p>
+
+</div>
+</div>
+<hr/><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" id="ab4fc84de0db1fc7de6ef81d98df24325"></a><!-- doxytag: member="Fuente::dibujar" ref="ab4fc84de0db1fc7de6ef81d98df24325" args="(SDL_Surface *superficie, const char *cadena, int x, int y, SDL_Color color)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Fuente::dibujar </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Surface *&nbsp;</td>
+          <td class="paramname"> <em>superficie</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>cadena</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Color&nbsp;</td>
+          <td class="paramname"> <em>color</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Dibuja en la superficie una cadena dada en las cordenadas (x,y) </p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>superficie</em>&nbsp;</td><td>Superficie donde se va a hacer el blitting </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>cadena</em>&nbsp;</td><td>Cadena que se va a dibujar </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Coordenada en el eje x donde se va a dibujar </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>Coordenada en el eje y donde se va a dibujar </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>color</em>&nbsp;</td><td>Color con el que se mostrara cadena </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a7a2044e65775def6d3f7fb80095cfa69"></a><!-- doxytag: member="Fuente::puntos" ref="a7a2044e65775def6d3f7fb80095cfa69" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Fuente::puntos </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Consultor </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Tamaño en puntos de la fuente </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a50001fc87d28ca24cfb3c62f0cad53db"></a><!-- doxytag: member="Fuente::tipo_fuente" ref="a50001fc87d28ca24cfb3c62f0cad53db" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TTF_Font * Fuente::tipo_fuente </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Consultor </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Puntero a TTF_Font con la fuente utilizada </dd></dl>
+
+</div>
+</div>
+<hr/>La documentación para esta clase fue generada a partir de los siguientes ficheros:<ul>
+<li>/home/david/Juegos/airforcepilot/src/motor/<a class="el" href="fuente_8h_source.html">fuente.h</a></li>
+<li>/home/david/Juegos/airforcepilot/src/motor/<a class="el" href="fuente_8cpp.html">fuente.cpp</a></li>
+</ul>
+</div>
+<hr size="1"/><address style="text-align: right;"><small>Generado el Sun Dec 13 19:09:11 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
+</body>
+</html>

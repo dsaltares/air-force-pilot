@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Fichero Fuente /home/david/Juegos/airforcepilot/src/motor/escena.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css">
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.8 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&nbsp;de&nbsp;los&nbsp;ficheros</span></a></li>
+    </ul>
+  </div>
+<h1>/home/david/Juegos/airforcepilot/src/motor/escena.h</h1><a href="escena_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef _ESCENA_</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define _ESCENA_</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="keyword">class </span><a class="code" href="classUniverso.html" title="Clase que controla el funcionamiento general del juego.">Universo</a>;
+<a name="l00005"></a>00005 
+<a name="l00007"></a>00007 
+<a name="l00011"></a><a class="code" href="classEscena.html">00011</a> <span class="keyword">class </span><a class="code" href="classEscena.html" title="Clase abstracta que representa una escena del Sistema.">Escena</a>{
+<a name="l00012"></a>00012         <span class="keyword">public</span>:
+<a name="l00013"></a>00013                 
+<a name="l00017"></a><a class="code" href="classEscena.html#d0bc8b751580f7d7bf7fe3b8f205de06">00017</a>                 <span class="keyword">enum</span> <a class="code" href="classEscena.html#d0bc8b751580f7d7bf7fe3b8f205de06">escenas</a>{
+<a name="l00018"></a><a class="code" href="classEscena.html#d0bc8b751580f7d7bf7fe3b8f205de061a6725759fba116774bf3b7d0cf001cf">00018</a>                         <a class="code" href="classEscena.html#d0bc8b751580f7d7bf7fe3b8f205de061a6725759fba116774bf3b7d0cf001cf">JUEGO</a>,
+<a name="l00019"></a><a class="code" href="classEscena.html#d0bc8b751580f7d7bf7fe3b8f205de060ae8c6340be5d836fec5734193978963">00019</a>                         <a class="code" href="classEscena.html#d0bc8b751580f7d7bf7fe3b8f205de060ae8c6340be5d836fec5734193978963">MENU</a>,
+<a name="l00020"></a><a class="code" href="classEscena.html#d0bc8b751580f7d7bf7fe3b8f205de063e07cb0551eca069d915763f6691ac89">00020</a>                         <a class="code" href="classEscena.html#d0bc8b751580f7d7bf7fe3b8f205de063e07cb0551eca069d915763f6691ac89">TRANSICION</a>
+<a name="l00021"></a>00021                 };
+<a name="l00022"></a>00022                 
+<a name="l00028"></a>00028                 <a class="code" href="classEscena.html#24921cde0970c711d5acd73afd5b8f97">Escena</a>(<a class="code" href="classUniverso.html" title="Clase que controla el funcionamiento general del juego.">Universo</a> *universo);
+<a name="l00029"></a>00029                 
+<a name="l00035"></a>00035                 <span class="keyword">virtual</span> <a class="code" href="classEscena.html#9b3686b61c8e1564b3cc5a075959f677">~Escena</a>();
+<a name="l00036"></a>00036                 
+<a name="l00042"></a>00042                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classEscena.html#19b36d483182d27e5caff09794561546">reiniciar</a>() = 0;
+<a name="l00043"></a>00043                 
+<a name="l00049"></a>00049                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classEscena.html#6d984f3b66985043eb878fbd9f6d0f6a">actualizar</a>() = 0;
+<a name="l00050"></a>00050                 
+<a name="l00056"></a>00056                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classEscena.html#b6026872f79ddeef7adeaacd3e7737c6">dibujar</a>() = 0;
+<a name="l00057"></a>00057                 
+<a name="l00058"></a>00058                 
+<a name="l00062"></a>00062                 <a class="code" href="classUniverso.html" title="Clase que controla el funcionamiento general del juego.">Universo</a>* <a class="code" href="classEscena.html#7fefdb9fe84a043bff3546b6eba0c1f1">univ</a>();
+<a name="l00063"></a>00063                 
+<a name="l00064"></a>00064         <span class="keyword">protected</span>:
+<a name="l00065"></a><a class="code" href="classEscena.html#36cf14782a7e41a4dfe975b0493bc3ca">00065</a>                 <a class="code" href="classUniverso.html" title="Clase que controla el funcionamiento general del juego.">Universo</a> *<a class="code" href="classEscena.html#36cf14782a7e41a4dfe975b0493bc3ca">universo_</a>;
+<a name="l00066"></a>00066 };
+<a name="l00067"></a>00067 
+<a name="l00068"></a><a class="code" href="classEscena.html#7fefdb9fe84a043bff3546b6eba0c1f1">00068</a> <span class="keyword">inline</span> <a class="code" href="classUniverso.html" title="Clase que controla el funcionamiento general del juego.">Universo</a>* <a class="code" href="classEscena.html#7fefdb9fe84a043bff3546b6eba0c1f1">Escena::univ</a>() {<span class="keywordflow">return</span> <a class="code" href="classEscena.html#36cf14782a7e41a4dfe975b0493bc3ca">universo_</a>;}
+<a name="l00069"></a>00069 
+<a name="l00070"></a>00070 <span class="preprocessor">#endif</span>
+</pre></div></div>
+<hr size="1"><address style="text-align: right;"><small>Generado el Sun Nov 22 12:29:30 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
+</body>
+</html>

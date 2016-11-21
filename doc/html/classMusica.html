@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Referencia de la Clase Musica</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generado por Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Clases</span></a></li>
+      <li><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;clases</span></a></li>
+      <li><a href="hierarchy.html"><span>Jerarquía&nbsp;de&nbsp;la&nbsp;clase</span></a></li>
+      <li><a href="functions.html"><span>Miembros&nbsp;de&nbsp;las&nbsp;clases</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Referencia de la Clase Musica</h1><!-- doxytag: class="Musica" -->
+<p>Utilizada para cargar y reproducir la BSO del juego.  
+<a href="#_details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="musica_8h_source.html">musica.h</a>&gt;</code></p>
+
+<p><a href="classMusica-members.html">Lista de todos los miembros.</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMusica.html#ab1729c3346336e7df37fc4c26042a93b">Musica</a> (const char *ruta)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMusica.html#aee502b6da7c3ea5ddb0fe70c8f468ee5">reproducir</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMusica.html#afd6797e629418b61c9d7ceb99f60f3ad">pausar</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMusica.html#a18809f402f5247e06112c8d95664596d">parar</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMusica.html#aebcf7c6bd83ea83d172be34e2fd550f2">~Musica</a> ()</td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descripción detallada</h2>
+<p>Utilizada para cargar y reproducir la BSO del juego. </p>
+<p>Permite cargar desde memoria secundaria músicas</p>
+<p>Ejemplo de uso : </p>
+<div class="fragment"><pre class="fragment"><span class="preprocessor">        #include &quot;<a class="code" href="musica_8h.html">musica.h</a>&quot;</span>
+        
+        <span class="comment">// Se supone pantalla debidamente inicializada y el subsistema de vídeo y audio inicializados</span>
+                
+        <span class="comment">// Creamos un objeto Musica: ruta</span>
+        <a class="code" href="classMusica.html" title="Utilizada para cargar y reproducir la BSO del juego.">Musica</a> ambiente(<span class="stringliteral">&quot;ambiente.wav&quot;</span>);
+        
+        <span class="comment">// Reproducimos el sonido</span>
+        ambiente.reproducir();
+        
+        <span class="comment">// Pausamos el sonido</span>
+        ambiente.pausar();
+        
+        <span class="comment">// Paramos el sonido</span>
+        ambiente.parar();
+</pre></div> <hr/><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" id="ab1729c3346336e7df37fc4c26042a93b"></a><!-- doxytag: member="Musica::Musica" ref="ab1729c3346336e7df37fc4c26042a93b" args="(const char *ruta)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Musica::Musica </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>ruta</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Constructor Carga en memoria un fichero de audio indicado por ruta </p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>ruta</em>&nbsp;</td><td>Ruta del fichero de audio </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aebcf7c6bd83ea83d172be34e2fd550f2"></a><!-- doxytag: member="Musica::~Musica" ref="aebcf7c6bd83ea83d172be34e2fd550f2" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Musica::~Musica </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="classDestructor.html" title="Clase base del destructor genérico para destuir Singleton.">Destructor</a>. Libera la memoria ocupada por el objeto </p>
+
+</div>
+</div>
+<hr/><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" id="a18809f402f5247e06112c8d95664596d"></a><!-- doxytag: member="Musica::parar" ref="a18809f402f5247e06112c8d95664596d" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Musica::parar </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Para la música </p>
+
+</div>
+</div>
+<a class="anchor" id="afd6797e629418b61c9d7ceb99f60f3ad"></a><!-- doxytag: member="Musica::pausar" ref="afd6797e629418b61c9d7ceb99f60f3ad" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Musica::pausar </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Pausa la música </p>
+
+</div>
+</div>
+<a class="anchor" id="aee502b6da7c3ea5ddb0fe70c8f468ee5"></a><!-- doxytag: member="Musica::reproducir" ref="aee502b6da7c3ea5ddb0fe70c8f468ee5" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Musica::reproducir </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Reproduce la música si está parada, la reanuda si está pausada </p>
+
+</div>
+</div>
+<hr/>La documentación para esta clase fue generada a partir de los siguientes ficheros:<ul>
+<li>/home/david/Juegos/airforcepilot/src/motor/<a class="el" href="musica_8h_source.html">musica.h</a></li>
+<li>/home/david/Juegos/airforcepilot/src/motor/<a class="el" href="musica_8cpp.html">musica.cpp</a></li>
+</ul>
+</div>
+<hr size="1"/><address style="text-align: right;"><small>Generado el Sun Dec 13 19:09:11 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
+</body>
+</html>

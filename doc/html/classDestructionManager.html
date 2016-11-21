@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Referencia de la Clase DestructionManager</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generado por Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Clases</span></a></li>
+      <li><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;clases</span></a></li>
+      <li><a href="hierarchy.html"><span>Jerarquía&nbsp;de&nbsp;la&nbsp;clase</span></a></li>
+      <li><a href="functions.html"><span>Miembros&nbsp;de&nbsp;las&nbsp;clases</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Referencia de la Clase DestructionManager</h1><!-- doxytag: class="DestructionManager" -->
+<p>Singleton utilizado para controlar la ordenada destrucción de los demás Singletons.  
+<a href="#_details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="dmanager_8h_source.html">dmanager.h</a>&gt;</code></p>
+
+<p><a href="classDestructionManager-members.html">Lista de todos los miembros.</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDestructionManager.html#a9537f0e2a661681b0064aed81d2b02bd">register_destructor</a> (<a class="el" href="classDestructor.html">Destructor</a> *destructor)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDestructionManager.html#a3d08bc67c987f646240b195d1a35086f">destroy_objects</a> ()</td></tr>
+<tr><td colspan="2"><h2>Métodos públicos estáticos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classDestructionManager.html">DestructionManager</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDestructionManager.html#a535689d104ccfb675650c29f2897ed1f">instance</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classDestructionManager.html">DestructionManager</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDestructionManager.html#a0dbe4a8593869e60d2194730e7fb5ec3">const_instance</a> ()</td></tr>
+<tr><td colspan="2"><h2>Amigas</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDestructionManager.html#a1d348664309c5bbd96aca0da251c0ae7">auto_ptr&lt; DestructionManager &gt;</a></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descripción detallada</h2>
+<p>Singleton utilizado para controlar la ordenada destrucción de los demás Singletons. </p>
+<p>Lo único que hay que hacer es crear nuestros Singleton de la misma manera que <a class="el" href="classGaleria.html" title="Gestor de recursos multimedia, emplea el patrón Singleton.">Galeria</a>, por ejemplo. Sólo hay que preocuparse que, cuando vayan a destruirse todos los Singleton se haga la siguiente llamada:</p>
+<div class="fragment"><pre class="fragment">        <a class="code" href="classDestructionManager.html#a535689d104ccfb675650c29f2897ed1f">DestructionManager::instance</a>().<a class="code" href="classDestructionManager.html#a3d08bc67c987f646240b195d1a35086f">destroy_objects</a>();
+</pre></div><p>De esta manera los todos Singleton del sistema se destruyen de manera perfectamente ordenada.</p>
+<p>Si se sigue el esquema de <a class="el" href="classGaleria.html" title="Gestor de recursos multimedia, emplea el patrón Singleton.">Galeria</a> para los Singleton no hay que preocuparse por esta clase </p>
+<hr/><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" id="a0dbe4a8593869e60d2194730e7fb5ec3"></a><!-- doxytag: member="DestructionManager::const_instance" ref="a0dbe4a8593869e60d2194730e7fb5ec3" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="classDestructionManager.html">DestructionManager</a>&amp; DestructionManager::const_instance </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Obtiene la única instancia del <a class="el" href="classDestructionManager.html" title="Singleton utilizado para controlar la ordenada destrucción de los demás Singletons...">DestructionManager</a> del sistema </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>instancia constante del manejador de destrucción del sistema </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3d08bc67c987f646240b195d1a35086f"></a><!-- doxytag: member="DestructionManager::destroy_objects" ref="a3d08bc67c987f646240b195d1a35086f" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DestructionManager::destroy_objects </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Se encarga de destruir todos los objetos Singleton de manera ordenada. </p>
+
+</div>
+</div>
+<a class="anchor" id="a535689d104ccfb675650c29f2897ed1f"></a><!-- doxytag: member="DestructionManager::instance" ref="a535689d104ccfb675650c29f2897ed1f" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classDestructionManager.html">DestructionManager</a>&amp; DestructionManager::instance </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Obtiene la única instancia del <a class="el" href="classDestructionManager.html" title="Singleton utilizado para controlar la ordenada destrucción de los demás Singletons...">DestructionManager</a> del sistema </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>instancia del manejador de destrucción del sistema </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9537f0e2a661681b0064aed81d2b02bd"></a><!-- doxytag: member="DestructionManager::register_destructor" ref="a9537f0e2a661681b0064aed81d2b02bd" args="(Destructor *destructor)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DestructionManager::register_destructor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classDestructor.html">Destructor</a> *&nbsp;</td>
+          <td class="paramname"> <em>destructor</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Registra un objeto del tipo Singleton a través de un puntero a <a class="el" href="classDestructor.html" title="Clase base del destructor genérico para destuir Singleton.">Destructor</a> relacionado con él </p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>destructor</em>&nbsp;</td><td>Puntero al objeto de la clase <a class="el" href="classDestructor.html" title="Clase base del destructor genérico para destuir Singleton.">Destructor</a> relacionado con el objeto Singleton a destruir </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/><h2>Documentación de las funciones relacionadas y clases amigas</h2>
+<a class="anchor" id="a1d348664309c5bbd96aca0da251c0ae7"></a><!-- doxytag: member="DestructionManager::auto_ptr&lt; DestructionManager &gt;" ref="a1d348664309c5bbd96aca0da251c0ae7" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class auto_ptr&lt; <a class="el" href="classDestructionManager.html">DestructionManager</a> &gt;<code> [friend]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<hr/>La documentación para esta clase fue generada a partir de los siguientes ficheros:<ul>
+<li>/home/david/Juegos/airforcepilot/src/motor/<a class="el" href="dmanager_8h_source.html">dmanager.h</a></li>
+<li>/home/david/Juegos/airforcepilot/src/motor/<a class="el" href="dmanager_8cpp.html">dmanager.cpp</a></li>
+</ul>
+</div>
+<hr size="1"/><address style="text-align: right;"><small>Generado el Sun Dec 13 19:09:11 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
+</body>
+</html>

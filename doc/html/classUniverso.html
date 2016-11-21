@@ -1,0 +1,342 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Referencia de la Clase Universo</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generado por Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Clases</span></a></li>
+      <li><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;clases</span></a></li>
+      <li><a href="hierarchy.html"><span>Jerarquía&nbsp;de&nbsp;la&nbsp;clase</span></a></li>
+      <li><a href="functions.html"><span>Miembros&nbsp;de&nbsp;las&nbsp;clases</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Referencia de la Clase Universo</h1><!-- doxytag: class="Universo" -->
+<p>Clase que controla el funcionamiento general del juego.  
+<a href="#_details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="universo_8h_source.html">universo.h</a>&gt;</code></p>
+
+<p><a href="classUniverso-members.html">Lista de todos los miembros.</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverso.html#a0ea5e5996a19e7c34480a77265ebc4a2">Universo</a> (const char *ruta)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverso.html#a0633602885c021eb512eba506f25b580">bucle_principal</a> (void)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">SDL_Surface *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverso.html#a83c31f284af7b00dcd71449efeb04ea5">superficie</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTeclado.html">Teclado</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverso.html#a00b01867aa8925ca958a0e444773d9f2">tecla</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTransicion.html">Transicion</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverso.html#a862850893aaed58e8c674c571bb42180">transicion</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverso.html#a412f27711556f861b2b1690f18187ce4">terminar</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverso.html#aeafc62d6533f88fbd190ad6137925e95">pantalla_ancho</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverso.html#a67a0450843cabbfb1a98fd5e1d0a761f">pantalla_alto</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverso.html#a455834b48e1b83506500b7302883fcde">pantalla_bpp</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverso.html#a102d40d4f8a21133961fdd90fe0db077">framespersecond</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverso.html#a35d9955d8d2b457736886b0318881451">~Universo</a> ()</td></tr>
+<tr><td colspan="2"><h2>Amigas</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverso.html#a93a7a14f225506a0adafc9a3ac883d76">Menu::seleccionar_opcion</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverso.html#aecd00452e3e786d2de8de7b7283719a8">Juego::actualizar</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverso.html#ab896d8e169ee63336b4282293031ee23">Transicion::actualizar</a> ()</td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descripción detallada</h2>
+<p>Clase que controla el funcionamiento general del juego. </p>
+<p>Se encarga de establecer la configuración, inicializar SDL y cargar los recursos</p>
+<p>Ejemplo de uso : </p>
+<div class="fragment"><pre class="fragment"><span class="preprocessor">        #include &quot;<a class="code" href="universo_8h.html">universo.h</a>&quot;</span>
+        
+        <span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)
+        {
+                <a class="code" href="classUniverso.html" title="Clase que controla el funcionamiento general del juego.">Universo</a> universo(<span class="stringliteral">&quot;configuracion.xml&quot;</span>);
+                
+                <span class="keywordflow">while</span>(universo.bucle_principal()){}
+                
+                <span class="keywordflow">return</span> 0;
+        }
+</pre></div> <hr/><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" id="a0ea5e5996a19e7c34480a77265ebc4a2"></a><!-- doxytag: member="Universo::Universo" ref="a0ea5e5996a19e7c34480a77265ebc4a2" args="(const char *ruta)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Universo::Universo </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>ruta</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Constructor</p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>ruta</em>&nbsp;</td><td>Ruta del fichero de configuración del juego </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a35d9955d8d2b457736886b0318881451"></a><!-- doxytag: member="Universo::~Universo" ref="a35d9955d8d2b457736886b0318881451" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Universo::~Universo </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="classDestructor.html" title="Clase base del destructor genérico para destuir Singleton.">Destructor</a></p>
+<p>Libera la memoria consumida por el juego </p>
+
+</div>
+</div>
+<hr/><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" id="a0633602885c021eb512eba506f25b580"></a><!-- doxytag: member="Universo::bucle_principal" ref="a0633602885c021eb512eba506f25b580" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Universo::bucle_principal </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Se encarga de actualizar lógica y gráficamente la pantalla </p>
+
+</div>
+</div>
+<a class="anchor" id="a102d40d4f8a21133961fdd90fe0db077"></a><!-- doxytag: member="Universo::framespersecond" ref="a102d40d4f8a21133961fdd90fe0db077" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Universo::framespersecond </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Método consultor</p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Frecuencia de actualización del juego, frames per second, fps </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a67a0450843cabbfb1a98fd5e1d0a761f"></a><!-- doxytag: member="Universo::pantalla_alto" ref="a67a0450843cabbfb1a98fd5e1d0a761f" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Universo::pantalla_alto </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Método consultor</p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Alto en píxeles de la pantalla </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aeafc62d6533f88fbd190ad6137925e95"></a><!-- doxytag: member="Universo::pantalla_ancho" ref="aeafc62d6533f88fbd190ad6137925e95" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Universo::pantalla_ancho </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Método consultor</p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Ancho en píxeles de la pantalla </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a455834b48e1b83506500b7302883fcde"></a><!-- doxytag: member="Universo::pantalla_bpp" ref="a455834b48e1b83506500b7302883fcde" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Universo::pantalla_bpp </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Método consultor</p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Profundidad de color en bits per pixel de la pantalla </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a83c31f284af7b00dcd71449efeb04ea5"></a><!-- doxytag: member="Universo::superficie" ref="a83c31f284af7b00dcd71449efeb04ea5" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Surface * Universo::superficie </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Puntero a la superficie principal de SDL (pantalla) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a00b01867aa8925ca958a0e444773d9f2"></a><!-- doxytag: member="Universo::tecla" ref="a00b01867aa8925ca958a0e444773d9f2" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTeclado.html">Teclado</a> * Universo::tecla </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Puntero a <a class="el" href="classTeclado.html">Teclado</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a412f27711556f861b2b1690f18187ce4"></a><!-- doxytag: member="Universo::terminar" ref="a412f27711556f861b2b1690f18187ce4" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Universo::terminar </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Hace que en el siguiente frame se salga del programa </p>
+
+</div>
+</div>
+<a class="anchor" id="a862850893aaed58e8c674c571bb42180"></a><!-- doxytag: member="Universo::transicion" ref="a862850893aaed58e8c674c571bb42180" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTransicion.html">Transicion</a> * Universo::transicion </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Puntero a <a class="el" href="classTransicion.html" title="Clase hija de Escena utilizada para transiciones entre otras escenas.">Transicion</a> </dd></dl>
+
+</div>
+</div>
+<hr/><h2>Documentación de las funciones relacionadas y clases amigas</h2>
+<a class="anchor" id="aecd00452e3e786d2de8de7b7283719a8"></a><!-- doxytag: member="Universo::Juego::actualizar" ref="aecd00452e3e786d2de8de7b7283719a8" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Juego::actualizar </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [friend]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a93a7a14f225506a0adafc9a3ac883d76"></a><!-- doxytag: member="Universo::Menu::seleccionar_opcion" ref="a93a7a14f225506a0adafc9a3ac883d76" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Menu::seleccionar_opcion </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [friend]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab896d8e169ee63336b4282293031ee23"></a><!-- doxytag: member="Universo::Transicion::actualizar" ref="ab896d8e169ee63336b4282293031ee23" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Transicion::actualizar </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [friend]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<hr/>La documentación para esta clase fue generada a partir de los siguientes ficheros:<ul>
+<li>/home/david/Juegos/airforcepilot/src/motor/<a class="el" href="universo_8h_source.html">universo.h</a></li>
+<li>/home/david/Juegos/airforcepilot/src/motor/<a class="el" href="universo_8cpp.html">universo.cpp</a></li>
+</ul>
+</div>
+<hr size="1"/><address style="text-align: right;"><small>Generado el Sun Dec 13 19:09:11 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
+</body>
+</html>

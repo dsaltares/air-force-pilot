@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Fichero Fuente /home/david/Juegos/airforcepilot/src/motor/destructor.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css">
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.8 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&nbsp;de&nbsp;los&nbsp;ficheros</span></a></li>
+    </ul>
+  </div>
+<h1>/home/david/Juegos/airforcepilot/src/motor/destructor.h</h1><a href="destructor_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef __DESTRUCTOR_H__</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define __DESTRUCTOR_H__</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include "<a class="code" href="dphase_8h.html">dphase.h</a>"</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include "<a class="code" href="dmanager_8h.html">dmanager.h</a>"</span>
+<a name="l00006"></a>00006 
+<a name="l00010"></a><a class="code" href="classDestructor.html">00010</a> <span class="keyword">class </span><a class="code" href="classDestructor.html" title="Clase base del destructor genérico para destuir Singleton.">Destructor</a> {
+<a name="l00011"></a>00011   <a class="code" href="classDestructionPhase.html" title="Utilizado para asignarle un orden de destrucción a los Singleton.">DestructionPhase</a> m_dphase;
+<a name="l00012"></a>00012 <span class="keyword">public</span>:
+<a name="l00013"></a>00013   
+<a name="l00020"></a><a class="code" href="classDestructor.html#12513e41911b86e1afbeaae0425c2abc">00020</a>   <a class="code" href="classDestructor.html#12513e41911b86e1afbeaae0425c2abc">Destructor</a>(<a class="code" href="classDestructionPhase.html" title="Utilizado para asignarle un orden de destrucción a los Singleton.">DestructionPhase</a> dphase) : m_dphase(dphase)
+<a name="l00021"></a>00021   { <a class="code" href="classDestructionManager.html#535689d104ccfb675650c29f2897ed1f">DestructionManager::instance</a>().<a class="code" href="classDestructionManager.html#9537f0e2a661681b0064aed81d2b02bd">register_destructor</a>(<span class="keyword">this</span>); }
+<a name="l00022"></a>00022   
+<a name="l00028"></a><a class="code" href="classDestructor.html#4613fe3441c2481fa806ba479a89bce2">00028</a>   <span class="keywordtype">bool</span> <a class="code" href="classDestructor.html#4613fe3441c2481fa806ba479a89bce2">operator&gt;</a>(<span class="keyword">const</span> <a class="code" href="classDestructor.html" title="Clase base del destructor genérico para destuir Singleton.">Destructor</a>&amp; destructor)<span class="keyword"> const</span>
+<a name="l00029"></a>00029 <span class="keyword">  </span>{ <span class="keywordflow">return</span> m_dphase &gt; destructor.<a class="code" href="classDestructor.html#9c5b7bad14d3d95f7a8836e14bb4fa99">m_dphase</a>; }
+<a name="l00030"></a>00030 
+<a name="l00034"></a>00034   <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classDestructor.html#fcd8007a6f925589404ded61bad96623">destroy</a>() = 0;
+<a name="l00035"></a>00035 };
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037 
+<a name="l00041"></a><a class="code" href="classTDestructor.html">00041</a> <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keyword">class </span><a class="code" href="classTDestructor.html" title="Clase paramétrica derivada de Destructor encargada de destruir objetos Singleton...">TDestructor</a> : <span class="keyword">public</span> <a class="code" href="classDestructor.html" title="Clase base del destructor genérico para destuir Singleton.">Destructor</a> {
+<a name="l00042"></a>00042   T* m_object;
+<a name="l00043"></a>00043 <span class="keyword">public</span>:
+<a name="l00044"></a>00044   
+<a name="l00053"></a><a class="code" href="classTDestructor.html#659b3b40c1d78150ef91d3453610a188">00053</a>   <a class="code" href="classTDestructor.html#659b3b40c1d78150ef91d3453610a188">TDestructor</a>(T* <span class="keywordtype">object</span>, <a class="code" href="classDestructionPhase.html" title="Utilizado para asignarle un orden de destrucción a los Singleton.">DestructionPhase</a> dphase)
+<a name="l00054"></a>00054     : <a class="code" href="classDestructor.html" title="Clase base del destructor genérico para destuir Singleton.">Destructor</a>(dphase), m_object(object) {}
+<a name="l00055"></a>00055 
+<a name="l00059"></a><a class="code" href="classTDestructor.html#f8ddf02ab177b9c32a6b5484f049ef0a">00059</a>   <span class="keywordtype">void</span> <a class="code" href="classTDestructor.html#f8ddf02ab177b9c32a6b5484f049ef0a">destroy</a>() { m_object-&gt;destroy_instance(); }
+<a name="l00060"></a>00060 };
+<a name="l00061"></a>00061 
+<a name="l00062"></a>00062 <span class="preprocessor">#endif // __DESTRUCTOR_H__</span>
+<a name="l00063"></a>00063 <span class="preprocessor"></span>
+</pre></div></div>
+<hr size="1"><address style="text-align: right;"><small>Generado el Sun Nov 22 12:29:30 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
+</body>
+</html>

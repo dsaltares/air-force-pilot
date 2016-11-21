@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Referencia de la Clase Control_Animacion</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generado por Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Clases</span></a></li>
+      <li><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;clases</span></a></li>
+      <li><a href="hierarchy.html"><span>Jerarquía&nbsp;de&nbsp;la&nbsp;clase</span></a></li>
+      <li><a href="functions.html"><span>Miembros&nbsp;de&nbsp;las&nbsp;clases</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Referencia de la Clase Control_Animacion</h1><!-- doxytag: class="Control_Animacion" -->
+<p>Permite manejar secuencias de enteros (cuadros de una animación).  
+<a href="#_details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="control__animacion_8h_source.html">control_animacion.h</a>&gt;</code></p>
+
+<p><a href="classControl__Animacion-members.html">Lista de todos los miembros.</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl__Animacion.html#ae91e7a1d3ab87849bbfe49a8381e1704">Control_Animacion</a> (const char *secuencia, int retardo)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl__Animacion.html#a59e14b5bd3d018a0f5ade36286aaa566">Control_Animacion</a> (const <a class="el" href="classControl__Animacion.html">Control_Animacion</a> &amp;c)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl__Animacion.html#a186b42e6ac504ff779d5edd126df5864">avanzar</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl__Animacion.html#abc73d2124574dbd3274c7d6e8d82d24c">reiniciar</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl__Animacion.html#a888317385a9e68a25aa43027dd69ee75">cuadro_actual</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl__Animacion.html#ac2a2b9205567e5d4168ae20c54dd8e78">ncuadros</a> () const </td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descripción detallada</h2>
+<p>Permite manejar secuencias de enteros (cuadros de una animación). </p>
+<p>Se crea con una secuencia de caracteres tipo "1,3,2,4,5,10,23" (que posteriormente se convierte a enteros) y un retardo (en frames). Sirve para llevar el control de qué cuadro de una rejilla de imágenes (clase <a class="el" href="classImagen.html" title="Utilizada para gestionar rejillas de imágenes.">Imagen</a>) hay que mostrar en cada iteración</p>
+<p>Ejemplo de uso: </p>
+<div class="fragment"><pre class="fragment"><span class="preprocessor">        #include &lt;iostream&gt;</span>
+<span class="preprocessor">        #include &quot;<a class="code" href="control__animacion_8h.html">control_animacion.h</a>&quot;</span>
+        
+        <span class="keyword">using namespace </span>std;
+        
+        ...
+        
+        <a class="code" href="classControl__Animacion.html" title="Permite manejar secuencias de enteros (cuadros de una animación).">Control_Animacion</a> animacion(<span class="stringliteral">&quot;1,2,3,4,5,6,7,8&quot;</span>, 10);
+        
+        <span class="comment">// Mientras que no hemos terminado la secuencia</span>
+        <span class="keywordflow">while</span>(!animacion.avanzar()){
+                cout &lt;&lt; animacion.cuadro_actual() &lt;&lt; endl;
+                <span class="comment">// Esperamos</span>
+                SDL_Delay(40);
+        }
+        
+        <span class="comment">// Cada 10 iteraciones del bucle while se avanza un cuadro</span>
+</pre></div> <hr/><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" id="ae91e7a1d3ab87849bbfe49a8381e1704"></a><!-- doxytag: member="Control_Animacion::Control_Animacion" ref="ae91e7a1d3ab87849bbfe49a8381e1704" args="(const char *secuencia, int retardo)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Control_Animacion::Control_Animacion </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>secuencia</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>retardo</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Constructor Toma una secuencia con su retardo </p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>secuencia</em>&nbsp;</td><td>Secuencia con formato "a1,a2,a3,...,an" donde ai es un entero que contiene la secuencia de cuadros </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>retardo</em>&nbsp;</td><td>Tiempo de espera para pasar de un cuadro a otro medido en frames Si nuestro objeto control_animacion tiene retardo 100 y nuestro juego corre a 25fps se producirá un cambio de cuadro cada 4 segundos </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a59e14b5bd3d018a0f5ade36286aaa566"></a><!-- doxytag: member="Control_Animacion::Control_Animacion" ref="a59e14b5bd3d018a0f5ade36286aaa566" args="(const Control_Animacion &amp;c)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Control_Animacion::Control_Animacion </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classControl__Animacion.html">Control_Animacion</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>c</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<hr/><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" id="a186b42e6ac504ff779d5edd126df5864"></a><!-- doxytag: member="Control_Animacion::avanzar" ref="a186b42e6ac504ff779d5edd126df5864" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Control_Animacion::avanzar </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Método que incrementa el contador de retardo en 1 y si ha pasado el tiempo suficiente pasa al siguiente cuadro Si se termina la secuencia y se sigue avanzando se vuelve a empezar </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Verdadero si se ha terminado la secuencia, Falso en caso contrario </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a888317385a9e68a25aa43027dd69ee75"></a><!-- doxytag: member="Control_Animacion::cuadro_actual" ref="a888317385a9e68a25aa43027dd69ee75" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Control_Animacion::cuadro_actual </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Método consultor </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Cuadro en el que se encuentra actualmente la animación </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac2a2b9205567e5d4168ae20c54dd8e78"></a><!-- doxytag: member="Control_Animacion::ncuadros" ref="ac2a2b9205567e5d4168ae20c54dd8e78" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Control_Animacion::ncuadros </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Método consultor </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Número de cuadros que posee la secuencia </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="abc73d2124574dbd3274c7d6e8d82d24c"></a><!-- doxytag: member="Control_Animacion::reiniciar" ref="abc73d2124574dbd3274c7d6e8d82d24c" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Control_Animacion::reiniciar </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Hace que la secuencia comience de nuevo, independientemente del cuadro en el que se encuentre </p>
+
+</div>
+</div>
+<hr/>La documentación para esta clase fue generada a partir de los siguientes ficheros:<ul>
+<li>/home/david/Juegos/airforcepilot/src/motor/<a class="el" href="control__animacion_8h_source.html">control_animacion.h</a></li>
+<li>/home/david/Juegos/airforcepilot/src/motor/<a class="el" href="control__animacion_8cpp.html">control_animacion.cpp</a></li>
+</ul>
+</div>
+<hr size="1"/><address style="text-align: right;"><small>Generado el Sun Dec 13 19:09:11 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Referencia de la Clase Escena</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generado por Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Clases</span></a></li>
+      <li><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;clases</span></a></li>
+      <li><a href="hierarchy.html"><span>Jerarquía&nbsp;de&nbsp;la&nbsp;clase</span></a></li>
+      <li><a href="functions.html"><span>Miembros&nbsp;de&nbsp;las&nbsp;clases</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Referencia de la Clase Escena</h1><!-- doxytag: class="Escena" -->
+<p>Clase abstracta que representa una escena del Sistema.  
+<a href="#_details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="escena_8h_source.html">escena.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de herencias de Escena</div>
+<div class="dynsection">
+ <div class="center">
+  <img src="classEscena.gif" usemap="#Escena_map" alt=""/>
+  <map id="Escena_map" name="Escena_map">
+<area href="classJuego.html" alt="Juego" shape="rect" coords="0,56,71,80"/>
+<area href="classMenu.html" alt="Menu" shape="rect" coords="81,56,152,80"/>
+<area href="classTransicion.html" alt="Transicion" shape="rect" coords="162,56,233,80"/>
+</map>
+ </div>
+</div>
+
+<p><a href="classEscena-members.html">Lista de todos los miembros.</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Tipos públicos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEscena.html#ad0bc8b751580f7d7bf7fe3b8f205de06">escenas</a> { <a class="el" href="classEscena.html#ad0bc8b751580f7d7bf7fe3b8f205de06a1a6725759fba116774bf3b7d0cf001cf">JUEGO</a>, 
+<a class="el" href="classEscena.html#ad0bc8b751580f7d7bf7fe3b8f205de06a0ae8c6340be5d836fec5734193978963">MENU</a>, 
+<a class="el" href="classEscena.html#ad0bc8b751580f7d7bf7fe3b8f205de06a3e07cb0551eca069d915763f6691ac89">TRANSICION</a>
+ }</td></tr>
+<tr><td colspan="2"><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEscena.html#a24921cde0970c711d5acd73afd5b8f97">Escena</a> (<a class="el" href="classUniverso.html">Universo</a> *universo)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEscena.html#a9b3686b61c8e1564b3cc5a075959f677">~Escena</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEscena.html#a19b36d483182d27e5caff09794561546">reiniciar</a> ()=0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEscena.html#a6d984f3b66985043eb878fbd9f6d0f6a">actualizar</a> ()=0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEscena.html#ab6026872f79ddeef7adeaacd3e7737c6">dibujar</a> ()=0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUniverso.html">Universo</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEscena.html#a7fefdb9fe84a043bff3546b6eba0c1f1">univ</a> ()</td></tr>
+<tr><td colspan="2"><h2>Atributos protegidos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUniverso.html">Universo</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEscena.html#a36cf14782a7e41a4dfe975b0493bc3ca">universo_</a></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descripción detallada</h2>
+<p>Clase abstracta que representa una escena del Sistema. </p>
+<p>Se utiliza como base para las distintas escenas del juego (menú, juego etc). </p>
+<hr/><h2>Documentación de las enumeraciones miembro de la clase</h2>
+<a class="anchor" id="ad0bc8b751580f7d7bf7fe3b8f205de06"></a><!-- doxytag: member="Escena::escenas" ref="ad0bc8b751580f7d7bf7fe3b8f205de06" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classEscena.html#ad0bc8b751580f7d7bf7fe3b8f205de06">Escena::escenas</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Las distintas escenas del juego </p>
+<dl><dt><b>Valores de la enumeración: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="ad0bc8b751580f7d7bf7fe3b8f205de06a1a6725759fba116774bf3b7d0cf001cf"></a><!-- doxytag: member="JUEGO" ref="ad0bc8b751580f7d7bf7fe3b8f205de06a1a6725759fba116774bf3b7d0cf001cf" args="" -->JUEGO</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ad0bc8b751580f7d7bf7fe3b8f205de06a0ae8c6340be5d836fec5734193978963"></a><!-- doxytag: member="MENU" ref="ad0bc8b751580f7d7bf7fe3b8f205de06a0ae8c6340be5d836fec5734193978963" args="" -->MENU</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ad0bc8b751580f7d7bf7fe3b8f205de06a3e07cb0551eca069d915763f6691ac89"></a><!-- doxytag: member="TRANSICION" ref="ad0bc8b751580f7d7bf7fe3b8f205de06a3e07cb0551eca069d915763f6691ac89" args="" -->TRANSICION</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+</div>
+</div>
+<hr/><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" id="a24921cde0970c711d5acd73afd5b8f97"></a><!-- doxytag: member="Escena::Escena" ref="a24921cde0970c711d5acd73afd5b8f97" args="(Universo *universo)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Escena::Escena </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classUniverso.html">Universo</a> *&nbsp;</td>
+          <td class="paramname"> <em>universo</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Constructor</p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>universo</em>&nbsp;</td><td><a class="el" href="classUniverso.html" title="Clase que controla el funcionamiento general del juego.">Universo</a> con el que se asocia la escena </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a9b3686b61c8e1564b3cc5a075959f677"></a><!-- doxytag: member="Escena::~Escena" ref="a9b3686b61c8e1564b3cc5a075959f677" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Escena::~Escena </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="classDestructor.html" title="Clase base del destructor genérico para destuir Singleton.">Destructor</a></p>
+<p>Libera la memoria ocupada por la escena </p>
+
+</div>
+</div>
+<hr/><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" id="a6d984f3b66985043eb878fbd9f6d0f6a"></a><!-- doxytag: member="Escena::actualizar" ref="a6d984f3b66985043eb878fbd9f6d0f6a" args="()=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Escena::actualizar </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Método virtual puro</p>
+<p>Actualiza lógicamente la escena y todos los elementos contenidos en ella </p>
+
+<p>Implementado en <a class="el" href="classJuego.html#ab669ac4f512edebabb50292a440a86bd">Juego</a>, <a class="el" href="classMenu.html#a9309cdd3fba3290d5ba786c5711aa746">Menu</a>, y <a class="el" href="classTransicion.html#a71cd6f1e9c25674a6759e18424fd6bc6">Transicion</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab6026872f79ddeef7adeaacd3e7737c6"></a><!-- doxytag: member="Escena::dibujar" ref="ab6026872f79ddeef7adeaacd3e7737c6" args="()=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Escena::dibujar </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Método virtual puro</p>
+<p>Dibuja la escena en la pantalla </p>
+
+<p>Implementado en <a class="el" href="classJuego.html#afe65103d14a92e8058c8473c6794ea6e">Juego</a>, <a class="el" href="classMenu.html#aa6cc11f76c57f64804c6e8139f56eadd">Menu</a>, y <a class="el" href="classTransicion.html#adb90e6d8fb364c83b88d38734ed95e4f">Transicion</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a19b36d483182d27e5caff09794561546"></a><!-- doxytag: member="Escena::reiniciar" ref="a19b36d483182d27e5caff09794561546" args="()=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Escena::reiniciar </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Método virtual puro</p>
+<p>Reinicia la escena </p>
+
+<p>Implementado en <a class="el" href="classJuego.html#a18b0dbdd2b07be4a9571b813fd169d8a">Juego</a>, <a class="el" href="classMenu.html#a0e42cc4e9954dbbb2a0e0e1c9047b016">Menu</a>, y <a class="el" href="classTransicion.html#ae0f323d1f133d90b17426c4abf93ec85">Transicion</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7fefdb9fe84a043bff3546b6eba0c1f1"></a><!-- doxytag: member="Escena::univ" ref="a7fefdb9fe84a043bff3546b6eba0c1f1" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classUniverso.html">Universo</a> * Escena::univ </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Puntero al universo al que pertenece la escena </dd></dl>
+
+</div>
+</div>
+<hr/><h2>Documentación de los datos miembro</h2>
+<a class="anchor" id="a36cf14782a7e41a4dfe975b0493bc3ca"></a><!-- doxytag: member="Escena::universo_" ref="a36cf14782a7e41a4dfe975b0493bc3ca" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classUniverso.html">Universo</a>* <a class="el" href="classEscena.html#a36cf14782a7e41a4dfe975b0493bc3ca">Escena::universo_</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<hr/>La documentación para esta clase fue generada a partir de los siguientes ficheros:<ul>
+<li>/home/david/Juegos/airforcepilot/src/motor/<a class="el" href="escena_8h_source.html">escena.h</a></li>
+<li>/home/david/Juegos/airforcepilot/src/motor/<a class="el" href="escena_8cpp.html">escena.cpp</a></li>
+</ul>
+</div>
+<hr size="1"/><address style="text-align: right;"><small>Generado el Sun Dec 13 19:09:11 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
+</body>
+</html>

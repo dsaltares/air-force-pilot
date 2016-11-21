@@ -1,0 +1,353 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Referencia de la Clase Imagen</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generado por Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Clases</span></a></li>
+      <li><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;clases</span></a></li>
+      <li><a href="hierarchy.html"><span>Jerarquía&nbsp;de&nbsp;la&nbsp;clase</span></a></li>
+      <li><a href="functions.html"><span>Miembros&nbsp;de&nbsp;las&nbsp;clases</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Referencia de la Clase Imagen</h1><!-- doxytag: class="Imagen" -->
+<p>Utilizada para gestionar rejillas de imágenes.  
+<a href="#_details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="imagen_8h_source.html">imagen.h</a>&gt;</code></p>
+
+<p><a href="classImagen-members.html">Lista de todos los miembros.</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImagen.html#acd4d434d3f5f4beaf7513b8f74f09859">Imagen</a> (const char *ruta, int filas=1, int columnas=1, int x=0, int y=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImagen.html#a808e6231b740b6ab9ad2afa6767fbcb6">Imagen</a> (const std::string &amp;ruta, int filas=1, int columnas=1, int x=0, int y=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImagen.html#a913e1f0de3b6e1afe54bae8de74f6e89">dibujar</a> (SDL_Surface *pantalla, int cuadro, int x, int y, int flip=1)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImagen.html#af74657d5c16a52feeda9d233cfe29b33">filas</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImagen.html#aaed2f76db10125985aac80e439ec7b6d">columnas</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImagen.html#a02bb33e6d75d2694174c2e33c6de5452">anchura</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImagen.html#ac3d4869987f556708a5bc3d00ebb51f9">altura</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImagen.html#ab78827d120318fd8a91b4b96f3224abd">cuadros</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImagen.html#a03dd93c9cf920a9dc0b72f8bd34f2e8a">~Imagen</a> ()</td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descripción detallada</h2>
+<p>Utilizada para gestionar rejillas de imágenes. </p>
+<p>Permite cargar desde memoria secundaria una imagen compuesta por bloques que pueden ser individualmente dibujados en pantalla. La idea de utilizar rejillas de imágenes se debe a la facilidad que se gana para manejar Sprites. Sino se precisa se pueden utilizar imágenes de 1 fila y 1 columna (imágenes individuales).</p>
+<p>Ejemplo de uso: </p>
+<div class="fragment"><pre class="fragment"><span class="preprocessor">        #include &quot;<a class="code" href="imagen_8h.html">imagen.h</a>&quot;</span>
+        
+        <span class="comment">// Se supone pantalla debidamente inicializada y el subsistema de vídeo inicializado</span>
+        SDL_Surface* pantalla;
+        
+        <span class="comment">// Creamos un objeto Imagen: ruta, filas, columnas</span>
+        <a class="code" href="classImagen.html" title="Utilizada para gestionar rejillas de imágenes.">Imagen</a> avion(<span class="stringliteral">&quot;avion.png&quot;</span>, 3, 4);
+        
+        <span class="comment">// Lo dibujamos: superficie, frame, x, y</span>
+        avion.<a class="code" href="classImagen.html#a913e1f0de3b6e1afe54bae8de74f6e89">dibujar</a>(pantalla, 5, 100, 200);
+        
+        <span class="comment">// Hacemos flip</span>
+        SDL_Flip(pantalla);
+</pre></div> <hr/><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" id="acd4d434d3f5f4beaf7513b8f74f09859"></a><!-- doxytag: member="Imagen::Imagen" ref="acd4d434d3f5f4beaf7513b8f74f09859" args="(const char *ruta, int filas=1, int columnas=1, int x=0, int y=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Imagen::Imagen </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>ruta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>filas</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>columnas</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>x</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>y</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Constructor Carga la rejilla de imagenes dadas sus filas y columnas que indique ruta. Cualquier formato soportado por SDL_Image es válido </p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>ruta</em>&nbsp;</td><td>Ruta del fichero que contiene la imagen </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>filas</em>&nbsp;</td><td>Número de filas de la rejilla </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>columnas</em>&nbsp;</td><td>Número de columnas de la rejilla </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a808e6231b740b6ab9ad2afa6767fbcb6"></a><!-- doxytag: member="Imagen::Imagen" ref="a808e6231b740b6ab9ad2afa6767fbcb6" args="(const std::string &amp;ruta, int filas=1, int columnas=1, int x=0, int y=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Imagen::Imagen </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>ruta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>filas</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>columnas</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>x</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>y</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Constructor Carga la rejilla de imagenes dadas sus filas y columnas que indique ruta. Cualquier formato soportado por SDL_Image es válido </p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>ruta</em>&nbsp;</td><td>Ruta del fichero que contiene la imagen </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>filas</em>&nbsp;</td><td>Número de filas de la rejilla </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>columnas</em>&nbsp;</td><td>Número de columnas de la rejilla </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a03dd93c9cf920a9dc0b72f8bd34f2e8a"></a><!-- doxytag: member="Imagen::~Imagen" ref="a03dd93c9cf920a9dc0b72f8bd34f2e8a" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Imagen::~Imagen </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="classDestructor.html" title="Clase base del destructor genérico para destuir Singleton.">Destructor</a>. Libera los recursos consumidos por la rejilla. </p>
+
+</div>
+</div>
+<hr/><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" id="ac3d4869987f556708a5bc3d00ebb51f9"></a><!-- doxytag: member="Imagen::altura" ref="ac3d4869987f556708a5bc3d00ebb51f9" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Imagen::altura </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Consultor </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Altura en píxeles de un cuadro de la rejilla </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a02bb33e6d75d2694174c2e33c6de5452"></a><!-- doxytag: member="Imagen::anchura" ref="a02bb33e6d75d2694174c2e33c6de5452" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Imagen::anchura </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Consultor </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Anchura en píxeles de un cuadro de la rejilla </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aaed2f76db10125985aac80e439ec7b6d"></a><!-- doxytag: member="Imagen::columnas" ref="aaed2f76db10125985aac80e439ec7b6d" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Imagen::columnas </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Consultor </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Número de columnas de la rejilla </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab78827d120318fd8a91b4b96f3224abd"></a><!-- doxytag: member="Imagen::cuadros" ref="ab78827d120318fd8a91b4b96f3224abd" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Imagen::cuadros </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Consultor </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Número de cuadros de la rejilla </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a913e1f0de3b6e1afe54bae8de74f6e89"></a><!-- doxytag: member="Imagen::dibujar" ref="a913e1f0de3b6e1afe54bae8de74f6e89" args="(SDL_Surface *pantalla, int cuadro, int x, int y, int flip=1)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Imagen::dibujar </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Surface *&nbsp;</td>
+          <td class="paramname"> <em>pantalla</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>cuadro</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>flip</em> = <code>1</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Hace blitting sobre la superficie indicada del frame cuadro dado en la posición (x,y) </p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pantalla</em>&nbsp;</td><td>Superficie sobre la cual se hará el blitting </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>cuadro</em>&nbsp;</td><td>Frame de la rejilla que se eligirá (debe ser un frame válido) </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Coordenada en el eje x donde se dibujará la imagen </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>Coordenada en el eje y donde se dibujará la imagen </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>flip</em>&nbsp;</td><td>1 imagen dibujada normal, -1 imagen invertida horizontalmente </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af74657d5c16a52feeda9d233cfe29b33"></a><!-- doxytag: member="Imagen::filas" ref="af74657d5c16a52feeda9d233cfe29b33" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Imagen::filas </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Consultor </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Número de filas de la rejilla </dd></dl>
+
+</div>
+</div>
+<hr/>La documentación para esta clase fue generada a partir de los siguientes ficheros:<ul>
+<li>/home/david/Juegos/airforcepilot/src/motor/<a class="el" href="imagen_8h_source.html">imagen.h</a></li>
+<li>/home/david/Juegos/airforcepilot/src/motor/<a class="el" href="imagen_8cpp.html">imagen.cpp</a></li>
+</ul>
+</div>
+<hr size="1"/><address style="text-align: right;"><small>Generado el Sun Dec 13 19:09:11 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
+</body>
+</html>

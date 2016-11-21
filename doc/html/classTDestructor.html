@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Referencia de la plantilla de la Clase TDestructor&lt; T &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generado por Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Clases</span></a></li>
+      <li><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;clases</span></a></li>
+      <li><a href="hierarchy.html"><span>Jerarquía&nbsp;de&nbsp;la&nbsp;clase</span></a></li>
+      <li><a href="functions.html"><span>Miembros&nbsp;de&nbsp;las&nbsp;clases</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Referencia de la plantilla de la Clase TDestructor&lt; T &gt;</h1><!-- doxytag: class="TDestructor" --><!-- doxytag: inherits="Destructor" -->
+<p>Clase paramétrica derivada de <a class="el" href="classDestructor.html" title="Clase base del destructor genérico para destuir Singleton.">Destructor</a> encargada de destruir objetos Singleton.  
+<a href="#_details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="destructor_8h_source.html">destructor.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de herencias de TDestructor&lt; T &gt;</div>
+<div class="dynsection">
+ <div class="center">
+  <img src="classTDestructor.gif" usemap="#TDestructor&lt; T &gt;_map" alt=""/>
+  <map id="TDestructor&lt; T &gt;_map" name="TDestructor&lt; T &gt;_map">
+<area href="classDestructor.html" alt="Destructor" shape="rect" coords="0,0,109,24"/>
+</map>
+ </div>
+</div>
+
+<p><a href="classTDestructor-members.html">Lista de todos los miembros.</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTDestructor.html#a659b3b40c1d78150ef91d3453610a188">TDestructor</a> (T *object, <a class="el" href="classDestructionPhase.html">DestructionPhase</a> dphase)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTDestructor.html#af8ddf02ab177b9c32a6b5484f049ef0a">destroy</a> ()</td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descripción detallada</h2>
+<h3>template&lt;class T&gt;<br/>
+ class TDestructor&lt; T &gt;</h3>
+
+<p>Clase paramétrica derivada de <a class="el" href="classDestructor.html" title="Clase base del destructor genérico para destuir Singleton.">Destructor</a> encargada de destruir objetos Singleton. </p>
+<hr/><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" id="a659b3b40c1d78150ef91d3453610a188"></a><!-- doxytag: member="TDestructor::TDestructor" ref="a659b3b40c1d78150ef91d3453610a188" args="(T *object, DestructionPhase dphase)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTDestructor.html">TDestructor</a>&lt; T &gt;::<a class="el" href="classTDestructor.html">TDestructor</a> </td>
+          <td>(</td>
+          <td class="paramtype">T *&nbsp;</td>
+          <td class="paramname"> <em>object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classDestructionPhase.html">DestructionPhase</a>&nbsp;</td>
+          <td class="paramname"> <em>dphase</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Constructor.</p>
+<p>Establece la fase de destrucción y registra el Singleton en la lista de los Singleton a destruir.</p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>object</em>&nbsp;</td><td>Puntero al objeto a destruir </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>dphase</em>&nbsp;</td><td>Orden de destrucción </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" id="af8ddf02ab177b9c32a6b5484f049ef0a"></a><!-- doxytag: member="TDestructor::destroy" ref="af8ddf02ab177b9c32a6b5484f049ef0a" args="()" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classTDestructor.html">TDestructor</a>&lt; T &gt;::destroy </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Destruye el Singleton apuntado por object </p>
+
+<p>Implementa <a class="el" href="classDestructor.html#afcd8007a6f925589404ded61bad96623">Destructor</a>.</p>
+
+</div>
+</div>
+<hr/>La documentación para esta clase fue generada a partir del siguiente fichero:<ul>
+<li>/home/david/Juegos/airforcepilot/src/motor/<a class="el" href="destructor_8h_source.html">destructor.h</a></li>
+</ul>
+</div>
+<hr size="1"/><address style="text-align: right;"><small>Generado el Sun Dec 13 19:09:11 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
+</body>
+</html>

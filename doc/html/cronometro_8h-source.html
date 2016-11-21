@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Fichero Fuente /home/david/Juegos/airforcepilot/src/motor/cronometro.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css">
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.8 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&nbsp;de&nbsp;los&nbsp;ficheros</span></a></li>
+    </ul>
+  </div>
+<h1>/home/david/Juegos/airforcepilot/src/motor/cronometro.h</h1><a href="cronometro_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef _CRONOMETRO_</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define _CRONOMETRO_</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;SDL/SDL.h&gt;</span>
+<a name="l00005"></a>00005 
+<a name="l00007"></a>00007 
+<a name="l00026"></a><a class="code" href="classCronometro.html">00026</a> <span class="keyword">class </span><a class="code" href="classCronometro.html" title="Cronómetro utilizado en el control del framerrate (utilizando funciones de SDL)...">Cronometro</a>{
+<a name="l00027"></a>00027         <span class="keyword">public</span>:
+<a name="l00032"></a>00032                 <a class="code" href="classCronometro.html#47cde54831744e3e0c6c7abe2bf17f0d">Cronometro</a>();
+<a name="l00033"></a>00033                 
+<a name="l00037"></a>00037                 <span class="keywordtype">void</span> <a class="code" href="classCronometro.html#aef9787a8deaaa6e2d57fe85bfd387c4">activar</a>();
+<a name="l00038"></a>00038                 
+<a name="l00042"></a>00042                 <span class="keywordtype">void</span> <a class="code" href="classCronometro.html#e358802141ac1b854f375d80e6ff3deb">parar</a>();
+<a name="l00043"></a>00043                 
+<a name="l00050"></a>00050                 <span class="keywordtype">int</span> <a class="code" href="classCronometro.html#9e09eb691180cdabc54ff5cdeae4a186">tiempo</a>() <span class="keyword">const</span>;
+<a name="l00051"></a>00051                 
+<a name="l00057"></a>00057                 <span class="keywordtype">bool</span> <a class="code" href="classCronometro.html#b6bf261a62886ef62b498f199c531636">esta_activo</a>() <span class="keyword">const</span>;
+<a name="l00058"></a>00058         <span class="keyword">private</span>:
+<a name="l00059"></a>00059                 <span class="keywordtype">bool</span> activo;
+<a name="l00060"></a>00060                 <span class="keywordtype">int</span> ticks_inicio;
+<a name="l00061"></a>00061 };
+<a name="l00062"></a>00062 
+<a name="l00063"></a>00063 <span class="preprocessor">#endif</span>
+</pre></div></div>
+<hr size="1"><address style="text-align: right;"><small>Generado el Sun Nov 22 12:29:30 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
+</body>
+</html>

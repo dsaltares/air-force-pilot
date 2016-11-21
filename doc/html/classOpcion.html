@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Referencia de la Clase Opcion</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generado por Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Clases</span></a></li>
+      <li><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;clases</span></a></li>
+      <li><a href="hierarchy.html"><span>Jerarquía&nbsp;de&nbsp;la&nbsp;clase</span></a></li>
+      <li><a href="functions.html"><span>Miembros&nbsp;de&nbsp;las&nbsp;clases</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Referencia de la Clase Opcion</h1><!-- doxytag: class="Opcion" -->
+<p>Utilizada como elemento del menú del juego.  
+<a href="#_details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="opcion_8h_source.html">opcion.h</a>&gt;</code></p>
+
+<p><a href="classOpcion-members.html">Lista de todos los miembros.</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOpcion.html#a6cfb69ede535d2bf16d6eb8659e81c20">Opcion</a> (const std::string &amp;texto, <a class="el" href="classFuente.html">Fuente</a> *fuente, int x, int y, int r1=0, int g1=0, int b1=0, int r2=0, int g2=0, int b2=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOpcion.html#af43ea74aebecfb85a6d0668f712ecb77">dibujar</a> (SDL_Surface *superficie, bool seleccionada=false)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOpcion.html#ab95ca2315a9503d9d7bf46161eab06c5">pos_x</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOpcion.html#a9616a536cdfa5efc75f9f9e17fe67a6a">pos_y</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const std::string &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOpcion.html#ad4964879789011ac545fcff03c766f07">texto</a> () const </td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descripción detallada</h2>
+<p>Utilizada como elemento del menú del juego. </p>
+<p>Permite almacenar el texto, color y posición de cada opción del menu de juego</p>
+<p>Ejemplo de uso: </p>
+<div class="fragment"><pre class="fragment"><span class="preprocessor">        #include &quot;<a class="code" href="opcion_8h.html">opcion.h</a>&quot;</span>
+        
+        ...
+        
+        <a class="code" href="classOpcion.html" title="Utilizada como elemento del menú del juego.">Opcion</a> jugar(<span class="stringliteral">&quot;Jugar&quot;</span>, <a class="code" href="galeria_8h.html#ad0f15b112f97814cc6ed665d8bae2e30">galeria</a>.fuente(<span class="stringliteral">&quot;stencil&quot;</span>), 100, 100) <span class="comment">// Hacemos uso del Singleton Galeria</span>
+        
+        ...
+        
+        jugar-&gt;dibujar(pantalla);
+</pre></div><p>En la clase <a class="el" href="classMenu.html">Menu</a> iteraríamos por las opciones dibujándolas. En dicha clase cargamos las opciones mediante un xml. </p>
+<hr/><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" id="a6cfb69ede535d2bf16d6eb8659e81c20"></a><!-- doxytag: member="Opcion::Opcion" ref="a6cfb69ede535d2bf16d6eb8659e81c20" args="(const std::string &amp;texto, Fuente *fuente, int x, int y, int r1=0, int g1=0, int b1=0, int r2=0, int g2=0, int b2=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Opcion::Opcion </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>texto</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classFuente.html">Fuente</a> *&nbsp;</td>
+          <td class="paramname"> <em>fuente</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>r1</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>g1</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>b1</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>r2</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>g2</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>b2</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Constructor</p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>texto</em>&nbsp;</td><td><a class="el" href="classTexto.html" title="Gestor de cuadros de texto.">Texto</a> de la opción </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>fuente</em>&nbsp;</td><td>Puntero a <a class="el" href="classFuente.html" title="Utilizada para gestionar fuentes ttf.">Fuente</a>, tipografía para mostrar el texto de la opción </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Coordenada en el eje x donde se mostrará la opción </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>Coordenada en el eje y donde se mostrará la opción </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>r1</em>&nbsp;</td><td>Componente RGB rojo para el color de la opción no seleccionada </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>g1</em>&nbsp;</td><td>Componente RGB verde para el color de la opción no seleccionada </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>b1</em>&nbsp;</td><td>Componente RGB azul para el color de la opción no seleccionada </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>r2</em>&nbsp;</td><td>Componente RGB rojo para el color de la opción seleccionada </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>g2</em>&nbsp;</td><td>Componente RGB verde para el color de la opción seleccionada </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>b2</em>&nbsp;</td><td>Componente RGB azul para el color de la opción seleccionada </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" id="af43ea74aebecfb85a6d0668f712ecb77"></a><!-- doxytag: member="Opcion::dibujar" ref="af43ea74aebecfb85a6d0668f712ecb77" args="(SDL_Surface *superficie, bool seleccionada=false)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Opcion::dibujar </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Surface *&nbsp;</td>
+          <td class="paramname"> <em>superficie</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>seleccionada</em> = <code>false</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Dibuja la opción en sus coordenadas x e y en un color según esté seleccionada o no</p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>superficie</em>&nbsp;</td><td>Superficie donde sobre la que se hará blitting  Verdadero si se utiliza el color para la opción seleccionada y falso en caso contrario </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab95ca2315a9503d9d7bf46161eab06c5"></a><!-- doxytag: member="Opcion::pos_x" ref="ab95ca2315a9503d9d7bf46161eab06c5" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Opcion::pos_x </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Consultora</p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Coordenada en el eje x de la opción </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9616a536cdfa5efc75f9f9e17fe67a6a"></a><!-- doxytag: member="Opcion::pos_y" ref="a9616a536cdfa5efc75f9f9e17fe67a6a" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Opcion::pos_y </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Consultora</p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Coordenada en el eje y de la opción </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad4964879789011ac545fcff03c766f07"></a><!-- doxytag: member="Opcion::texto" ref="ad4964879789011ac545fcff03c766f07" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; Opcion::texto </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Consultora</p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd><a class="el" href="classTexto.html" title="Gestor de cuadros de texto.">Texto</a> de la opción </dd></dl>
+
+</div>
+</div>
+<hr/>La documentación para esta clase fue generada a partir de los siguientes ficheros:<ul>
+<li>/home/david/Juegos/airforcepilot/src/motor/<a class="el" href="opcion_8h_source.html">opcion.h</a></li>
+<li>/home/david/Juegos/airforcepilot/src/motor/<a class="el" href="opcion_8cpp.html">opcion.cpp</a></li>
+</ul>
+</div>
+<hr size="1"/><address style="text-align: right;"><small>Generado el Sun Dec 13 19:09:11 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
+</body>
+</html>

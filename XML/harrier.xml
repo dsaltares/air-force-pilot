@@ -1,0 +1,14 @@
+<protagonista vx="5" vy="2" energia="4" ataque="2" cadencia = "65" imagen="harrier">
+	<colisiones>
+		<colision x="54" y="0" w="15" h="101" />
+		<colision x="33" y="37" w="60" h="35" />
+		<colision x="0" y="34" w="125" h="15" />
+	</colisiones>
+	<animaciones>
+		<animacion nombre="normal" anim="0" retardo="1"/>
+		<animacion nombre="acelerado" anim="0" retardo="1"/>
+		<animacion nombre="frenado" anim="0" retardo="1"/>
+		<animacion nombre="morir" anim="1,2,3,4" retardo="6"/>
+		<animacion nombre="eliminar" anim="0" retardo="1"/>
+	</animaciones>
+</protagonista>

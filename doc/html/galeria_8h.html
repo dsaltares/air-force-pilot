@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Referencia del Archivo /home/david/Juegos/airforcepilot/src/motor/galeria.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generado por Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&nbsp;de&nbsp;los&nbsp;ficheros</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Referencia del Archivo /home/david/Juegos/airforcepilot/src/motor/galeria.h</h1><code>#include &lt;memory&gt;</code><br/>
+<code>#include &lt;map&gt;</code><br/>
+<code>#include &lt;string&gt;</code><br/>
+<code>#include &quot;<a class="el" href="dphase_8h_source.html">dphase.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="destructor_8h_source.html">destructor.h</a>&quot;</code><br/>
+
+<p><a href="galeria_8h_source.html">Ir al código fuente de este archivo.</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Clases</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGaleria.html">Galeria</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Gestor de recursos multimedia, emplea el patrón Singleton.  <a href="classGaleria.html#_details">Más...</a><br/></td></tr>
+<tr><td colspan="2"><h2>Definiciones</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="galeria_8h.html#ad0f15b112f97814cc6ed665d8bae2e30">galeria</a>&nbsp;&nbsp;&nbsp;Galeria::Instanciar()</td></tr>
+<tr><td colspan="2"><h2>Tipos definidos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; std::string, <br class="typebreak"/>
+<a class="el" href="classImagen.html">Imagen</a> * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="galeria_8h.html#a0ee19bb4eaecc507b6b47f805c289630">Imagenes</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; std::string, <br class="typebreak"/>
+<a class="el" href="classSonido.html">Sonido</a> * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="galeria_8h.html#a0d275db43bef53ba91a0b0460b82277a">Sonidos</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; std::string, <br class="typebreak"/>
+<a class="el" href="classMusica.html">Musica</a> * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="galeria_8h.html#a13063c4322bd46af8faea7c3191cbd8b">Musicas</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; std::string, <br class="typebreak"/>
+<a class="el" href="classFuente.html">Fuente</a> * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="galeria_8h.html#a4d7ad647117768da7ddcc5b18b5b3016">Fuentes</a></td></tr>
+</table>
+<hr/><h2>Documentación de las definiciones</h2>
+<a class="anchor" id="ad0f15b112f97814cc6ed665d8bae2e30"></a><!-- doxytag: member="galeria.h::galeria" ref="ad0f15b112f97814cc6ed665d8bae2e30" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define galeria&nbsp;&nbsp;&nbsp;Galeria::Instanciar()</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Permite acceder más fácilmente a la instancia única de <a class="el" href="classGaleria.html" title="Gestor de recursos multimedia, emplea el patrón Singleton.">Galeria</a>: </p>
+<div class="fragment"><pre class="fragment">        <a class="code" href="galeria_8h.html#ad0f15b112f97814cc6ed665d8bae2e30">galeria</a>.imagen(<span class="stringliteral">&quot;avion&quot;</span>)-&gt;dibujar(pantalla, 0, 100, 100);
+</pre></div> 
+</div>
+</div>
+<hr/><h2>Documentación de los tipos definidos</h2>
+<a class="anchor" id="a4d7ad647117768da7ddcc5b18b5b3016"></a><!-- doxytag: member="galeria.h::Fuentes" ref="a4d7ad647117768da7ddcc5b18b5b3016" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="galeria_8h.html#a4d7ad647117768da7ddcc5b18b5b3016">Fuentes</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Diccionario que relaciona una clave (string) con un puntero a <a class="el" href="classFuente.html" title="Utilizada para gestionar fuentes ttf.">Fuente</a>. Facilita el acceso a los recursos. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0ee19bb4eaecc507b6b47f805c289630"></a><!-- doxytag: member="galeria.h::Imagenes" ref="a0ee19bb4eaecc507b6b47f805c289630" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="galeria_8h.html#a0ee19bb4eaecc507b6b47f805c289630">Imagenes</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Diccionario que relaciona una clave (string) con un puntero a <a class="el" href="classImagen.html" title="Utilizada para gestionar rejillas de imágenes.">Imagen</a>. Facilita el acceso a los recursos. </p>
+
+</div>
+</div>
+<a class="anchor" id="a13063c4322bd46af8faea7c3191cbd8b"></a><!-- doxytag: member="galeria.h::Musicas" ref="a13063c4322bd46af8faea7c3191cbd8b" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="galeria_8h.html#a13063c4322bd46af8faea7c3191cbd8b">Musicas</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Diccionario que relaciona una clave (string) con un puntero a <a class="el" href="classMusica.html" title="Utilizada para cargar y reproducir la BSO del juego.">Musica</a>. Facilita el acceso a los recursos. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0d275db43bef53ba91a0b0460b82277a"></a><!-- doxytag: member="galeria.h::Sonidos" ref="a0d275db43bef53ba91a0b0460b82277a" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="galeria_8h.html#a0d275db43bef53ba91a0b0460b82277a">Sonidos</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Diccionario que relaciona una clave (string) con un puntero a <a class="el" href="classSonido.html" title="Utilizada para cargar y reproducir efectos de sonido del juego.">Sonido</a>. Facilita el acceso a los recursos. </p>
+
+</div>
+</div>
+</div>
+<hr size="1"/><address style="text-align: right;"><small>Generado el Sun Dec 13 19:09:11 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
+</body>
+</html>

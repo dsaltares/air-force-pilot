@@ -1,0 +1,5 @@
+<transicion fondo="fondomenu" musica="menu">
+		<linea x="100" y="240" texto="HAS GANADO" fuente="stencilg" r="160" g="20" b="20"/>
+		<linea x="50" y="360" texto="Te has convertido en una leyenda" fuente="stencil" r="0" g="0" b="0"/>
+		<linea x="10" y="570" texto="Pulsa ESC para continuar" fuente="stencilp" r="0" g="0" b="0"/>
+</transicion>

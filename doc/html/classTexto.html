@@ -1,0 +1,327 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Referencia de la Clase Texto</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generado por Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Clases</span></a></li>
+      <li><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;clases</span></a></li>
+      <li><a href="hierarchy.html"><span>Jerarquía&nbsp;de&nbsp;la&nbsp;clase</span></a></li>
+      <li><a href="functions.html"><span>Miembros&nbsp;de&nbsp;las&nbsp;clases</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Referencia de la Clase Texto</h1><!-- doxytag: class="Texto" -->
+<p>Gestor de cuadros de texto.  
+<a href="#_details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="texto_8h_source.html">texto.h</a>&gt;</code></p>
+
+<p><a href="classTexto-members.html">Lista de todos los miembros.</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTexto.html#a85764a4abda28f40f24425f167ef9544">Texto</a> (<a class="el" href="classFuente.html">Fuente</a> *fuente, int r, int g, int b, SDL_Rect caja, std::string cadena=&quot;&quot;)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTexto.html#aa3de3a230f192411dfc1364ce51adee5">dibujar</a> (SDL_Surface *superficie, int x, int y)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTexto.html#a9827c0ee7f90903944b63a674afb5009">dibujar</a> (SDL_Surface *superficie)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTexto.html#ab1f803bedd338c504a6fa5652e352f8a">dibujar</a> (SDL_Surface *superficie, const std::string &amp;cadena)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const SDL_Rect &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTexto.html#af5116ad70ad1ce6f2871a0f136bfa4c2">caja</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const std::string &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTexto.html#a99ce5142533506cc051cebbfa3c8b0bc">cadena</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">SDL_Rect &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTexto.html#a101933d3bd0444a8225479c3cd2e8208">caja</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::string &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTexto.html#adcaa1437c399102472d3ac1efd11947f">cadena</a> ()</td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descripción detallada</h2>
+<p>Gestor de cuadros de texto. </p>
+<p>Utiliza la clase <a class="el" href="classFuente.html" title="Utilizada para gestionar fuentes ttf.">Fuente</a> y se encarga de almacenar un texto que puede ser dibujado en pantalla dentro de unos limites establecidos por un SDL_RECT Si no cabe el texto en una línea se encarga de introducir saltos de línea cuando sea oportuno</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Tareas Pendientes:</a></b></dt><dd><p class="startdd">Mejorar el salto de línea y los espaciados </p>
+<p class="enddd">Detectar que "\n" es un salto de línea</p>
+</dd></dl>
+<p>Ejemplo de uso : </p>
+<div class="fragment"><pre class="fragment"><span class="preprocessor">        #include &quot;<a class="code" href="texto_8h.html">texto.h</a>&quot;</span>
+        
+        <span class="comment">// Se supone SDL inicializado, así como SDL_TTF</span>
+        SDL_Surface *pantalla;
+        
+        <span class="comment">// Fuente</span>
+        <a class="code" href="classFuente.html" title="Utilizada para gestionar fuentes ttf.">Fuente</a> arial(<span class="stringliteral">&quot;arial.ttf&quot;</span>, 12);
+        
+        <span class="comment">//Color del texto</span>
+        SDL_Color color = SDL_MapRGB(pantalla-&gt;pixelformat, 100, 0, 0);
+        
+        <span class="comment">// Límites de impresión</span>
+        SDL_Rect rect = {10, 10, 400, 400};
+                
+        <a class="code" href="classTexto.html" title="Gestor de cuadros de texto.">Texto</a> texto1(&amp;arial, color, rect);
+        
+        texto1.dibujar(pantalla, <span class="stringliteral">&quot;Hola, muy buenas, esto es una prueba de mi clase Texto&quot;</span>);
+        
+        SDL_Flip(pantalla);
+</pre></div> <hr/><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" id="a85764a4abda28f40f24425f167ef9544"></a><!-- doxytag: member="Texto::Texto" ref="a85764a4abda28f40f24425f167ef9544" args="(Fuente *fuente, int r, int g, int b, SDL_Rect caja, std::string cadena=&quot;&quot;)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Texto::Texto </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classFuente.html">Fuente</a> *&nbsp;</td>
+          <td class="paramname"> <em>fuente</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Rect&nbsp;</td>
+          <td class="paramname"> <em>caja</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&nbsp;</td>
+          <td class="paramname"> <em>cadena</em> = <code>&quot;&quot;</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Constructor Asocia un texto con una fuente, le asigna un color y un recuadro donde dibujarse, opcionalmente puede incluirse una cadena </p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>fuente</em>&nbsp;</td><td>Puntero a <a class="el" href="classFuente.html" title="Utilizada para gestionar fuentes ttf.">Fuente</a> que se utilizará para blitear el texto en la pantalla </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>color</em>&nbsp;</td><td>Color con el que se dibujará el texto </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>caja</em>&nbsp;</td><td>Límites de la pantalla donde se colocará el texto </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>cadena</em>&nbsp;</td><td>Cadena que contiene el texto a dibujar </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" id="adcaa1437c399102472d3ac1efd11947f"></a><!-- doxytag: member="Texto::cadena" ref="adcaa1437c399102472d3ac1efd11947f" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string &amp; Texto::cadena </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Modificador </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Referencia a la cadena que contiene el texto </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a99ce5142533506cc051cebbfa3c8b0bc"></a><!-- doxytag: member="Texto::cadena" ref="a99ce5142533506cc051cebbfa3c8b0bc" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; Texto::cadena </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Consultor </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Cadena del texto </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a101933d3bd0444a8225479c3cd2e8208"></a><!-- doxytag: member="Texto::caja" ref="a101933d3bd0444a8225479c3cd2e8208" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Rect &amp; Texto::caja </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Consultor </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Color utilizado para dibujar el texto Modificador </dd>
+<dd>
+Referencia al recuadro que límita y sitúa al texto en la pantalla </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af5116ad70ad1ce6f2871a0f136bfa4c2"></a><!-- doxytag: member="Texto::caja" ref="af5116ad70ad1ce6f2871a0f136bfa4c2" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const SDL_Rect &amp; Texto::caja </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Consultor </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Cuadro que límita y sitúa al texto en la pantalla </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab1f803bedd338c504a6fa5652e352f8a"></a><!-- doxytag: member="Texto::dibujar" ref="ab1f803bedd338c504a6fa5652e352f8a" args="(SDL_Surface *superficie, const std::string &amp;cadena)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Texto::dibujar </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Surface *&nbsp;</td>
+          <td class="paramname"> <em>superficie</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>cadena</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Idéntico al método anterior sólo que asigna la cadena al contenido del objeto y lo dibuja. Ahorraría hacer:</p>
+<div class="fragment"><pre class="fragment">                        texto.cadena = <span class="stringliteral">&quot;Hola, esto es otra cadena&quot;</span>;
+                        texto.dibujar(pantalla);
+</pre></div><dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>superficie</em>&nbsp;</td><td>Superficie donde se dibujará el texto </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>cadena</em>&nbsp;</td><td>Cadena que se le asigna al objeto y que se dibujará </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a9827c0ee7f90903944b63a674afb5009"></a><!-- doxytag: member="Texto::dibujar" ref="a9827c0ee7f90903944b63a674afb5009" args="(SDL_Surface *superficie)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Texto::dibujar </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Surface *&nbsp;</td>
+          <td class="paramname"> <em>superficie</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Dibuja la cadena almacenada en el objeto, con la fuente asociada, en el color correspondiente. Se utilizan la anchura, la altura y las coordenadas (x,y) del recuadro (SDL_Rect con el se construyó el objeto).</p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>superficie</em>&nbsp;</td><td>Superficie donde se dibujará el texto </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aa3de3a230f192411dfc1364ce51adee5"></a><!-- doxytag: member="Texto::dibujar" ref="aa3de3a230f192411dfc1364ce51adee5" args="(SDL_Surface *superficie, int x, int y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Texto::dibujar </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Surface *&nbsp;</td>
+          <td class="paramname"> <em>superficie</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>y</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Dibuja la cadena almacenada en el objeto, con la fuente asociada, en el color correspondiente en las coordenadas (x,y). Se utilizan la anchura y altura definidas en el recuadro como límites (SDL_Rect con el se construyó el objeto).</p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>superficie</em>&nbsp;</td><td>Superficie donde se dibujará el texto </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Coordenada en el eje x donde se dibujará el texto </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>Coordenada en el eje y donde se dibujará el texto </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>La documentación para esta clase fue generada a partir de los siguientes ficheros:<ul>
+<li>/home/david/Juegos/airforcepilot/src/motor/<a class="el" href="texto_8h_source.html">texto.h</a></li>
+<li>/home/david/Juegos/airforcepilot/src/motor/<a class="el" href="texto_8cpp.html">texto.cpp</a></li>
+</ul>
+</div>
+<hr size="1"/><address style="text-align: right;"><small>Generado el Sun Dec 13 19:09:11 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
+</body>
+</html>

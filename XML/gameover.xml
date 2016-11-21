@@ -1,0 +1,5 @@
+<transicion fondo="fondogameover" musica="menu">
+		<linea x="190" y="280" texto="GAME OVER" fuente="stencilg" r="160" g="20" b="20"/>
+		<linea x="130" y="360" texto="Te han fundido chavalote" fuente="stencil" r="0" g="0" b="0"/>
+		<linea x="10" y="570" texto="Pulsa ESC para continuar" fuente="stencilp" r="0" g="0" b="0"/>
+</transicion>

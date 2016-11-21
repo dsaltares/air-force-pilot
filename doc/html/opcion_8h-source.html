@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Fichero Fuente /home/david/Juegos/airforcepilot/src/motor/opcion.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css">
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.8 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&nbsp;de&nbsp;los&nbsp;ficheros</span></a></li>
+    </ul>
+  </div>
+<h1>/home/david/Juegos/airforcepilot/src/motor/opcion.h</h1><a href="opcion_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef _OPCION_</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define _OPCION_</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;SDL/SDL.h&gt;</span>
+<a name="l00006"></a>00006 
+<a name="l00007"></a>00007 <span class="preprocessor">#include "<a class="code" href="fuente_8h.html">fuente.h</a>"</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include "<a class="code" href="galeria_8h.html">galeria.h</a>"</span>
+<a name="l00009"></a>00009 
+<a name="l00011"></a>00011 
+<a name="l00033"></a><a class="code" href="classOpcion.html">00033</a> <span class="keyword">class </span><a class="code" href="classOpcion.html" title="Utilizada como elemento del menú del juego.">Opcion</a>{
+<a name="l00034"></a>00034         <span class="keyword">public</span>:
+<a name="l00049"></a>00049                 <a class="code" href="classOpcion.html#6cfb69ede535d2bf16d6eb8659e81c20">Opcion</a>(<span class="keyword">const</span> std::string&amp; <a class="code" href="classOpcion.html#d4964879789011ac545fcff03c766f07">texto</a>, <a class="code" href="classFuente.html" title="Utilizada para gestionar fuentes ttf.">Fuente</a>* fuente, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> r1 = 0, <span class="keywordtype">int</span> g1 = 0, <span class="keywordtype">int</span> b1 = 0, <span class="keywordtype">int</span> r2 = 0, <span class="keywordtype">int</span> g2 = 0, <span class="keywordtype">int</span> b2 = 0);
+<a name="l00050"></a>00050                 
+<a name="l00057"></a>00057                 <span class="keywordtype">void</span> <a class="code" href="classOpcion.html#f43ea74aebecfb85a6d0668f712ecb77">dibujar</a>(SDL_Surface* superficie, <span class="keywordtype">bool</span> seleccionada = <span class="keyword">false</span>);
+<a name="l00058"></a>00058                 
+<a name="l00064"></a>00064                 <span class="keywordtype">int</span> <a class="code" href="classOpcion.html#b95ca2315a9503d9d7bf46161eab06c5">pos_x</a>() <span class="keyword">const</span>;
+<a name="l00065"></a>00065                 
+<a name="l00071"></a>00071                 <span class="keywordtype">int</span> <a class="code" href="classOpcion.html#9616a536cdfa5efc75f9f9e17fe67a6a">pos_y</a>() <span class="keyword">const</span>;
+<a name="l00072"></a>00072                 
+<a name="l00078"></a>00078                 <span class="keyword">const</span> std::string&amp; <a class="code" href="classOpcion.html#d4964879789011ac545fcff03c766f07">texto</a>() <span class="keyword">const</span>;
+<a name="l00079"></a>00079                         
+<a name="l00080"></a>00080         <span class="keyword">private</span>:
+<a name="l00081"></a>00081                 std::string texto_;
+<a name="l00082"></a>00082                 <a class="code" href="classFuente.html" title="Utilizada para gestionar fuentes ttf.">Fuente</a> *fuente_;
+<a name="l00083"></a>00083                 <span class="keywordtype">int</span> x_, y_;
+<a name="l00084"></a>00084                 <span class="keywordtype">int</span> r1_, g1_, b1_, r2_, g2_, b2_;
+<a name="l00085"></a>00085 };
+<a name="l00086"></a>00086 
+<a name="l00087"></a><a class="code" href="classOpcion.html#b95ca2315a9503d9d7bf46161eab06c5">00087</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classOpcion.html#b95ca2315a9503d9d7bf46161eab06c5">Opcion::pos_x</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> x_;}
+<a name="l00088"></a><a class="code" href="classOpcion.html#9616a536cdfa5efc75f9f9e17fe67a6a">00088</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classOpcion.html#9616a536cdfa5efc75f9f9e17fe67a6a">Opcion::pos_y</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> y_;}
+<a name="l00089"></a><a class="code" href="classOpcion.html#d4964879789011ac545fcff03c766f07">00089</a> <span class="keyword">inline</span> <span class="keyword">const</span> std::string&amp; <a class="code" href="classOpcion.html#d4964879789011ac545fcff03c766f07">Opcion::texto</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> texto_;}
+<a name="l00090"></a>00090 
+<a name="l00091"></a>00091 <span class="preprocessor">#endif</span>
+<a name="l00092"></a>00092 <span class="preprocessor"></span>
+</pre></div></div>
+<hr size="1"><address style="text-align: right;"><small>Generado el Sun Nov 22 12:29:30 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
+</body>
+</html>

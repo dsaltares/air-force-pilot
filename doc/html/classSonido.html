@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Referencia de la Clase Sonido</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generado por Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Clases</span></a></li>
+      <li><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;clases</span></a></li>
+      <li><a href="hierarchy.html"><span>Jerarquía&nbsp;de&nbsp;la&nbsp;clase</span></a></li>
+      <li><a href="functions.html"><span>Miembros&nbsp;de&nbsp;las&nbsp;clases</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Referencia de la Clase Sonido</h1><!-- doxytag: class="Sonido" -->
+<p>Utilizada para cargar y reproducir efectos de sonido del juego.  
+<a href="#_details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="sonido_8h_source.html">sonido.h</a>&gt;</code></p>
+
+<p><a href="classSonido-members.html">Lista de todos los miembros.</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSonido.html#aca711d49b9ceb877bcba7258132136d2">Sonido</a> (const char *ruta)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSonido.html#a3754ccd9480121b4260f4675f734a0fa">reproducir</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSonido.html#a1ff145c1b9d188a0827a8c091a075c8c">~Sonido</a> ()</td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descripción detallada</h2>
+<p>Utilizada para cargar y reproducir efectos de sonido del juego. </p>
+<p>Permite cargar desde memoria secundaria efectos de sonido</p>
+<p>Ejemplo de uso : </p>
+<div class="fragment"><pre class="fragment"><span class="preprocessor">        #include &quot;<a class="code" href="sonido_8h.html">sonido.h</a>&quot;</span>
+        
+        <span class="comment">// Se supone pantalla debidamente inicializada y el subsistema de vídeo y audio inicializados</span>
+                
+        <span class="comment">// Creamos un objeto Sonido: ruta</span>
+        <a class="code" href="classSonido.html" title="Utilizada para cargar y reproducir efectos de sonido del juego.">Sonido</a> disparo(<span class="stringliteral">&quot;disparo.wav&quot;</span>);
+        
+        <span class="comment">// Reproducimos el sonido</span>
+        disparo.reproducir();
+</pre></div> <hr/><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" id="aca711d49b9ceb877bcba7258132136d2"></a><!-- doxytag: member="Sonido::Sonido" ref="aca711d49b9ceb877bcba7258132136d2" args="(const char *ruta)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Sonido::Sonido </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>ruta</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Constructor Carga el fichero de audio </p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>ruta</em>&nbsp;</td><td>Ruta del fichero de audio a cargar </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a1ff145c1b9d188a0827a8c091a075c8c"></a><!-- doxytag: member="Sonido::~Sonido" ref="a1ff145c1b9d188a0827a8c091a075c8c" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Sonido::~Sonido </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="classDestructor.html" title="Clase base del destructor genérico para destuir Singleton.">Destructor</a> Libera la memoria ocupada por el efecto </p>
+
+</div>
+</div>
+<hr/><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" id="a3754ccd9480121b4260f4675f734a0fa"></a><!-- doxytag: member="Sonido::reproducir" ref="a3754ccd9480121b4260f4675f734a0fa" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Sonido::reproducir </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Reproduce el efecto de sonido 1 vez </p>
+
+</div>
+</div>
+<hr/>La documentación para esta clase fue generada a partir de los siguientes ficheros:<ul>
+<li>/home/david/Juegos/airforcepilot/src/motor/<a class="el" href="sonido_8h_source.html">sonido.h</a></li>
+<li>/home/david/Juegos/airforcepilot/src/motor/<a class="el" href="sonido_8cpp.html">sonido.cpp</a></li>
+</ul>
+</div>
+<hr size="1"/><address style="text-align: right;"><small>Generado el Sun Dec 13 19:09:11 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
+</body>
+</html>

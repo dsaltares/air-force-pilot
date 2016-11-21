@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Fichero Fuente /home/david/Juegos/airforcepilot/src/motor/parser.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css">
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.8 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&nbsp;de&nbsp;los&nbsp;ficheros</span></a></li>
+    </ul>
+  </div>
+<h1>/home/david/Juegos/airforcepilot/src/motor/parser.h</h1><a href="parser_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef _PARSER_</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define _PARSER_</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include "ticpp/ticpp.h"</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;vector&gt;</span>
+<a name="l00007"></a>00007 
+<a name="l00009"></a>00009 
+<a name="l00075"></a><a class="code" href="classParser.html">00075</a> <span class="keyword">class </span><a class="code" href="classParser.html" title="Parsea ficheros xml.">Parser</a>{
+<a name="l00076"></a>00076         <span class="keyword">public</span>:
+<a name="l00077"></a>00077                 
+<a name="l00083"></a>00083                 <a class="code" href="classParser.html#af261d7c45d2cdfc4b4862cfa59bc66b">Parser</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* fichero);
+<a name="l00084"></a>00084                 
+<a name="l00090"></a>00090                 <a class="code" href="classParser.html#af261d7c45d2cdfc4b4862cfa59bc66b">Parser</a>(<span class="keyword">const</span> std::string fichero);
+<a name="l00091"></a>00091                 
+<a name="l00100"></a>00100                 std::string <a class="code" href="classParser.html#34d640bfde0b3349a79d38f189c569e8">contenido</a>(<span class="keyword">const</span> ticpp::Element* elemento) <span class="keyword">const</span>;
+<a name="l00101"></a>00101                 
+<a name="l00108"></a>00108                 std::string <a class="code" href="classParser.html#99017f931b265e91f24de5899b6edc19">atributo</a>(<span class="keyword">const</span> std::string&amp; nombre, <span class="keyword">const</span> ticpp::Element* elemento) <span class="keyword">const</span>;
+<a name="l00109"></a>00109                 
+<a name="l00120"></a>00120                 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;
+<a name="l00121"></a><a class="code" href="classParser.html#f6bb60d990e363472c208161faa3e38f">00121</a>                 <span class="keywordtype">bool</span> <a class="code" href="classParser.html#f6bb60d990e363472c208161faa3e38f">atributo</a>(<span class="keyword">const</span> std::string&amp; nombre, <span class="keyword">const</span> ticpp::Element *elemento, T* valor)<span class="keyword"> const</span>{
+<a name="l00122"></a>00122                         <span class="keywordflow">if</span>(elemento){
+<a name="l00123"></a>00123                                 <span class="keywordflow">try</span>{
+<a name="l00124"></a>00124                                         elemento-&gt;GetAttribute(nombre, valor);
+<a name="l00125"></a>00125                                 }
+<a name="l00126"></a>00126                                 <span class="keywordflow">catch</span>(ticpp::Exception&amp; e){
+<a name="l00127"></a>00127                                         <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00128"></a>00128                                 }
+<a name="l00129"></a>00129                                 <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00130"></a>00130                         }
+<a name="l00131"></a>00131                         <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00132"></a>00132                 }
+<a name="l00133"></a>00133                 
+<a name="l00137"></a><a class="code" href="classParser.html#1bad0c2021331b37ab14158855ae9324">00137</a>                 ticpp::Element* <a class="code" href="classParser.html#1bad0c2021331b37ab14158855ae9324">raiz</a>() {<span class="keywordflow">return</span> documento.FirstChildElement();}
+<a name="l00138"></a>00138                 
+<a name="l00139"></a>00139                 
+<a name="l00146"></a>00146                 ticpp::Element* <a class="code" href="classParser.html#9b3a55b0a1bdbefff3d8813b68a042a2">encontrar</a>(<span class="keyword">const</span> std::string&amp; nombre, ticpp::Element* inicio = 0);
+<a name="l00147"></a>00147                 
+<a name="l00155"></a>00155                 <span class="keywordtype">bool</span> <a class="code" href="classParser.html#9b3a55b0a1bdbefff3d8813b68a042a2">encontrar</a>(<span class="keyword">const</span> std::string&amp; nombre, std::vector&lt;ticpp::Element*&gt;&amp; v, ticpp::Element* inicio = 0);
+<a name="l00156"></a>00156                 
+<a name="l00161"></a>00161                 <span class="keywordtype">bool</span> <a class="code" href="classParser.html#eb64c24c0b88e94360fb0433622680bf">save</a>(<span class="keyword">const</span> std::string&amp; filename);
+<a name="l00162"></a>00162                 
+<a name="l00168"></a>00168                 ticpp::Element* <span class="keyword">add</span>(<span class="keyword">const</span> std::string&amp; nombre, ticpp::Element* padre = 0);
+<a name="l00169"></a>00169 
+<a name="l00177"></a>00177                 <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;
+<a name="l00178"></a><a class="code" href="classParser.html#0a4087c89076c7b4ba901eb5e87f366b">00178</a>                     <span class="keywordtype">bool</span> <a class="code" href="classParser.html#0a4087c89076c7b4ba901eb5e87f366b">establece_atributo</a>(<span class="keyword">const</span> std::string&amp; nombre, <span class="keyword">const</span> T&amp; valor, ticpp::Element* elemento){
+<a name="l00179"></a>00179                         <span class="keywordflow">if</span>(elemento){
+<a name="l00180"></a>00180                             <span class="keywordflow">try</span>{
+<a name="l00181"></a>00181                                 elemento-&gt;SetAttribute(nombre,valor);
+<a name="l00182"></a>00182                             }<span class="keywordflow">catch</span>(ticpp::Exception&amp; e){
+<a name="l00183"></a>00183                                 <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00184"></a>00184                             }
+<a name="l00185"></a>00185                             <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00186"></a>00186                         }
+<a name="l00187"></a>00187                         <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00188"></a>00188                     }
+<a name="l00189"></a>00189 
+<a name="l00195"></a>00195                 <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;
+<a name="l00196"></a><a class="code" href="classParser.html#9dd150500170eed5dcbffae781fc2e5c">00196</a>                     <span class="keywordtype">bool</span> <a class="code" href="classParser.html#9dd150500170eed5dcbffae781fc2e5c">establece_contenido</a>(<span class="keyword">const</span> T&amp; valor, ticpp::Element* elemento){
+<a name="l00197"></a>00197                         <span class="keywordflow">if</span>(elemento){
+<a name="l00198"></a>00198                             <span class="keywordflow">try</span>{
+<a name="l00199"></a>00199                                 elemento-&gt;SetText(valor);
+<a name="l00200"></a>00200                             }<span class="keywordflow">catch</span>(ticpp::Exception&amp; e){
+<a name="l00201"></a>00201                                 <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00202"></a>00202                             }
+<a name="l00203"></a>00203                             <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00204"></a>00204                         }
+<a name="l00205"></a>00205                         <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00206"></a>00206                     }
+<a name="l00207"></a>00207                 
+<a name="l00208"></a>00208         <span class="keyword">private</span>:
+<a name="l00209"></a>00209                 ticpp::Document documento;
+<a name="l00210"></a>00210                 <span class="keywordtype">void</span> encontrar_aux(<span class="keyword">const</span> std::string&amp; nombre, ticpp::Element* padre, ticpp::Element*&amp; elemento, <span class="keywordtype">bool</span>&amp; parada);
+<a name="l00211"></a>00211                 <span class="keywordtype">void</span> encontrar_aux(<span class="keyword">const</span> std::string&amp; nombre, ticpp::Element* padre, std::vector&lt;ticpp::Element*&gt;&amp; v);
+<a name="l00212"></a>00212 };
+<a name="l00213"></a>00213 
+<a name="l00214"></a>00214 <span class="preprocessor">#endif</span>
+</pre></div></div>
+<hr size="1"><address style="text-align: right;"><small>Generado el Sun Nov 22 12:29:30 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
+</body>
+</html>

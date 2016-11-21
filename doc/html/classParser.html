@@ -1,0 +1,516 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Referencia de la Clase Parser</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generado por Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Clases</span></a></li>
+      <li><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;clases</span></a></li>
+      <li><a href="hierarchy.html"><span>Jerarquía&nbsp;de&nbsp;la&nbsp;clase</span></a></li>
+      <li><a href="functions.html"><span>Miembros&nbsp;de&nbsp;las&nbsp;clases</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Referencia de la Clase Parser</h1><!-- doxytag: class="Parser" -->
+<p>Parsea ficheros xml.  
+<a href="#_details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="parser_8h_source.html">parser.h</a>&gt;</code></p>
+
+<p><a href="classParser-members.html">Lista de todos los miembros.</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParser.html#aaf261d7c45d2cdfc4b4862cfa59bc66b">Parser</a> (const char *fichero)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParser.html#ace4aa37a7f218c47b712238ba936ab48">Parser</a> (const std::string fichero)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParser.html#a34d640bfde0b3349a79d38f189c569e8">contenido</a> (const ticpp::Element *elemento) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParser.html#a99017f931b265e91f24de5899b6edc19">atributo</a> (const std::string &amp;nombre, const ticpp::Element *elemento) const </td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classParser.html#af6bb60d990e363472c208161faa3e38f">atributo</a> (const std::string &amp;nombre, const ticpp::Element *elemento, T *valor) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">ticpp::Element *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParser.html#a1bad0c2021331b37ab14158855ae9324">raiz</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">ticpp::Element *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParser.html#a9b3a55b0a1bdbefff3d8813b68a042a2">encontrar</a> (const std::string &amp;nombre, ticpp::Element *inicio=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParser.html#aba905afac0a1c925438581323a19b90f">encontrar</a> (const std::string &amp;nombre, std::vector&lt; ticpp::Element * &gt; &amp;v, ticpp::Element *inicio=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParser.html#aeb64c24c0b88e94360fb0433622680bf">save</a> (const std::string &amp;filename)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">ticpp::Element *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParser.html#a60742c3f1a4c4c33dc322e63bd74ddbc">add</a> (const std::string &amp;nombre, ticpp::Element *padre=0)</td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classParser.html#a0a4087c89076c7b4ba901eb5e87f366b">establece_atributo</a> (const std::string &amp;nombre, const T &amp;valor, ticpp::Element *elemento)</td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classParser.html#a9dd150500170eed5dcbffae781fc2e5c">establece_contenido</a> (const T &amp;valor, ticpp::Element *elemento)</td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descripción detallada</h2>
+<p>Parsea ficheros xml. </p>
+<p>Carga ficheros XML y los parsea utilizando por debajo la librería ticpp</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Tareas Pendientes:</a></b></dt><dd>Implementar un sistema de salida, es decir, de escritura en ficheros XML (quizás para guardar la partida)</dd></dl>
+<p>Ejemplo de uso :</p>
+<p>Fichero XML: </p>
+<div class="fragment"><pre class="fragment">        &lt;<a class="code" href="galeria_8h.html#ad0f15b112f97814cc6ed665d8bae2e30">galeria</a>&gt;
+
+                &lt;imagenes&gt;
+                        &lt;imagen nombre=<span class="stringliteral">&quot;avion&quot;</span> ruta=<span class="stringliteral">&quot;multimedia/avion-normal-acelerado-p.png&quot;</span> filas=<span class="stringliteral">&quot;1&quot;</span> columnas=<span class="stringliteral">&quot;1&quot;</span>/&gt;
+                &lt;/imagenes&gt;
+        
+                &lt;fuentes&gt;
+                        &lt;fuente nombre=<span class="stringliteral">&quot;comic&quot;</span> ruta=<span class="stringliteral">&quot;multimedia/comic.ttf&quot;</span> puntos=<span class="stringliteral">&quot;12&quot;</span>/&gt;
+                        &lt;fuente nombre=<span class="stringliteral">&quot;arial&quot;</span> ruta=<span class="stringliteral">&quot;multimedia/arial.ttf&quot;</span> puntos=<span class="stringliteral">&quot;12&quot;</span>/&gt;
+                        &lt;fuente nombre=<span class="stringliteral">&quot;times&quot;</span> ruta=<span class="stringliteral">&quot;multimedia/times.ttf&quot;</span> puntos=<span class="stringliteral">&quot;12&quot;</span>/&gt;
+                &lt;/fuentes&gt;
+        
+                &lt;sonidos&gt;
+                        &lt;sonido nombre=<span class="stringliteral">&quot;muere&quot;</span> ruta=<span class="stringliteral">&quot;multimedia/muere.wav&quot;</span>/&gt;
+                &lt;/sonidos&gt;
+        
+                &lt;musicas&gt;
+                        &lt;musica nombre=<span class="stringliteral">&quot;juego&quot;</span> ruta=<span class="stringliteral">&quot;multimedia/juego.wav&quot;</span>/&gt;
+                &lt;/musicas&gt;
+        
+        &lt;/<a class="code" href="galeria_8h.html#ad0f15b112f97814cc6ed665d8bae2e30">galeria</a>&gt;
+</pre></div><p>Código del programa (hace uso de la clase <a class="el" href="classFuente.html" title="Utilizada para gestionar fuentes ttf.">Fuente</a> para el ejemplo </p>
+<div class="fragment"><pre class="fragment"><span class="preprocessor">        #include &quot;<a class="code" href="parser_8h.html">parser.h</a>&quot;</span>
+<span class="preprocessor">        #include &quot;<a class="code" href="fuente_8h.html">fuente.h</a>&quot;</span>
+<span class="preprocessor">        #include &lt;vector&gt;</span>
+        
+        <span class="keyword">using namespace </span>std;
+        
+        ...
+        
+        <span class="comment">// Declaramos el parser</span>
+        <a class="code" href="classParser.html" title="Parsea ficheros xml.">Parser</a> p(<span class="stringliteral">&quot;multimedia.xml&quot;</span>);
+        
+        <span class="comment">// Vector para almacenar las fuentes</span>
+        vector &lt;Fuente*&gt; fuentes;
+        
+        <span class="comment">// Atributos</span>
+        <span class="keywordtype">string</span> clave, ruta;
+        <span class="keywordtype">int</span> puntos;
+        
+        <span class="comment">// Construimos las fuentes</span>
+        multimedia.encontrar(<span class="stringliteral">&quot;fuente&quot;</span>, fuentes, multimedia.encontrar(<span class="stringliteral">&quot;fuentes&quot;</span>));
+        <span class="keywordflow">for</span>(i = fuentes.begin(); i != fuentes.end(); i++){
+                clave = multimedia.atributo(<span class="stringliteral">&quot;nombre&quot;</span>, *i);
+                ruta = multimedia.atributo(<span class="stringliteral">&quot;ruta&quot;</span>, *i);
+                multimedia.atributo(<span class="stringliteral">&quot;puntos&quot;</span>, *i, &amp;puntos);
+                fuentes_[clave] = <span class="keyword">new</span> <a class="code" href="classFuente.html" title="Utilizada para gestionar fuentes ttf.">Fuente</a>(ruta.c_str(), puntos);
+        }
+</pre></div> <hr/><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" id="aaf261d7c45d2cdfc4b4862cfa59bc66b"></a><!-- doxytag: member="Parser::Parser" ref="aaf261d7c45d2cdfc4b4862cfa59bc66b" args="(const char *fichero)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Parser::Parser </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>fichero</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Constructor Carga el fichero xml </p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>fichero</em>&nbsp;</td><td>Ruta del fichero a ser cargado </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ace4aa37a7f218c47b712238ba936ab48"></a><!-- doxytag: member="Parser::Parser" ref="ace4aa37a7f218c47b712238ba936ab48" args="(const std::string fichero)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Parser::Parser </td>
+          <td>(</td>
+          <td class="paramtype">const std::string&nbsp;</td>
+          <td class="paramname"> <em>fichero</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Constructor Carga el fichero xml </p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>fichero</em>&nbsp;</td><td>Ruta del fichero a ser cargado </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" id="a60742c3f1a4c4c33dc322e63bd74ddbc"></a><!-- doxytag: member="Parser::add" ref="a60742c3f1a4c4c33dc322e63bd74ddbc" args="(const std::string &amp;nombre, ticpp::Element *padre=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ticpp::Element * Parser::add </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>nombre</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ticpp::Element *&nbsp;</td>
+          <td class="paramname"> <em>padre</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Crea un elemento con ese nombre al final de la lista de hijos del padre </p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>nombre</em>&nbsp;</td><td>Nombre del elemento a añadir </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>padre</em>&nbsp;</td><td>Padre del elemento a añadir, sino se especifica es la raíz. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af6bb60d990e363472c208161faa3e38f"></a><!-- doxytag: member="Parser::atributo" ref="af6bb60d990e363472c208161faa3e38f" args="(const std::string &amp;nombre, const ticpp::Element *elemento, T *valor) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Parser::atributo </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>nombre</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ticpp::Element *&nbsp;</td>
+          <td class="paramname"> <em>elemento</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T *&nbsp;</td>
+          <td class="paramname"> <em>valor</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Consultor</p>
+<p>Método para consultar atributos de tipo T (de cualquier tipo para los que se haya definido &gt;&gt;)</p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>nombre</em>&nbsp;</td><td>Nombre del atributo a consultar </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>elemento</em>&nbsp;</td><td>Elemento cuyo atributo será consultado </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>valor</em>&nbsp;</td><td>puntero a variable de tipo T donde se guardará el atributo </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Verdadero con éxito Falso ante fracaso </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a99017f931b265e91f24de5899b6edc19"></a><!-- doxytag: member="Parser::atributo" ref="a99017f931b265e91f24de5899b6edc19" args="(const std::string &amp;nombre, const ticpp::Element *elemento) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Parser::atributo </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>nombre</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ticpp::Element *&nbsp;</td>
+          <td class="paramname"> <em>elemento</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Consultor </p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>nombre</em>&nbsp;</td><td>Cadena con el nombre del atributo a consultar </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>elemento</em>&nbsp;</td><td>Elemento cuyo atributo será consultado </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Cadena con el atributo, cadena vacía si el elemento no posee el atributo </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a34d640bfde0b3349a79d38f189c569e8"></a><!-- doxytag: member="Parser::contenido" ref="a34d640bfde0b3349a79d38f189c569e8" args="(const ticpp::Element *elemento) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Parser::contenido </td>
+          <td>(</td>
+          <td class="paramtype">const ticpp::Element *&nbsp;</td>
+          <td class="paramname"> <em>elemento</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Consultor</p>
+<p>Sólo vale para nodos cuyo contendo sea texto</p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>elemento</em>&nbsp;</td><td>Elemento del que se va a extraer el contenido </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Cadena con el contenido del elemento </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aba905afac0a1c925438581323a19b90f"></a><!-- doxytag: member="Parser::encontrar" ref="aba905afac0a1c925438581323a19b90f" args="(const std::string &amp;nombre, std::vector&lt; ticpp::Element * &gt; &amp;v, ticpp::Element *inicio=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Parser::encontrar </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>nombre</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; ticpp::Element * &gt; &amp;&nbsp;</td>
+          <td class="paramname"> <em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ticpp::Element *&nbsp;</td>
+          <td class="paramname"> <em>inicio</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Búsqueda recursiva de varios elementos con un nombre que se guardan en un vector </p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>nombre</em>&nbsp;</td><td>Nombre de los nodos a buscar </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>v</em>&nbsp;</td><td>Vector de ticpp::Element* donde se guardarán los elementos coincidentes con nombre </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>inicio</em>&nbsp;</td><td>Elemento raíz del subárbol que se va a explorar (si se omite se toma la raíz del documento) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Verdadero si se ha encontrado algún elemento, Falso en caso contrario </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9b3a55b0a1bdbefff3d8813b68a042a2"></a><!-- doxytag: member="Parser::encontrar" ref="a9b3a55b0a1bdbefff3d8813b68a042a2" args="(const std::string &amp;nombre, ticpp::Element *inicio=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ticpp::Element* Parser::encontrar </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>nombre</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ticpp::Element *&nbsp;</td>
+          <td class="paramname"> <em>inicio</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Búsqueda recursiva de un elemento con un determinado nombre. </p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>nombre</em>&nbsp;</td><td>Nombre del nodo a buscar </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>inicio</em>&nbsp;</td><td>Elemento raíz del subárbol que se va a explorar (si se omite se toma la raíz del documento) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Primer elemento con el nombre indicado que se encuentra </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0a4087c89076c7b4ba901eb5e87f366b"></a><!-- doxytag: member="Parser::establece_atributo" ref="a0a4087c89076c7b4ba901eb5e87f366b" args="(const std::string &amp;nombre, const T &amp;valor, ticpp::Element *elemento)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Parser::establece_atributo </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>nombre</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&nbsp;</td>
+          <td class="paramname"> <em>valor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ticpp::Element *&nbsp;</td>
+          <td class="paramname"> <em>elemento</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Crea un atributo con ese nombre y ese valor en un elemento Es necesario el operador &gt;&gt; para el valor </p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>nombre</em>&nbsp;</td><td>Nombre del atributo </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>valor</em>&nbsp;</td><td>Valor del atributo a añadir </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>elemento</em>&nbsp;</td><td>Elemento al que establecer el atributo </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a9dd150500170eed5dcbffae781fc2e5c"></a><!-- doxytag: member="Parser::establece_contenido" ref="a9dd150500170eed5dcbffae781fc2e5c" args="(const T &amp;valor, ticpp::Element *elemento)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Parser::establece_contenido </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&nbsp;</td>
+          <td class="paramname"> <em>valor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ticpp::Element *&nbsp;</td>
+          <td class="paramname"> <em>elemento</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Establece el contenido de un elemento con el valor indicado </p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>valor</em>&nbsp;</td><td>Valor del contenido del elemento </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>elemento</em>&nbsp;</td><td>Elemento al que hay que modificarle el contenido </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a1bad0c2021331b37ab14158855ae9324"></a><!-- doxytag: member="Parser::raiz" ref="a1bad0c2021331b37ab14158855ae9324" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ticpp::Element* Parser::raiz </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Elemento raíz del documento </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aeb64c24c0b88e94360fb0433622680bf"></a><!-- doxytag: member="Parser::save" ref="aeb64c24c0b88e94360fb0433622680bf" args="(const std::string &amp;filename)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Parser::save </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>filename</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Guarda el documento actual </p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>filename</em>&nbsp;</td><td>Nombre del fichero a guardar </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>La documentación para esta clase fue generada a partir de los siguientes ficheros:<ul>
+<li>/home/david/Juegos/airforcepilot/src/motor/<a class="el" href="parser_8h_source.html">parser.h</a></li>
+<li>/home/david/Juegos/airforcepilot/src/motor/<a class="el" href="parser_8cpp.html">parser.cpp</a></li>
+</ul>
+</div>
+<hr size="1"/><address style="text-align: right;"><small>Generado el Sun Dec 13 19:09:11 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
+</body>
+</html>

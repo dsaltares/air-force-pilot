@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Fichero Fuente /home/david/Juegos/airforcepilot/src/motor/fuente.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css">
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.8 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&nbsp;de&nbsp;los&nbsp;ficheros</span></a></li>
+    </ul>
+  </div>
+<h1>/home/david/Juegos/airforcepilot/src/motor/fuente.h</h1><a href="fuente_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef _FUENTE_</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define _FUENTE_</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;SDL/SDL.h&gt;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;SDL/SDL_ttf.h&gt;</span>
+<a name="l00006"></a>00006 
+<a name="l00008"></a>00008 
+<a name="l00034"></a><a class="code" href="classFuente.html">00034</a> <span class="keyword">class </span><a class="code" href="classFuente.html" title="Utilizada para gestionar fuentes ttf.">Fuente</a>{
+<a name="l00035"></a>00035         <span class="keyword">public</span>:
+<a name="l00036"></a>00036                 
+<a name="l00043"></a>00043                 <a class="code" href="classFuente.html#74028847653c8f26fc7b59ecc846af61">Fuente</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* ruta, <span class="keywordtype">int</span> <a class="code" href="classFuente.html#7a2044e65775def6d3f7fb80095cfa69">puntos</a> = 20);
+<a name="l00044"></a>00044                 
+<a name="l00053"></a>00053                 <span class="keywordtype">void</span> <a class="code" href="classFuente.html#b4fc84de0db1fc7de6ef81d98df24325">dibujar</a>(SDL_Surface* superficie, <span class="keyword">const</span> <span class="keywordtype">char</span>* cadena, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, SDL_Color color);
+<a name="l00054"></a>00054                 
+<a name="l00055"></a>00055                 
+<a name="l00060"></a>00060                 TTF_Font* <a class="code" href="classFuente.html#50001fc87d28ca24cfb3c62f0cad53db">tipo_fuente</a>() <span class="keyword">const</span>;
+<a name="l00061"></a>00061                 
+<a name="l00066"></a>00066                 <span class="keywordtype">int</span> <a class="code" href="classFuente.html#7a2044e65775def6d3f7fb80095cfa69">puntos</a>() <span class="keyword">const</span>;
+<a name="l00067"></a>00067                 
+<a name="l00072"></a>00072                 <a class="code" href="classFuente.html#01184689694f659594bbadf1cad63e87">~Fuente</a>();
+<a name="l00073"></a>00073         <span class="keyword">private</span>:
+<a name="l00074"></a>00074                 TTF_Font* fuente;
+<a name="l00075"></a>00075                 <span class="keywordtype">int</span> puntos_;
+<a name="l00076"></a>00076                 SDL_Surface* renderizada;
+<a name="l00077"></a>00077 };
+<a name="l00078"></a>00078 
+<a name="l00079"></a><a class="code" href="classFuente.html#50001fc87d28ca24cfb3c62f0cad53db">00079</a> <span class="keyword">inline</span> TTF_Font* <a class="code" href="classFuente.html#50001fc87d28ca24cfb3c62f0cad53db">Fuente::tipo_fuente</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> fuente;}
+<a name="l00080"></a><a class="code" href="classFuente.html#7a2044e65775def6d3f7fb80095cfa69">00080</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classFuente.html#7a2044e65775def6d3f7fb80095cfa69">Fuente::puntos</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> puntos_;}
+<a name="l00081"></a>00081 
+<a name="l00082"></a>00082 <span class="preprocessor">#endif</span>
+</pre></div></div>
+<hr size="1"><address style="text-align: right;"><small>Generado el Sun Nov 22 12:29:30 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
+</body>
+</html>

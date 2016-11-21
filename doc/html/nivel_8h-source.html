@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Fichero Fuente /home/david/Juegos/airforcepilot/src/motor/nivel.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css">
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.8 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&nbsp;de&nbsp;los&nbsp;ficheros</span></a></li>
+    </ul>
+  </div>
+<h1>/home/david/Juegos/airforcepilot/src/motor/nivel.h</h1><a href="nivel_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef _NIVEL_</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define _NIVEL_</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;vector&gt;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;SDL/SDL.h&gt;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include "<a class="code" href="imagen_8h.html">imagen.h</a>"</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include "<a class="code" href="parser_8h.html">parser.h</a>"</span>
+<a name="l00009"></a>00009 
+<a name="l00010"></a>00010 <span class="keyword">class </span><a class="code" href="classJuego.html" title="Clase derivada de Escena utilizada para el Juego y su lógica.">Juego</a>;
+<a name="l00011"></a>00011 
+<a name="l00017"></a><a class="code" href="nivel_8h.html#27ff744a4dd967d260cf54a33591754c">00017</a> <span class="keyword">typedef</span> <span class="keyword">enum</span>{
+<a name="l00018"></a><a class="code" href="nivel_8h.html#27ff744a4dd967d260cf54a33591754c5a3eb7ef0aff35640856061b4e7707f8">00018</a>         <a class="code" href="nivel_8h.html#27ff744a4dd967d260cf54a33591754c5a3eb7ef0aff35640856061b4e7707f8">ATRAVESABLE</a>,
+<a name="l00019"></a><a class="code" href="nivel_8h.html#27ff744a4dd967d260cf54a33591754c608ddc540566fa7676df35c99ed0106b">00019</a>         <a class="code" href="nivel_8h.html#27ff744a4dd967d260cf54a33591754c608ddc540566fa7676df35c99ed0106b">NOATRAVESABLE</a>,
+<a name="l00020"></a><a class="code" href="nivel_8h.html#27ff744a4dd967d260cf54a33591754cf78069d9785261f08bcbd981ba4ee177">00020</a>         <a class="code" href="nivel_8h.html#27ff744a4dd967d260cf54a33591754cf78069d9785261f08bcbd981ba4ee177">SUELOFLOTANTE</a>
+<a name="l00021"></a>00021 } <a class="code" href="nivel_8h.html#27ff744a4dd967d260cf54a33591754c">tipo_tile</a>;
+<a name="l00022"></a>00022 
+<a name="l00027"></a>00027 <span class="comment">/*typedef struct{</span>
+<a name="l00028"></a>00028 <span class="comment">        </span>
+<a name="l00029"></a>00029 <span class="comment">                Cuadro del Tileset (rejilla de imágenes)</span>
+<a name="l00030"></a>00030 <span class="comment">        </span>
+<a name="l00031"></a>00031 <span class="comment">        int cuadro;</span>
+<a name="l00032"></a>00032 <span class="comment">        </span>
+<a name="l00033"></a>00033 <span class="comment">                Tipo de tile (atravesable, no atravesable etc)</span>
+<a name="l00034"></a>00034 <span class="comment">        </span>
+<a name="l00035"></a>00035 <span class="comment">        int tipo;</span>
+<a name="l00036"></a>00036 <span class="comment">}Tile;*/</span>
+<a name="l00037"></a>00037 
+<a name="l00038"></a><a class="code" href="nivel_8h.html#db45227d1e82db0d1962abcd62a2ec85">00038</a> <span class="keyword">typedef</span> <span class="keywordtype">int</span> <a class="code" href="structTile.html" title="Registro que guarda la información sobre los tiles, el cuadro de la rejilla del...">Tile</a>;
+<a name="l00039"></a>00039 
+<a name="l00070"></a><a class="code" href="classNivel.html">00070</a> <span class="keyword">class </span><a class="code" href="classNivel.html" title="Utilizada para cargar, manejar y dibujar los niveles del juego.">Nivel</a>{
+<a name="l00071"></a>00071         <span class="keyword">public</span>:
+<a name="l00072"></a>00072                 
+<a name="l00078"></a>00078                 <a class="code" href="classNivel.html#cdbf6648418197b4c07ea78041d2fc26">Nivel</a>(<a class="code" href="classJuego.html" title="Clase derivada de Escena utilizada para el Juego y su lógica.">Juego</a> *juego, std::string ruta);
+<a name="l00079"></a>00079                 
+<a name="l00084"></a>00084                 <a class="code" href="classNivel.html#965c3ae8442da70021de778020808286">~Nivel</a>();
+<a name="l00085"></a>00085                 
+<a name="l00091"></a>00091                 <span class="keywordtype">void</span> <a class="code" href="classNivel.html#d865fad2741c8020aeefb1133e15ad7d">dibujar</a>(SDL_Surface* superficie, <span class="keywordtype">int</span> capa);
+<a name="l00092"></a>00092                 
+<a name="l00097"></a>00097                 <span class="keywordtype">void</span> <a class="code" href="classNivel.html#a65adcafd9601785a4fca88d7fec3525">cargar_nivel</a>(<span class="keywordtype">int</span> i);
+<a name="l00098"></a>00098                 
+<a name="l00102"></a>00102                 <span class="keywordtype">void</span> <a class="code" href="classNivel.html#6e30e416a8e530fdc0a7a20cf21f40c7">siguiente</a>();
+<a name="l00103"></a>00103                 
+<a name="l00107"></a>00107                 <span class="keywordtype">void</span> <a class="code" href="classNivel.html#d089f580df60618d4926adfa1d6905a4">anterior</a>();
+<a name="l00108"></a>00108                 
+<a name="l00112"></a>00112                 <span class="keywordtype">void</span> <a class="code" href="classNivel.html#5892a1d0fcdb7815bb4fe4e0bb74208e">reinciar</a>();
+<a name="l00113"></a>00113                 
+<a name="l00119"></a>00119                 <span class="keywordtype">void</span> <a class="code" href="classNivel.html#c98ee8e8ac11a776ef6781db150f1c81">mover</a>(<span class="keywordtype">int</span> x_, <span class="keywordtype">int</span> y_);
+<a name="l00120"></a>00120                 
+<a name="l00124"></a>00124                 <span class="keywordtype">int</span> <a class="code" href="classNivel.html#472d7455fd026cb6a4799defe24b0d69">nivel_actual</a>() <span class="keyword">const</span>;
+<a name="l00125"></a>00125                 
+<a name="l00129"></a>00129                 <span class="keywordtype">int</span> <a class="code" href="classNivel.html#4515f4ef4b712f532636fc1c82dcdfe6">n_niveles</a>() <span class="keyword">const</span>;
+<a name="l00130"></a>00130                 
+<a name="l00134"></a>00134                 <span class="keywordtype">int</span> <a class="code" href="classNivel.html#438305ecb7bf202fc304b423a6861215">nivel_x</a>() <span class="keyword">const</span>;
+<a name="l00135"></a>00135                 
+<a name="l00139"></a>00139                 <span class="keywordtype">int</span> <a class="code" href="classNivel.html#6141ce17639872452f9592fa323c8252">nivel_y</a>() <span class="keyword">const</span>;
+<a name="l00140"></a>00140                 
+<a name="l00144"></a>00144                 <span class="keywordtype">int</span> <a class="code" href="classNivel.html#13347b34633e727b2725e1e0e48e341f">nivel_alto</a>() <span class="keyword">const</span>;
+<a name="l00145"></a>00145                 
+<a name="l00149"></a>00149                 <span class="keywordtype">int</span> <a class="code" href="classNivel.html#e67a2d64344bf701a6b8f513ed1886c9">nivel_ancho</a>() <span class="keyword">const</span>;
+<a name="l00150"></a>00150                 
+<a name="l00154"></a>00154                 <span class="keywordtype">int</span> <a class="code" href="classNivel.html#7cbf2ddb67010ef19414ee1fa90af1ca">tile_alto</a>() <span class="keyword">const</span>;
+<a name="l00155"></a>00155                 
+<a name="l00159"></a>00159                 <span class="keywordtype">int</span> <a class="code" href="classNivel.html#c29f4d43ae647a62c3cdcf8374e257d8">tile_ancho</a>() <span class="keyword">const</span>;
+<a name="l00160"></a>00160                 
+<a name="l00169"></a>00169                 <a class="code" href="structTile.html" title="Registro que guarda la información sobre los tiles, el cuadro de la rejilla del...">Tile</a> <a class="code" href="classNivel.html#f5030d17f856f094c0b8f1fd484693bb">get_tile</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> capa) <span class="keyword">const</span>;
+<a name="l00170"></a>00170                 
+<a name="l00171"></a>00171         <span class="keyword">private</span>:
+<a name="l00172"></a>00172                 <a class="code" href="classJuego.html" title="Clase derivada de Escena utilizada para el Juego y su lógica.">Juego</a> *juego_;
+<a name="l00173"></a>00173                 
+<a name="l00174"></a>00174                 <span class="keywordtype">int</span> numero_nivel; <span class="comment">// Número de nivel actual</span>
+<a name="l00175"></a>00175                 <span class="keywordtype">int</span> numero_niveles; <span class="comment">// Número de niveles</span>
+<a name="l00176"></a>00176                 <a class="code" href="structTile.html" title="Registro que guarda la información sobre los tiles, el cuadro de la rejilla del...">Tile</a>*** mapa; <span class="comment">// Mapa de tiles (es tridimensional porque son 3 capas)</span>
+<a name="l00177"></a>00177                 std::vector&lt;std::string&gt; niveles; <span class="comment">// Vector con las rutas de los niveles del juego</span>
+<a name="l00178"></a>00178                 <a class="code" href="classImagen.html" title="Utilizada para gestionar rejillas de imágenes.">Imagen</a>* tileset;
+<a name="l00179"></a>00179                 
+<a name="l00180"></a>00180                 <span class="keywordtype">int</span> x, y; <span class="comment">// Coordenadas a partir de las cuales se renderiza el mapa</span>
+<a name="l00181"></a>00181                 <span class="keywordtype">int</span> alto_, ancho_; <span class="comment">// Alto y ancho del mapa</span>
+<a name="l00182"></a>00182                 <span class="keywordtype">int</span> tile_ancho_, tile_alto_; <span class="comment">// Alto y ancho de cada tile</span>
+<a name="l00183"></a>00183                 
+<a name="l00184"></a>00184                 <span class="keywordtype">void</span> cargar_actores(); <span class="comment">// Utiliza la clase Juego para incluir en los actores del juego</span>
+<a name="l00185"></a>00185 };
+<a name="l00186"></a>00186 
+<a name="l00187"></a><a class="code" href="classNivel.html#4515f4ef4b712f532636fc1c82dcdfe6">00187</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classNivel.html#4515f4ef4b712f532636fc1c82dcdfe6">Nivel::n_niveles</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> numero_niveles;}
+<a name="l00188"></a><a class="code" href="classNivel.html#472d7455fd026cb6a4799defe24b0d69">00188</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classNivel.html#472d7455fd026cb6a4799defe24b0d69">Nivel::nivel_actual</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> numero_nivel;}
+<a name="l00189"></a><a class="code" href="classNivel.html#f5030d17f856f094c0b8f1fd484693bb">00189</a> <span class="keyword">inline</span> <a class="code" href="structTile.html" title="Registro que guarda la información sobre los tiles, el cuadro de la rejilla del...">Tile</a> <a class="code" href="classNivel.html#f5030d17f856f094c0b8f1fd484693bb">Nivel::get_tile</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> capa)<span class="keyword"> const </span>{<span class="keywordflow">return</span> mapa[x][y][capa];}
+<a name="l00190"></a><a class="code" href="classNivel.html#438305ecb7bf202fc304b423a6861215">00190</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classNivel.html#438305ecb7bf202fc304b423a6861215">Nivel::nivel_x</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> x;}
+<a name="l00191"></a><a class="code" href="classNivel.html#6141ce17639872452f9592fa323c8252">00191</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classNivel.html#6141ce17639872452f9592fa323c8252">Nivel::nivel_y</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> y;}
+<a name="l00192"></a><a class="code" href="classNivel.html#13347b34633e727b2725e1e0e48e341f">00192</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classNivel.html#13347b34633e727b2725e1e0e48e341f">Nivel::nivel_alto</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> alto_ * tile_alto_;}
+<a name="l00193"></a><a class="code" href="classNivel.html#e67a2d64344bf701a6b8f513ed1886c9">00193</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classNivel.html#e67a2d64344bf701a6b8f513ed1886c9">Nivel::nivel_ancho</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> ancho_ * tile_ancho_;}
+<a name="l00194"></a><a class="code" href="classNivel.html#7cbf2ddb67010ef19414ee1fa90af1ca">00194</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classNivel.html#7cbf2ddb67010ef19414ee1fa90af1ca">Nivel::tile_alto</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> tile_alto_;}
+<a name="l00195"></a><a class="code" href="classNivel.html#c29f4d43ae647a62c3cdcf8374e257d8">00195</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classNivel.html#c29f4d43ae647a62c3cdcf8374e257d8">Nivel::tile_ancho</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> tile_ancho_;}
+<a name="l00196"></a>00196 
+<a name="l00197"></a>00197 <span class="preprocessor">#endif</span>
+</pre></div></div>
+<hr size="1"><address style="text-align: right;"><small>Generado el Sun Nov 22 12:29:30 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
+</body>
+</html>

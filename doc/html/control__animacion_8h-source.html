@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Fichero Fuente /home/david/Juegos/airforcepilot/src/motor/control_animacion.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css">
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.8 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&nbsp;de&nbsp;los&nbsp;ficheros</span></a></li>
+    </ul>
+  </div>
+<h1>/home/david/Juegos/airforcepilot/src/motor/control_animacion.h</h1><a href="control__animacion_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef _CONTROL_ANIMACION_</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define _CONTROL_ANIMACION_</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;vector&gt;</span>
+<a name="l00005"></a>00005 
+<a name="l00007"></a>00007 
+<a name="l00034"></a><a class="code" href="classControl__Animacion.html">00034</a> <span class="keyword">class </span><a class="code" href="classControl__Animacion.html" title="Permite manejar secuencias de enteros (cuadros de una animación).">Control_Animacion</a>{
+<a name="l00035"></a>00035         <span class="keyword">public</span>:
+<a name="l00036"></a>00036         
+<a name="l00044"></a>00044                 <a class="code" href="classControl__Animacion.html#e91e7a1d3ab87849bbfe49a8381e1704">Control_Animacion</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* secuencia, <span class="keywordtype">int</span> retardo);
+<a name="l00045"></a>00045                 
+<a name="l00046"></a>00046                 <a class="code" href="classControl__Animacion.html#e91e7a1d3ab87849bbfe49a8381e1704">Control_Animacion</a>(<span class="keyword">const</span> <a class="code" href="classControl__Animacion.html" title="Permite manejar secuencias de enteros (cuadros de una animación).">Control_Animacion</a>&amp; c);
+<a name="l00047"></a>00047                 
+<a name="l00053"></a>00053                 <span class="keywordtype">bool</span> <a class="code" href="classControl__Animacion.html#186b42e6ac504ff779d5edd126df5864">avanzar</a>();
+<a name="l00054"></a>00054                 
+<a name="l00058"></a>00058                 <span class="keywordtype">void</span> <a class="code" href="classControl__Animacion.html#bc73d2124574dbd3274c7d6e8d82d24c">reiniciar</a>();
+<a name="l00059"></a>00059                 
+<a name="l00064"></a>00064                 <span class="keywordtype">int</span> <a class="code" href="classControl__Animacion.html#888317385a9e68a25aa43027dd69ee75">cuadro_actual</a>() <span class="keyword">const</span>;
+<a name="l00065"></a>00065                 
+<a name="l00070"></a>00070                 <span class="keywordtype">int</span> <a class="code" href="classControl__Animacion.html#c2a2b9205567e5d4168ae20c54dd8e78">ncuadros</a>() <span class="keyword">const</span>;
+<a name="l00071"></a>00071         <span class="keyword">private</span>:
+<a name="l00072"></a>00072                 std::vector&lt;int&gt; animacion;
+<a name="l00073"></a>00073                 <span class="keywordtype">int</span> r_, cr_, nc, paso;
+<a name="l00074"></a>00074 };
+<a name="l00075"></a>00075 
+<a name="l00076"></a><a class="code" href="classControl__Animacion.html#888317385a9e68a25aa43027dd69ee75">00076</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classControl__Animacion.html#888317385a9e68a25aa43027dd69ee75">Control_Animacion::cuadro_actual</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> animacion[paso];}
+<a name="l00077"></a><a class="code" href="classControl__Animacion.html#c2a2b9205567e5d4168ae20c54dd8e78">00077</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classControl__Animacion.html#c2a2b9205567e5d4168ae20c54dd8e78">Control_Animacion::ncuadros</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> nc;}
+<a name="l00078"></a>00078 
+<a name="l00079"></a><a class="code" href="classControl__Animacion.html#bc73d2124574dbd3274c7d6e8d82d24c">00079</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classControl__Animacion.html#bc73d2124574dbd3274c7d6e8d82d24c">Control_Animacion::reiniciar</a>() {paso = 0; cr_ = 0;}
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081 <span class="preprocessor">#endif</span>
+</pre></div></div>
+<hr size="1"><address style="text-align: right;"><small>Generado el Sun Nov 22 12:29:30 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
+</body>
+</html>

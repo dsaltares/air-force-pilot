@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Referencia de la Clase DestructionPhase</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generado por Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Clases</span></a></li>
+      <li><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;clases</span></a></li>
+      <li><a href="hierarchy.html"><span>Jerarquía&nbsp;de&nbsp;la&nbsp;clase</span></a></li>
+      <li><a href="functions.html"><span>Miembros&nbsp;de&nbsp;las&nbsp;clases</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Referencia de la Clase DestructionPhase</h1><!-- doxytag: class="DestructionPhase" -->
+<p>Utilizado para asignarle un orden de destrucción a los Singleton.  
+<a href="#_details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="dphase_8h_source.html">dphase.h</a>&gt;</code></p>
+
+<p><a href="classDestructionPhase-members.html">Lista de todos los miembros.</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Métodos públicos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDestructionPhase.html#ad9198cb588273b4c0e2b7bc8d4c97a4c">DestructionPhase</a> (int phase)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDestructionPhase.html#a02d3979507b9b679e57c9ffe1d915598">operator&gt;</a> (const <a class="el" href="classDestructionPhase.html">DestructionPhase</a> &amp;dp) const </td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descripción detallada</h2>
+<p>Utilizado para asignarle un orden de destrucción a los Singleton. </p>
+<hr/><h2>Documentación del constructor y destructor</h2>
+<a class="anchor" id="ad9198cb588273b4c0e2b7bc8d4c97a4c"></a><!-- doxytag: member="DestructionPhase::DestructionPhase" ref="ad9198cb588273b4c0e2b7bc8d4c97a4c" args="(int phase)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DestructionPhase::DestructionPhase </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>phase</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, explicit]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Constructor </p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>phase</em>&nbsp;</td><td>Orden de destrucción, a más pequeño, más tarde será destruido el Singleton</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Por ejemplo un Singleton Log deberá tener una fase más baja que un Singleton que se encargue de manejar recursos multimedia. Quizás éste último necesite usar el Singleton Log durante su destrucción, si el Log se hubiera destruído, daría problemas graves. </p>
+
+</div>
+</div>
+<hr/><h2>Documentación de las funciones miembro</h2>
+<a class="anchor" id="a02d3979507b9b679e57c9ffe1d915598"></a><!-- doxytag: member="DestructionPhase::operator&gt;" ref="a02d3979507b9b679e57c9ffe1d915598" args="(const DestructionPhase &amp;dp) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DestructionPhase::operator&gt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classDestructionPhase.html">DestructionPhase</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>dp</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Utilizado para saber si un objeto se debe destruir antes o después. </p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>dp</em>&nbsp;</td><td>Fase de destrucción a comparar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Verdadero si el <a class="el" href="classDestructionPhase.html" title="Utilizado para asignarle un orden de destrucción a los Singleton.">DestructionPhase</a> a es mayor que el b, falso en caso contrario. </dd></dl>
+
+</div>
+</div>
+<hr/>La documentación para esta clase fue generada a partir del siguiente fichero:<ul>
+<li>/home/david/Juegos/airforcepilot/src/motor/<a class="el" href="dphase_8h_source.html">dphase.h</a></li>
+</ul>
+</div>
+<hr size="1"/><address style="text-align: right;"><small>Generado el Sun Dec 13 19:09:11 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
+</body>
+</html>

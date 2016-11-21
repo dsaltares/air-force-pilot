@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Fichero Fuente /home/david/Juegos/airforcepilot/src/motor/Teclado.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css">
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.8 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&nbsp;de&nbsp;los&nbsp;ficheros</span></a></li>
+    </ul>
+  </div>
+<h1>/home/david/Juegos/airforcepilot/src/motor/Teclado.h</h1><a href="Teclado_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Listado: Teclado.h</span>
+<a name="l00002"></a>00002 <span class="comment">// Control del dispositivo de entrada</span>
+<a name="l00003"></a>00003 
+<a name="l00004"></a>00004 
+<a name="l00005"></a>00005 <span class="preprocessor">#ifndef _TECLADO_H_</span>
+<a name="l00006"></a>00006 <span class="preprocessor"></span><span class="preprocessor">#define _TECLADO_H_</span>
+<a name="l00007"></a>00007 <span class="preprocessor"></span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;SDL/SDL.h&gt;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;map&gt;</span>
+<a name="l00010"></a>00010 
+<a name="l00011"></a>00011 <span class="keyword">using namespace </span>std;
+<a name="l00012"></a>00012 
+<a name="l00013"></a>00013 
+<a name="l00014"></a><a class="code" href="classTeclado.html">00014</a> <span class="keyword">class </span><a class="code" href="classTeclado.html">Teclado</a> {
+<a name="l00015"></a>00015 
+<a name="l00016"></a>00016  <span class="keyword">public</span>:
+<a name="l00017"></a>00017 
+<a name="l00018"></a>00018     <span class="comment">// Teclas a usar en la aplicación</span>
+<a name="l00019"></a>00019 
+<a name="l00020"></a><a class="code" href="classTeclado.html#e8605569ea32782c771156b0f06683d3">00020</a>     <span class="keyword">enum</span> <a class="code" href="classTeclado.html#e8605569ea32782c771156b0f06683d3">teclas_utilizadas</a> {
+<a name="l00021"></a>00021 
+<a name="l00022"></a><a class="code" href="classTeclado.html#e8605569ea32782c771156b0f06683d3c2e22ca7ad59af1f618f3eb5a612e33b">00022</a>         <a class="code" href="classTeclado.html#e8605569ea32782c771156b0f06683d3c2e22ca7ad59af1f618f3eb5a612e33b">TECLA_SALIR</a>,
+<a name="l00023"></a><a class="code" href="classTeclado.html#e8605569ea32782c771156b0f06683d32ee67b58fd4541ff615e107de85c2d73">00023</a>         <a class="code" href="classTeclado.html#e8605569ea32782c771156b0f06683d32ee67b58fd4541ff615e107de85c2d73">TECLA_SUBIR</a>,
+<a name="l00024"></a><a class="code" href="classTeclado.html#e8605569ea32782c771156b0f06683d39168c267a9cf4b35ff5b8c876a6bcb4b">00024</a>         <a class="code" href="classTeclado.html#e8605569ea32782c771156b0f06683d39168c267a9cf4b35ff5b8c876a6bcb4b">TECLA_BAJAR</a>,
+<a name="l00025"></a><a class="code" href="classTeclado.html#e8605569ea32782c771156b0f06683d3a5ae5475a471bf2cf52e73acd596db54">00025</a>         <a class="code" href="classTeclado.html#e8605569ea32782c771156b0f06683d3a5ae5475a471bf2cf52e73acd596db54">TECLA_ACEPTAR</a>,
+<a name="l00026"></a><a class="code" href="classTeclado.html#e8605569ea32782c771156b0f06683d3f5065dd3614a46294fc97fb3f33fbf05">00026</a>         <a class="code" href="classTeclado.html#e8605569ea32782c771156b0f06683d3f5065dd3614a46294fc97fb3f33fbf05">TECLA_GOLPEAR</a>,
+<a name="l00027"></a><a class="code" href="classTeclado.html#e8605569ea32782c771156b0f06683d33d41537a5e4c834c97b0971dcfac9f44">00027</a>         <a class="code" href="classTeclado.html#e8605569ea32782c771156b0f06683d33d41537a5e4c834c97b0971dcfac9f44">TECLA_IZQUIERDA</a>,
+<a name="l00028"></a><a class="code" href="classTeclado.html#e8605569ea32782c771156b0f06683d3a7988dbc85ef8c93e3cef022a39deed0">00028</a>         <a class="code" href="classTeclado.html#e8605569ea32782c771156b0f06683d3a7988dbc85ef8c93e3cef022a39deed0">TECLA_DERECHA</a>,
+<a name="l00029"></a><a class="code" href="classTeclado.html#e8605569ea32782c771156b0f06683d3593acd59335272167d3b15bbdc80e005">00029</a>         <a class="code" href="classTeclado.html#e8605569ea32782c771156b0f06683d3593acd59335272167d3b15bbdc80e005">TECLA_SALTAR</a>,
+<a name="l00030"></a><a class="code" href="classTeclado.html#e8605569ea32782c771156b0f06683d35c93b18caf6c4c2a31184162ee449272">00030</a>         <a class="code" href="classTeclado.html#e8605569ea32782c771156b0f06683d35c93b18caf6c4c2a31184162ee449272">TECLA_GUARDAR</a>
+<a name="l00031"></a>00031         
+<a name="l00032"></a>00032     };
+<a name="l00033"></a>00033 
+<a name="l00034"></a>00034     <span class="comment">// Constructor</span>
+<a name="l00035"></a>00035 
+<a name="l00036"></a>00036     <a class="code" href="classTeclado.html#604c5fe2b66ded22ec1772d965f20b9b">Teclado</a>();
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038     <span class="comment">// Consultoras</span>
+<a name="l00039"></a>00039 
+<a name="l00040"></a>00040     <span class="comment">// Actualiza la información del teclado</span>
+<a name="l00041"></a>00041 
+<a name="l00042"></a>00042     <span class="keywordtype">void</span> <a class="code" href="classTeclado.html#e88fbd385c6e6934aeb3033e0d84e18d">actualizar</a>(<span class="keywordtype">void</span>);
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044     <span class="comment">// Informa si una tecla ha sido pulsada</span>
+<a name="l00045"></a>00045     
+<a name="l00046"></a>00046     <span class="keywordtype">bool</span> <a class="code" href="classTeclado.html#d9c13699a2a05e37965b2f2af0394522">pulso</a>(<a class="code" href="classTeclado.html#e8605569ea32782c771156b0f06683d3">teclas_utilizadas</a> tecla);
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048                 
+<a name="l00049"></a>00049  <span class="keyword">private</span>:
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051     <span class="comment">// Para conocer el estado de la pulsación</span>
+<a name="l00052"></a>00052     <span class="comment">// de las teclas en todo momento</span>
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054     Uint8* teclas;
+<a name="l00055"></a>00055 
+<a name="l00056"></a>00056 
+<a name="l00057"></a>00057     <span class="comment">// Asocia las teclas que necesitamos a la </span>
+<a name="l00058"></a>00058     <span class="comment">// constate SDL que la representa</span>
+<a name="l00059"></a>00059     
+<a name="l00060"></a>00060     map&lt;teclas_utilizadas, SDLKey&gt; teclas_configuradas;
+<a name="l00061"></a>00061 };
+<a name="l00062"></a>00062 
+<a name="l00063"></a>00063 <span class="preprocessor">#endif </span>
+</pre></div></div>
+<hr size="1"><address style="text-align: right;"><small>Generado el Sun Nov 22 12:29:30 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
+</body>
+</html>

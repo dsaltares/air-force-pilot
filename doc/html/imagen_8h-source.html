@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Fichero Fuente /home/david/Juegos/airforcepilot/src/motor/imagen.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css">
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.8 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&nbsp;de&nbsp;los&nbsp;ficheros</span></a></li>
+    </ul>
+  </div>
+<h1>/home/david/Juegos/airforcepilot/src/motor/imagen.h</h1><a href="imagen_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef _IMAGEN_</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define _IMAGEN_</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;SDL/SDL.h&gt;</span>
+<a name="l00007"></a>00007  
+<a name="l00009"></a>00009 
+<a name="l00032"></a><a class="code" href="classImagen.html">00032</a> <span class="keyword">class </span><a class="code" href="classImagen.html" title="Utilizada para gestionar rejillas de imágenes.">Imagen</a>{
+<a name="l00033"></a>00033         <span class="keyword">public</span>:
+<a name="l00042"></a>00042                 <a class="code" href="classImagen.html#cd4d434d3f5f4beaf7513b8f74f09859">Imagen</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* ruta, <span class="keywordtype">int</span> <a class="code" href="classImagen.html#f74657d5c16a52feeda9d233cfe29b33">filas</a> = 1, <span class="keywordtype">int</span> <a class="code" href="classImagen.html#aed2f76db10125985aac80e439ec7b6d">columnas</a> = 1, <span class="keywordtype">int</span> x = 0, <span class="keywordtype">int</span> y = 0);
+<a name="l00043"></a>00043                 
+<a name="l00044"></a>00044                 
+<a name="l00053"></a>00053                 <a class="code" href="classImagen.html#cd4d434d3f5f4beaf7513b8f74f09859">Imagen</a>(<span class="keyword">const</span> std::string&amp; ruta, <span class="keywordtype">int</span> <a class="code" href="classImagen.html#f74657d5c16a52feeda9d233cfe29b33">filas</a> = 1, <span class="keywordtype">int</span> <a class="code" href="classImagen.html#aed2f76db10125985aac80e439ec7b6d">columnas</a> = 1, <span class="keywordtype">int</span> x = 0, <span class="keywordtype">int</span> y = 0);
+<a name="l00054"></a>00054                 
+<a name="l00063"></a>00063                 <span class="keywordtype">void</span> <a class="code" href="classImagen.html#913e1f0de3b6e1afe54bae8de74f6e89">dibujar</a>(SDL_Surface* pantalla, <span class="keywordtype">int</span> cuadro, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> flip = 1);
+<a name="l00064"></a>00064                 
+<a name="l00069"></a>00069                 <span class="keywordtype">int</span> <a class="code" href="classImagen.html#f74657d5c16a52feeda9d233cfe29b33">filas</a>() <span class="keyword">const</span>;
+<a name="l00070"></a>00070                 
+<a name="l00075"></a>00075                 <span class="keywordtype">int</span> <a class="code" href="classImagen.html#aed2f76db10125985aac80e439ec7b6d">columnas</a>() <span class="keyword">const</span>;
+<a name="l00076"></a>00076                 
+<a name="l00081"></a>00081                 <span class="keywordtype">int</span> <a class="code" href="classImagen.html#02bb33e6d75d2694174c2e33c6de5452">anchura</a>() <span class="keyword">const</span>;
+<a name="l00082"></a>00082                 
+<a name="l00087"></a>00087                 <span class="keywordtype">int</span> <a class="code" href="classImagen.html#c3d4869987f556708a5bc3d00ebb51f9">altura</a>() <span class="keyword">const</span>;
+<a name="l00088"></a>00088                 
+<a name="l00093"></a>00093                 <span class="keywordtype">int</span> <a class="code" href="classImagen.html#b78827d120318fd8a91b4b96f3224abd">cuadros</a>() <span class="keyword">const</span>;
+<a name="l00094"></a>00094                 
+<a name="l00099"></a>00099                 <a class="code" href="classImagen.html#03dd93c9cf920a9dc0b72f8bd34f2e8a">~Imagen</a>();
+<a name="l00100"></a>00100         <span class="keyword">private</span>:
+<a name="l00101"></a>00101                 SDL_Surface* imagen;
+<a name="l00102"></a>00102                 SDL_Surface* invertida;
+<a name="l00103"></a>00103                 
+<a name="l00104"></a>00104                 SDL_Surface* invertir_imagen();
+<a name="l00105"></a>00105                 
+<a name="l00106"></a>00106                 <span class="keywordtype">int</span>  f_, c_, x_, y_;
+<a name="l00107"></a>00107 };
+<a name="l00108"></a>00108 
+<a name="l00109"></a><a class="code" href="classImagen.html#f74657d5c16a52feeda9d233cfe29b33">00109</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classImagen.html#f74657d5c16a52feeda9d233cfe29b33">Imagen::filas</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> f_;}
+<a name="l00110"></a><a class="code" href="classImagen.html#aed2f76db10125985aac80e439ec7b6d">00110</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classImagen.html#aed2f76db10125985aac80e439ec7b6d">Imagen::columnas</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> c_;}
+<a name="l00111"></a><a class="code" href="classImagen.html#02bb33e6d75d2694174c2e33c6de5452">00111</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classImagen.html#02bb33e6d75d2694174c2e33c6de5452">Imagen::anchura</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> (imagen-&gt;w / c_);}
+<a name="l00112"></a><a class="code" href="classImagen.html#c3d4869987f556708a5bc3d00ebb51f9">00112</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classImagen.html#c3d4869987f556708a5bc3d00ebb51f9">Imagen::altura</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> (imagen-&gt;h / f_);}
+<a name="l00113"></a><a class="code" href="classImagen.html#b78827d120318fd8a91b4b96f3224abd">00113</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classImagen.html#b78827d120318fd8a91b4b96f3224abd">Imagen::cuadros</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> f_*c_;}
+<a name="l00114"></a>00114 
+<a name="l00115"></a>00115 <span class="preprocessor">#endif</span>
+</pre></div></div>
+<hr size="1"><address style="text-align: right;"><small>Generado el Sun Nov 22 12:29:30 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
+</body>
+</html>

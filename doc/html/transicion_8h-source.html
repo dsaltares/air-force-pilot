@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Fichero Fuente /home/david/Juegos/airforcepilot/src/motor/transicion.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css">
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.8 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&nbsp;de&nbsp;los&nbsp;ficheros</span></a></li>
+    </ul>
+  </div>
+<h1>/home/david/Juegos/airforcepilot/src/motor/transicion.h</h1><a href="transicion_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef _TRANSICION_</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define _TRANSICION_</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;vector&gt;</span>
+<a name="l00006"></a>00006 
+<a name="l00007"></a>00007 <span class="preprocessor">#include "<a class="code" href="escena_8h.html">escena.h</a>"</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include "<a class="code" href="galeria_8h.html">galeria.h</a>"</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include "<a class="code" href="imagen_8h.html">imagen.h</a>"</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include "<a class="code" href="fuente_8h.html">fuente.h</a>"</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include "<a class="code" href="texto_8h.html">texto.h</a>"</span>
+<a name="l00012"></a>00012 
+<a name="l00014"></a>00014 
+<a name="l00040"></a><a class="code" href="classTransicion.html">00040</a> <span class="keyword">class </span><a class="code" href="classTransicion.html" title="Clase hija de Escena utilizada para transiciones entre otras escenas.">Transicion</a>: <span class="keyword">public</span> <a class="code" href="classEscena.html" title="Clase abstracta que representa una escena del Sistema.">Escena</a>{
+<a name="l00041"></a>00041         <span class="keyword">public</span>:
+<a name="l00049"></a>00049                 <a class="code" href="classTransicion.html#9e09023cdc2430c079e90ba7fa09b00e">Transicion</a>(<a class="code" href="classUniverso.html" title="Clase que controla el funcionamiento general del juego.">Universo</a>* universo);
+<a name="l00050"></a>00050                 
+<a name="l00056"></a>00056                 <a class="code" href="classTransicion.html#3dc0fbbafe2cbd0a2e8e633a7634a9b8">~Transicion</a>();
+<a name="l00057"></a>00057                 
+<a name="l00061"></a>00061                 <span class="keywordtype">void</span> <a class="code" href="classTransicion.html#e0f323d1f133d90b17426c4abf93ec85">reiniciar</a>();
+<a name="l00062"></a>00062                 
+<a name="l00066"></a>00066                 <span class="keywordtype">void</span> <a class="code" href="classTransicion.html#71cd6f1e9c25674a6759e18424fd6bc6">actualizar</a>();
+<a name="l00067"></a>00067                 
+<a name="l00071"></a>00071                 <span class="keywordtype">void</span> <a class="code" href="classTransicion.html#db90e6d8fb364c83b88d38734ed95e4f">dibujar</a>();
+<a name="l00072"></a>00072                 
+<a name="l00079"></a>00079                 <span class="keywordtype">void</span> <a class="code" href="classTransicion.html#a8954305d5b3cf0997a4761e7ad79204">cargar</a>(<span class="keyword">const</span> std::string&amp; ruta, <a class="code" href="classEscena.html" title="Clase abstracta que representa una escena del Sistema.">Escena</a>* p);
+<a name="l00080"></a>00080                 
+<a name="l00093"></a>00093                 <span class="keywordtype">void</span> <a class="code" href="classTransicion.html#be3eef9ada687665f745b4865df59778">cargar_trans_nivel</a>(<span class="keyword">const</span> std::string&amp; ruta_base, <a class="code" href="classEscena.html" title="Clase abstracta que representa una escena del Sistema.">Escena</a>* p, <span class="keywordtype">int</span> nivel);
+<a name="l00094"></a>00094         <span class="keyword">private</span>:
+<a name="l00095"></a>00095         
+<a name="l00096"></a>00096                 <span class="keywordtype">void</span> limpiar();
+<a name="l00097"></a>00097                 
+<a name="l00098"></a>00098                 <a class="code" href="classEscena.html" title="Clase abstracta que representa una escena del Sistema.">Escena</a> *padre;
+<a name="l00099"></a>00099                 <a class="code" href="classImagen.html" title="Utilizada para gestionar rejillas de imágenes.">Imagen</a> *fondo;
+<a name="l00100"></a>00100                 <a class="code" href="classMusica.html" title="Utilizada para cargar y reproducir la BSO del juego.">Musica</a> *musica;
+<a name="l00101"></a>00101                 std::vector&lt;Texto*&gt; textos;
+<a name="l00102"></a>00102 };
+<a name="l00103"></a>00103 
+<a name="l00104"></a>00104 <span class="preprocessor">#endif</span>
+</pre></div></div>
+<hr size="1"><address style="text-align: right;"><small>Generado el Sun Nov 22 12:29:30 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
+</body>
+</html>
